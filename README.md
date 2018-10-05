@@ -73,15 +73,18 @@ SWDでの書き込みと、ブートローダ書き込み済みの場合はDFU�
 
 #### セットアップ
 python2.7をインストールし、pipでnrfutilを入れます。
-`pip install nrfutil`
+    
+    pip install nrfutil
 
 #### ファームウェアパッケージの作成
 qmkで作成したファームウェアをdfu用にパッケージします。
-`nrfutil pkg generate --debug-mode --hw-version 52 --sd-req 0xA9 --application <firmware>.bin <package>.zip`
+    
+    nrfutil pkg generate --debug-mode --hw-version 52 --sd-req 0xA9 --application <firmware>.bin <package>.zip
 
 #### 書き込み
 キーボードのリセットボタンを押しながら電源投入、あるいはキーマップに設定したコマンドからブートローダを起動します。キーボードではなくCOMポートとして認識されていれば番号を確認して書き込みます。
-`nrfutil dfu usb_serial -pkg <package>.zip -p <COMport>`
+    
+    nrfutil dfu usb_serial -pkg <package>.zip -p <COMport>
 書き込みに成功すれば自動で再起動してUSBキーボードとして認識されます。
 
 #### (分割型)マスタとスレーブの接続
