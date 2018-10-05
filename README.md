@@ -25,8 +25,10 @@ USBコネクタの横にあるBATピンから、あるいはUSBコネクタ、RA
 
 ブートローダーを使わない場合は裏面に露出したパッドからSWDでファームウェアを書き込みます。
 
-##　使い方(自作キーボード編)
+## 使い方(自作キーボード編)
+
 nrf52対応のqmk_firmwareは[こちら](https://github.com/sekigon-gonnoc/qmk_firmware/tree/nrf52)
+
 ### ビルド環境
 通常のqmk用の環境に加えて、arm-none-eabi-gccが必要です。(Version 7-2017-q4-majorで動作確認)
 
@@ -69,7 +71,7 @@ qmk_firmware/keyboard/ble_micro_testが一体型、qmk_firmware/keyboard/ergo42_
 SWDでの書き込みと、ブートローダ書き込み済みの場合はDFUでの書き込みに対応しています。
 以下ではDFUでの書き込みについて説明します。
 
-####　セットアップ
+#### セットアップ
 python2.7をインストールし、pipでnrfutilを入れます。
 `pip install nrfutil`
 
