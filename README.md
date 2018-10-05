@@ -1,6 +1,8 @@
 # BLE-Micro-Pro
 Pro Microとの互換性を意識したBL654(nrf52840モジュール)のブレークアウトボードです。主に自作キーボードでの使用を想定して設計しています。Pro Microを使用した自作キーボードに取り付けて、USB/Bluetooth Low Energyの両方に対応させることができます。
 
+<img src="https://github.com/sekigon-gonnoc/BLE-Micro-Pro/blob/master/pin%20assign.jpg" width=300px/>
+
 ## 使用上の注意点
 Pro Microとの互換性を意識して設計されていますが、以下の点にご注意ください。
 
