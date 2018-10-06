@@ -30,6 +30,8 @@ USBコネクタの横にあるBATピンから、あるいはUSBコネクタ、RA
 ## 使い方(自作キーボード編)
 
 nrf52対応のqmk_firmwareは[こちら](https://github.com/sekigon-gonnoc/qmk_firmware/tree/nrf52)
+    
+    git clone --depth 1 -b nrf52 https://github.com/sekigon-gonnoc/qmk_firmware.git
 
 ### ビルド環境
 通常のqmk用の環境に加えて、arm-none-eabi-gccが必要です。(Version 7-2017-q4-majorで動作確認)
