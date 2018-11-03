@@ -101,6 +101,7 @@ pipでnrfutilを入れます。(python2.7)
     make <keyboard>:nrfutil
 を実行することで、ビルド後にそのままファームウェアが書き込めます。
 > Detecting USB port, put your controller into dfu-mode now
+
 と表示されたら、キーボードのリセットボタンを押しながら電源投入、あるいはキーマップに設定したコマンドからブートローダを起動します。
 書き込みに成功すれば自動で再起動してUSBキーボードとして認識されます。
 
