@@ -132,6 +132,7 @@ qmk_firmware/keyboard/ble_micro_testが一体型、qmk_firmware/keyboard/ergo42_
 |パラメータ|変更方法|
 |:--|:--|
 |MATRIX_ROWS, MATRIX_COLS| 通常通り|
-|THIS_DEVICE_ROWS, THIS_DEVICE_COLS| マスタ、スレーブそれぞれの列数と行数。8x16まで対応。|
+|THIS_DEVICE_ROWS, THIS_DEVICE_COLS| マスタ、スレーブそれぞれの列数と行数。8x16まで対応|
 |MATRIX_ROW_PINS, MATRIX_COL_PINS| キーマトリクスに使用しているピン番号を指定|
 |IS_LEFT_HAND| 左手側ならtrue、右手側ならfalse|
+|BLE_NUS_MAX_INTERVAL| 左右間の通信間隔(ms)　下げると消費電力が増える|
