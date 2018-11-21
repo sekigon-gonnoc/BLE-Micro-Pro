@@ -53,13 +53,6 @@ arm用の環境を外してセットアップしていた場合は、もう一�
 また、[nRF5_SDK v15.0.0](https://developer.nordicsemi.com/nRF5_SDK/nRF5_SDK_v15.x.x/)をダウンロードして適当な場所に展開してください。
 
 ### ファームウェア作成
-ビルドする前に環境変数としてnRF SDKの場所を設定してください
-
-    export NRFSDK15_ROOT=<path to sdk> #例 /c/dev/nRF5_SDK_15.0.0_a53641a
-
-
-ビルドコマンドは通常通りです。
-
 
 #### キーマップ
 サンプルを参考にして(分割型の場合マスタ側のキーに)以下の関数を実行するカスタムコードを設定することをお勧めします。
@@ -85,13 +78,21 @@ pipでnrfutilを入れます。(python2.7)
     pip install nrfutil
 
 #### パッケージの作成と書き込み
+
+ビルドする前に環境変数としてnRF SDKの場所を設定してください
+
+    export NRFSDK15_ROOT=<path to sdk> #例 /c/dev/nRF5_SDK_15.0.0_a53641a
     
-    make <keyboard>:nrfutil
+初回はライブラリをビルドするため時間がかかります。分割型の場合はmaster用とslave用の両方をビルドしてください。
+
+    make <keyboard>/<master or slave>:nrfutil
 を実行することで、ビルド後にそのままファームウェアが書き込めます。
 > Detecting USB port, put your controller into dfu-mode now
 
 と表示されたら、キーボードのリセットボタンを押しながら電源投入、あるいはキーマップに設定したコマンドからブートローダを起動します。初回書き込み時は自動的にブートローダが起動します。
 書き込みに成功すれば自動で再起動してUSBキーボードとして認識されます。
+
+[書き込み時にエラーが出る](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/blob/master/FAQ.md#%E6%9B%B8%E3%81%8D%E8%BE%BC%E3%81%BF%E6%99%82%E3%81%AB%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E5%87%BA%E3%82%8B)
 
 ##### 書き込み時にusb_serialが見つからないとエラーが出る場合(MacOSなど？)
 qmk/tmk_core/nrf.mkの862行目
