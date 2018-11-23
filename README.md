@@ -126,6 +126,8 @@ qmk_firmware/keyboard/ble_micro_testが一体型、qmk_firmware/keyboard/ergo42_
 |THIS_DEVICE_ROWS, THIS_DEVICE_COLS| MATRIX_ROWS, MATRIX_COLSと同じ値に設定|
 |MATRIX_ROW_PINS, MATRIX_COL_PINS| キーマトリクスに使用しているピン番号を指定|
 |IS_LEFT_HAND| 必ずtrue|
+|BLE_HID_MAX_INTERVAL| 端末との通信間隔(ms)　下げると消費電力が増える。デフォルトは90|
+|BLE_HID_SLAVE_LATENCY| 端末との通信パラメータ　下げると消費電力が増える。HID‗INTERVALに反比例させると良い？　デフォルトは4|
 
 #### 分割型の場合
 マスタとスレーブで異なるファームウェアが必要です。現状ではマスタのみUSB接続に対応しています。編集するファイルはergo42_ble/config.hとergo42_ble/master/config.hとergo42_ble/slave/config.hの3つです。
@@ -136,4 +138,6 @@ qmk_firmware/keyboard/ble_micro_testが一体型、qmk_firmware/keyboard/ergo42_
 |THIS_DEVICE_ROWS, THIS_DEVICE_COLS| マスタ、スレーブそれぞれの列数と行数。8x16まで対応|
 |MATRIX_ROW_PINS, MATRIX_COL_PINS| キーマトリクスに使用しているピン番号を指定|
 |IS_LEFT_HAND| 左手側ならtrue、右手側ならfalse|
-|BLE_NUS_MAX_INTERVAL| 左右間の通信間隔(ms)　下げると消費電力が増える|
+|BLE_NUS_MAX_INTERVAL| 左右間の通信間隔(ms)　下げると消費電力が増える。デフォルトは70|
+|BLE_HID_MAX_INTERVAL| 端末との通信間隔(ms)　下げると消費電力が増える。デフォルトは90|
+|BLE_HID_SLAVE_LATENCY| 端末との通信パラメータ　下げると消費電力が増える。HID‗INTERVALに反比例させると良い？　デフォルトは4|
