@@ -9,7 +9,7 @@ bootloader(v1.0)で使っているライブラリのバグで、正常なバイ�
 
 のいずれかの方法で書き込めるようになります。
 
-bootloaderを書き換えるには以下のコマンドを実行してください。
+bootloaderを書き換えるには以下のコマンドを実行してください。bootloaderの書き換えに失敗すると文鎮化する恐れがあるため絶対に途中でケーブルを抜かないでください。
 
 `nrfutil dfu usb_serial -pkg ble_micro_pro_bootloader.zip -p <ポート名>`
 
