@@ -4,7 +4,7 @@ NRDSDK15_ROOTがあっているか、ダウンロードしたSDKのバージョ�
 ## 書き込み時にハッシュエラー(0x0C)が出る
 bootloader(v1.0)で使っているライブラリのバグで、正常なバイナリでも書き込みエラーが出ることがあるようです。
 
-* bootloader v2.0に書き換える
+* [最新版のbootloader](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/blob/master/ble_micro_pro_bootloader.zip)に書き換える
 * master.cかslave.c内の関数をコメントアウトしたり書きかえたりして、バイナリサイズを変える
 
 のいずれかの方法で書き込めるようになります。
