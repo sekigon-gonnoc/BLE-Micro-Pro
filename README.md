@@ -39,8 +39,8 @@ nrf52対応のqmk_firmwareは[こちら](https://github.com/sekigon-gonnoc/qmk_f
 - 既にqmk_firmwareを使っている場合
 
         git remote add sekigon https://github.com/sekigon-gonnoc/qmk_firmware.git
-        git pull sekigon nrf52
-        git checkout nrf52
+        git fetch sekigon
+        git checkout -b nrf52 sekigon/nrf52
 - 初めて使う場合
 
         git clone --depth 1 -b nrf52 https://github.com/sekigon-gonnoc/qmk_firmware.git
