@@ -36,14 +36,24 @@ LEDの電源を24番ピンからしか取っていないキーボードの場合
 
 nrf52対応のqmk_firmwareは[こちら](https://github.com/sekigon-gonnoc/qmk_firmware/tree/nrf52)
 
-- 既にqmk_firmwareを使っている場合
+- 既にqmk_firmwareを使っていて別のブランチとして用意したい場合
+```
+    git remote add sekigon https://github.com/sekigon-gonnoc/qmk_firmware.git
+    git fetch sekigon
+    git checkout -b nrf52 sekigon/nrf52
+```
 
-        git remote add sekigon https://github.com/sekigon-gonnoc/qmk_firmware.git
-        git fetch sekigon
-        git checkout -b nrf52 sekigon/nrf52
+- 既にqmk_firmwareを使っていて別のフォルダに置きたい場合
+
+ ```
+    git clone  -b nrf52 https://github.com/sekigon-gonnoc/qmk_firmware.git ble_micro_pro
+ ```
+
 - 初めて使う場合
 
-        git clone --depth 1 -b nrf52 https://github.com/sekigon-gonnoc/qmk_firmware.git
+```
+    git clone --depth 1 -b nrf52 https://github.com/sekigon-gonnoc/qmk_firmware.git
+```
 
 ### ビルド環境
 pro micro用の環境に加えて、arm-none-eabi-gccが必要です。(Version 7-2017-q4-majorで動作確認)
