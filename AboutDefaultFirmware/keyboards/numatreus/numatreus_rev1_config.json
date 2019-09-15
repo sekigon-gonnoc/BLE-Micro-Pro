@@ -1,0 +1,18 @@
+{"config":
+  {
+  "version":2,
+  "device_info":{"vid":"0xFEED","vid":"0x6062","name":"Numatreus","manufacture":"","description":""},
+  "matrix":{"rows":4,"cols":11,"device_rows":4, "device_cols":11,
+  "debounce":1,"is_left_hand":1,"diode_direction":1,
+  "row_pins":[9,10,11,12],
+  "col_pins":[20,19,18,17,16,15,14,13,6,7,8],
+  "layout":[1,2,3,4,5,  7,8,9,10,11,0,
+            12,13,14,15,16,18,19,20,21,22,0,
+            23,24,25,26,27,29,30,31,32,33,0,
+            34,35,36,37,38,28,39,40,41,42,43,44]},
+  "mode":"SINGLE", "startup":1,
+  "peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+  "central":{"max_interval":0,"min_interval":0,"slave_latency":0}
+  "led":{"pin":255, "num":0}
+  "keymap":{"locale":"US","use_ascii":0}
+}}
