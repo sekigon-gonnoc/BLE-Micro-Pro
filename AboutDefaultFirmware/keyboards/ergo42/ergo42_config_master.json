@@ -1,7 +1,7 @@
 {"config":
   {
   "version":2,
-  "device_info":{"vid":"0xBC42","vid":"0x0042",
+  "device_info":{"vid":"0xBC42","pid":"0x0042",
     "name":"Ergo42","manufacture":"Biacco42","description":""},
   "matrix":{"rows":8,"cols":7,"device_rows":4, "device_cols":7,
     "debounce":1,"is_left_hand":1,"diode_direction":0,
