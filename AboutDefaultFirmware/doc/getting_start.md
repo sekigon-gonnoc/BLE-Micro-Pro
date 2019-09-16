@@ -25,9 +25,9 @@
  
 ## ファームウェアのアップデート
 
- 標準ファームウェアとして[コンパイル済みのファームウェア](https://github.com/sekigon-gonnoc/qmk_firmware/releases/tag/bmp-0.0.1)を用意しました。
- TAPPINT_TERM_PER_KEY, PERMISSIVE_HOLD などが設定してあります。
- そのほかのオプションを設定したい場合やカスタムキーコードを設定したい場合は[自分でビルドする](build_bmp_qmk_firmware.md)必要があります。  
+ 標準ファームウェアとして[コンパイル済みのファームウェア](https://github.com/sekigon-gonnoc/qmk_firmware/releases/tag/bmp-0.0.1)を定期的にリリースします。
+ ビルドオプションとしてTAPPINT_TERM_PER_KEY, PERMISSIVE_HOLD などが設定してあります。
+ 最新版のファームウェアを使いたい場合、自分の好きなオプションを設定したい場合やカスタムキーコードを設定したい場合は[自分でビルドする](build_bmp_qmk_firmware.md)必要があります。  
    ```
    nrfutil dfu usb-serial -pkg <firmware>.zip -p <ポート名>
    ```

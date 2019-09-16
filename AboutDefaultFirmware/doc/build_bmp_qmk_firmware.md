@@ -12,6 +12,12 @@ git clone --depth 1 -b dev/ble_micro_pro https://github.com/sekigon-gonnoc/qmk_f
 - Install `nrfutil` via `pip2`  or download [nrfutil.exe](https://github.com/NordicSemiconductor/pc-nrfutil/releases) to ~/qmk_utils (windows only).
 
 ## Build and write firmware
+- Default firmware
+```
+  make ble_micro_pro:default:nrfutil
+```
+
+- Your own firmware
 ```
   make <keyboard>:<keymap>:nrfutil
 ```
