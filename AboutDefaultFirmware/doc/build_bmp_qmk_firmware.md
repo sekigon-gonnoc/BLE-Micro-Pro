@@ -3,7 +3,7 @@
 ## get source code
 
 ```
-git clone --depth 1 -b nrf52/ble_micro_pro https://github.com/sekigon-gonnoc/qmk_firmware.git qmk_firmware_bmp
+git clone --depth 1 -b dev/ble_micro_pro https://github.com/sekigon-gonnoc/qmk_firmware.git qmk_firmware_bmp
 ```
 
 ## install build tools
