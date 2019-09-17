@@ -35,6 +35,7 @@
 ## 設定ファイルの書き込み
  - BLE Micro Pro をPC等にUSBで接続するとマスストレージデバイスとして認識されます
  - 使いたいキーボードのconfig.jsonとkeymap.jsonをコピーしてから電源を再投入してください
+ - keymap.json, tapping_term.jsonは即時反映されるので再起動は必要ありません。
 
 ### keymap.jsonの設定
  - [QMK Configurator](https://config.qmk.fm)で生成したkeymap.jsonをそのまま読み込むことができます。
