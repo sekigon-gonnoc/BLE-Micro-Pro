@@ -1,40 +1,44 @@
 # Getting start
 
+BLE Micro Proはブートローダとアプリケーションファームウェアがセットになって動作します。  
+アップデートする場合ブートローダとアプリケーションのメジャーバージョン・マイナバージョンを一致させるようにしてください。バージョン番号の表記は下記のとおりです。
+```
+  version number: <major>.<minor>.<revision>
+```
 
-## ブートローダのアップデート
+[ブートローダ](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/releases)と[コンパイル済みアプリケーションファームウェア](https://github.com/sekigon-gonnoc/qmk_firmware/releases)はReleaseページから入手できます。  
+コンパイル済みアプリケーションにはQMKのビルドオプションとしてTAPPING_TERM_PER_KEY, PERMISSIVE_HOLD などが設定してあります。  
+最新版のファームウェアを使いたい場合、自分の好きなオプションを設定したい場合やカスタムキーコードを設定したい場合は[自分でビルドする](build_bmp_qmk_firmware.md)必要があります。  
+ 
+## uf2を使ったアップデート (対応ブートローダのみ)
+- キーボードのリセットボタンを押しながらUSB接続、または[CLI](cli.md)からdfuコマンドを送信するとブートローダが起動します。  
+- BLE Micro Proがマスストレージデバイスとして認識され、中に`INFO_UF2.TXT`があることを確認してください。  
+- アップデートしたいuf2ファイルをコピーするとアップデートが始まります。アップデート中はケーブルを外さないでください。
+- アップデート完了後、自動的に再起動します。`VERSION.TXT`などを確認してアップデートが完了していることを確認してください。
 
-　nRF SDK依存のコードは全てブートローダ内部に移行しました。以前のバージョンを使用している場合はアップデートしてください。
-
+## nrfutilを使ったアップデート
 ### nrfutilの準備
 事前に[nrfutil](https://github.com/NordicSemiconductor/pc-nrfutil)を用意してください。
 
 - Windowsの場合  
-    nrfutil.exeを[ダウンロード](https://github.com/NordicSemiconductor/pc-nrfutil/releases)する
+    nrfutil.exeを[ダウンロード](https://github.com/NordicSemiconductor/pc-nrfutil/releases)してください
 
 - Linux, Macの場合  
-    pip2でnrfutilをインストールする
+    pip2でnrfutilをインストールしてください
     ```
       pip2 install --user nrfutil
     ```
 
 ### アップデート方法
-- キーボードのリセットボタンを押しながらUSB接続、またはターミナルソフトからdfuコマンドを送信してから以下を実行  
+- キーボードのリセットボタンを押しながらUSB接続、またはターミナルソフトからdfuコマンドを送信してから以下を実行します。パッケージ名、ポート名は状況に応じて書き換えてください  
     ```
-   nrfutil dfu usb-serial -pkg ble_micro_pro_bootloader.zip -p <ポート名>
+   nrfutil dfu usb-serial -pkg <パッケージ名>.zip -p <ポート名>
     ```
- 
-## ファームウェアのアップデート
-
- 標準ファームウェアとして[コンパイル済みのファームウェア](https://github.com/sekigon-gonnoc/qmk_firmware/releases/tag/bmp-0.0.1)を定期的にリリースします。
- ビルドオプションとしてTAPPINT_TERM_PER_KEY, PERMISSIVE_HOLD などが設定してあります。
- 最新版のファームウェアを使いたい場合、自分の好きなオプションを設定したい場合やカスタムキーコードを設定したい場合は[自分でビルドする](build_bmp_qmk_firmware.md)必要があります。  
-   ```
-   nrfutil dfu usb-serial -pkg <firmware>.zip -p <ポート名>
-   ```
  
 ## 設定ファイルの書き込み
- - BLE Micro Pro をPC等にUSBで接続するとマスストレージデバイスとして認識されます
- - 使いたいキーボードのconfig.jsonとkeymap.jsonをコピーしてから電源を再投入してください
+ - BLE Micro Pro をPC等にUSBで接続するとマスストレージデバイスとして認識されます  
+   アプリケーションが起動している場合は`KEYMAP.JSN`や`CONFIG.JSN`といったファイルが確認できます。
+ - 使いたいキーボードのconfig.jsonとkeymap.jsonをコピーしてから電源を再投入してください。
  - keymap.json, tapping_term.jsonは即時反映されるので再起動は必要ありません。
 
 ### keymap.jsonの設定
@@ -71,7 +75,8 @@
 |peripheral||マスター、一体型の場合: PC等との接続に使われる設定<br>スレーブの場合: マスターとの接続に使われる設定|
 |cetral||マスターの場合のみ: スレーブとの接続に使われる設定|
 
-無線接続時に遅延を感じる場合は peripheral, central の max_interval, min_interval を小さくしてください
+無線接続時に遅延を感じる場合は peripheral, central の max_interval, min_interval を小さくしてください  
+また、OSのBLEに関する省電力設定も確認してみてください
 
 ### [開発者向け情報](define_new_keyboard.md)
 
