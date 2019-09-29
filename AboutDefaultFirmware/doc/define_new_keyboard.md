@@ -1,40 +1,13 @@
 # 新しいキーボード用の設定を作成する
 
-## ファームウェアを作成する
- 他のキーボードでも使えそうなカスタムキーコードを追加したい場合はkeyboard/ble_micro_pro に追加することも検討してください。
- ハードウェアに依存する機能を追加する場合は以下を参考に新しいキーボードを定義してください。
-
-### Start new project
-```
-$ ./util/new_keyboard.sh
-Generating a new QMK keyboard directory
-
-Keyboard Name: <your keyboard name>
-Keyboard Type [avr]: nrf
-Your Name [sekigon-gonnoc]: 
-
-Copying base template files... done
-Copying nrf template files... done
-Renaming keyboard files... done
-Replacing %YEAR% with 2019... done
-Replacing %KEYBOARD% with name... done
-Replacing %YOUR_NAME% with sekigon-gonnoc... done
-
-Created a new keyboard called name.
-
-To start working on things, cd into keyboards/name,
-or open the directory in your favourite text editor.
-```
-
-### Configure your project
- Settings in config.h and keymap.c will be used as defaults, and overrided by config.json and keymap.json if given.
-
-### [ビルド方法](doc/build_bmp_qmk_firmware.md)
-
 ## コンフィグファイルの用意
+Pro Micro用のQMKがすでにある場合、[変換スクリプト](../keyboards/config_converter.py)を用いて`config.json`を生成できます。
 
- 上の手順で独自ファームウェアを作成した場合は、デフォルトのconfig.json, keymap.jsonに反映されます。  
- BLE Micro Pro上にデフォルトの設定ファイルを復元したい場合は[cli](cli.md)からremoveコマンドを発行してください。
+```example
+keyboards/config_converter.py ~/qmk_firmware/helix/rev2
+```
+
+LAYOUTマクロなどが複数定義されている場合、最初に変換された定義が使用されます。他の定義を使いたい場合は関係のない定義を一時的に削除あるいは`//`でコメントアウトしてください。
 
 ### config.jsonの設定 (開発者向け)
 |キー|値|内容|
@@ -79,3 +52,35 @@ layout配列の数値はキーマトリクスの行->列の順に1から降っ�
 ```
 
 <img src="https://github.com/sekigon-gonnoc/BLE-Micro-Pro/blob/master/pin%20assign.jpg" width=300px/>
+
+## ファームウェアを作成する
+ 他のキーボードでも使えそうなカスタムキーコードを追加したい場合はkeyboard/ble_micro_pro に追加することも検討してください。
+ ハードウェアに依存する機能を追加する場合は以下を参考に新しいキーボードを定義してください。
+
+### Start new project
+```
+$ ./util/new_keyboard.sh
+Generating a new QMK keyboard directory
+
+Keyboard Name: <your keyboard name>
+Keyboard Type [avr]: nrf
+Your Name [sekigon-gonnoc]: 
+
+Copying base template files... done
+Copying nrf template files... done
+Renaming keyboard files... done
+Replacing %YEAR% with 2019... done
+Replacing %KEYBOARD% with name... done
+Replacing %YOUR_NAME% with sekigon-gonnoc... done
+
+Created a new keyboard called name.
+
+To start working on things, cd into keyboards/name,
+or open the directory in your favourite text editor.
+```
+
+### Configure your project
+ Settings in config.h and keymap.c will be used as defaults, and overridden by config.json and keymap.json if given.
+ If you want to restore default settings, use `remove` command from [CLI](cli.md)
+
+### [ビルド方法](doc/build_bmp_qmk_firmware.md)
