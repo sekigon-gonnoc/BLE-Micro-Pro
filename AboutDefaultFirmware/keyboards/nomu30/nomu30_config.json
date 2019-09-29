@@ -1,0 +1,18 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0xC0C0","pid":"0x3000",
+			"name":"nomu30","manufacture":"Naoto Takai","description":"A 30% keyboard with ISO enter."},
+		"matrix":{"rows":3,"cols":12,"device_rows":3, "device_cols":12,
+			"debounce":1,"is_left_hand":1,"diode_direction":0,
+			"row_pins":[5, 6, 7],
+			"col_pins":[8, 9, 10, 11, 20, 19, 18, 17, 16, 15, 14, 13],
+		"layout":[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 0,
+			 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 0,
+			 25, 26, 27, 28, 29, 30, 31, 32, 33]},
+		"mode":"SINGLE","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":255, "num":0},
+		"keymap":{"locale":"US","use_ascii":0}
+}}

@@ -1,0 +1,20 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0xC0C0","pid":"0x6000",
+			"name":"choco60","manufacture":"Naoto Takai","description":"A 60% split keyboard for programmers."},
+		"matrix":{"rows":10,"cols":9,"device_rows":5, "device_cols":9,
+			"debounce":1,"is_left_hand":1,"diode_direction":0,
+			"row_pins":[8, 9, 10, 11, 12],
+			"col_pins":[20, 19, 18, 17, 16, 15, 14, 13, 5],
+		"layout":[1, 2, 3, 4, 5, 6, 46, 47, 48, 49, 50, 51, 52, 53, 54, 0,
+			 10, 11, 12, 13, 14, 15, 55, 56, 57, 58, 59, 60, 61, 62, 0,
+			 19, 20, 21, 22, 23, 24, 64, 65, 66, 67, 68, 69, 70, 0,
+			 28, 29, 30, 31, 32, 33, 73, 74, 75, 76, 77, 78, 79, 0,
+			 37, 38, 40, 82, 83, 85, 86]},
+		"mode":"SPLIT_MASTER","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":255, "num":0},
+		"keymap":{"locale":"US","use_ascii":0}
+}}

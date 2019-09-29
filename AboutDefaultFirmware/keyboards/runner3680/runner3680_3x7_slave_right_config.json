@@ -1,0 +1,18 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0xFEED","pid":"0x0000",
+			"name":"runner3680","manufacture":"Omkbd","description":"A split keyboard"},
+		"matrix":{"rows":6,"cols":7,"device_rows":3, "device_cols":7,
+			"debounce":1,"is_left_hand":0,"diode_direction":0,
+			"row_pins":[7, 8, 9],
+			"col_pins":[19, 18, 17, 16, 15, 14, 13],
+		"layout":[1, 2, 3, 4, 5, 6, 7, 28, 27, 26, 25, 24, 23, 22, 0,
+			 8, 9, 10, 11, 12, 13, 14, 35, 34, 33, 32, 31, 30, 29, 0,
+			 15, 16, 17, 18, 19, 20, 21, 42, 41, 40, 39, 38, 37, 36]},
+		"mode":"SPLIT_SLAVE","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":1, "num":42},
+		"keymap":{"locale":"US","use_ascii":0}
+}}

@@ -1,0 +1,20 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0xFC51","pid":"0x0058",
+			"name":"Lily58","manufacture":"F_YUUCHI","description":"Lily58 is 6×4+5keys column-staggered split keyboard."},
+		"matrix":{"rows":10,"cols":6,"device_rows":5, "device_cols":6,
+			"debounce":1,"is_left_hand":0,"diode_direction":0,
+			"row_pins":[8, 9, 10, 11, 12],
+			"col_pins":[18, 17, 16, 15, 14, 13],
+		"layout":[1, 2, 3, 4, 5, 6, 36, 35, 34, 33, 32, 31, 0,
+			 7, 8, 9, 10, 11, 12, 42, 41, 40, 39, 38, 37, 0,
+			 13, 14, 15, 16, 17, 18, 48, 47, 46, 45, 44, 43, 0,
+			 19, 20, 21, 22, 23, 24, 30, 60, 54, 53, 52, 51, 50, 49, 0,
+			 26, 27, 28, 29, 59, 58, 57, 56]},
+		"mode":"SPLIT_SLAVE","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":1, "num":12},
+		"keymap":{"locale":"US","use_ascii":0}
+}}
