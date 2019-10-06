@@ -1,0 +1,17 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0xFEED","pid":"0x0000",
+			"name":"Dozen0","manufacture":"yynmt","description":"12 keys macropad"},
+		"matrix":{"rows":1,"cols":12,"device_rows":1, "device_cols":12,
+			"debounce":1,"is_left_hand":1,"diode_direction":0,
+			"row_pins":[20],
+			"col_pins":[13, 14, 15, 16, 17, 18, 12, 11, 10, 9, 8, 7],
+		"layout":[1, 2, 3, 4, 5, 6, 0,
+			 7, 8, 9, 10, 11, 12]},
+		"mode":"SINGLE","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":255, "num":0},
+		"keymap":{"locale":"US","use_ascii":0}
+}}
