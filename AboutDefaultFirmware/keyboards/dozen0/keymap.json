@@ -1,0 +1,12 @@
+{"keyboard":"dozen0","keymap":"default_a1de199","layout":"LAYOUT",
+  "layers":[
+    [
+      "LCTL(KC_X)", "LCTL(KC_C)", "LCTL(KC_V)", "KC_UP",   "KC_DEL", "KC_BSPC",
+      "KC_LCTL",    "KC_LSFT",    "KC_LEFT",    "KC_DOWN", "KC_RGHT", "LT(1, KC_ENT)"
+    ],
+    [
+      "AD_WO_L", "ADV_ID0", "ADV_ID1", "DEL_ID0", "BATT_LV", "ENT_SLP",
+      "ENT_DFU", "USB_DIS", "USB_EN",  "BLE_DIS", "BLE_EN",  "_______"
+    ]
+  ],
+"author":"","notes":""}
