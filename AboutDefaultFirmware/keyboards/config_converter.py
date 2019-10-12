@@ -6,6 +6,18 @@ import sys
 import re
 
 
+def red(string):
+    return '\033[31m' + string + '\033[0m'
+
+
+def yellow(string):
+    return '\033[33m' + string + '\033[0m'
+
+
+def green(string):
+    return '\033[32m' + string + '\033[0m'
+
+
 class ConfigConverter:
     PIN_TABLE = {'D3': 1, 'D2': 2, 'D1': 5, 'D0': 6, 'D4': 7, 'C6': 8, 'D7': 9, 'E6': 10, 'B4': 11, 'B5': 12, 'B6': 13, 'B2': 14, 'B3': 15, 'B1': 16, 'F7': 17, 'F6': 18, 'F5': 19, 'F4': 20}
 
@@ -27,6 +39,39 @@ class ConfigConverter:
         self.led_num = ''
         self.diode_direction = ''
         self.mode = ''
+        self.layout_macro = []
+        self.search_layout = ''
+
+    def find_layout_macro(self, f):
+        lines = f.readlines()
+        layout_detect = False
+        layout_str = ''
+        line = 0
+        for string in lines:
+            string = self.remove_comment(string)
+            layout_name = re.match(r'^\s*#define\s+LAYOUT\S*\s*', string)
+            if not layout_name is None:
+                layout_name = layout_name.group().split("#define")[1]
+                layout_name = layout_name.replace('(', '')
+                layout_name = layout_name.strip()
+                file_name = f.name
+                if 'keyboards/' in file_name:
+                    file_name = file_name.split('keyboards/')[1]
+                self.layout_macro.append({"name": layout_name, "file": file_name, "line": line})
+            line = line + 1
+
+    def set_layout_index(self, idx):
+        idx = int(idx)
+        if idx >= len(self.layout_macro):
+            raise ValueError
+
+        self.search_layout = self.layout_macro[idx]["name"]
+
+    def print_layout_list(self):
+        index = 0
+        for layout in self.layout_macro:
+            print(f'{index}: {layout["name"]}\t\t{layout["file"]}:{layout["line"]}')
+            index = index + 1
 
     def convert_pindef(self, arg):
         str2 = arg.split('{')[1]
@@ -50,7 +95,7 @@ class ConfigConverter:
     def convert_layout(self, arg):
         str2 = re.sub(r'(\(|{|})', '', arg)
         str2 = str2.replace('#define', '')
-        str2 = str2.replace('LAYOUT', '')
+        str2 = str2.replace(self.search_layout, '')
         str2 = str2.replace(' ', '')
 
         [place, array] = str2.split(')')
@@ -82,7 +127,7 @@ class ConfigConverter:
         return layout_str
 
     def waring_multiple_definition(self, symbol, f, line):
-        print(f'warning: multiple definition of {symbol} in {f.name}:{line}. Previous definition is used.')
+        print(yellow('warning') + f': multiple definition of {symbol} in {f.name}:{line}. Previous definition is used.')
 
     def remove_comment(self, arg):
         return arg.split('//')[0]
@@ -155,9 +200,9 @@ class ConfigConverter:
                     self.waring_multiple_definition('RGBLED_NUM', f, line)
                 else:
                     self.led_num = string.split('RGBLED_NUM')[1].replace('\n', '').strip()
-            elif '#define LAYOUT(' in string:
+            elif '#define ' + self.search_layout + '(' in string:
                 if self.layout != '':
-                    self.waring_multiple_definition('LAYOUT', f, line)
+                    self.waring_multiple_definition(self.search_layout, f, line)
                 else:
                     layout_detect = True
 
@@ -173,23 +218,23 @@ class ConfigConverter:
     def assertion(self):
         res = True
         if self.layout == '':
-            print('ERROR: Failed to find LAYOUT')
+            print(red('ERROR') + ': Failed to find LAYOUT')
             res = False
 
         if self.col_pins == '':
-            print('ERROR: Failed to find MATRIX_COL_PINS')
+            print(red('ERROR') + ': Failed to find MATRIX_COL_PINS')
             res = False
 
         if self.row_pins == '':
-            print('ERROR: Failed to find MATRIX_ROW_PINS')
+            print(red('ERROR') + ': Failed to find MATRIX_ROW_PINS')
             res = False
 
         if self.col_num == '':
-            print('ERROR: Failed to find MATRIX_COLS')
+            print(red('ERROR') + ': Failed to find MATRIX_COLS')
             res = False
 
         if self.row_num == '':
-            print('ERROR: Failed to find MATRIX_ROWS')
+            print(red('ERROR') + ': Failed to find MATRIX_ROWS')
             res = False
 
         if (int(self.col_num) != len(self.col_pins.split(',')) or int(self.row_num) != len(self.row_pins.split(','))):
@@ -197,7 +242,7 @@ class ConfigConverter:
             print('This keyboard is spilit keyboard')
 
         if (int(self.col_num) != len(self.col_pins.split(',')) and int(self.row_num) != len(self.row_pins.split(','))):
-            print('warning: MATRIX len and PINS len do not match in both row and col.')
+            print(yellow('warning') + ': MATRIX len and PINS len do not match in both row and col.')
 
         return res
 
@@ -240,6 +285,27 @@ if __name__ == '__main__':
         if not '.h' in path:
             continue
         with open(path) as f:
+            config.find_layout_macro(f)
+
+    config.print_layout_list()
+
+    if len(config.layout_macro) == 1:
+        layout_idx = 0
+    else:
+        print('')
+        layout_idx = input('Use layout: ')
+
+    try:
+        config.set_layout_index(layout_idx)
+    except:
+        print('invalid input')
+        sys.exit()
+
+    for fname in files:
+        path = os.path.join(dirc, fname)
+        if not '.h' in path:
+            continue
+        with open(path) as f:
             config.parse_file(f)
 
     if not config.assertion():
@@ -253,6 +319,9 @@ if __name__ == '__main__':
 
     if config_name[-1] != '_':
         config_name = config_name + '_'
+
+    if config.search_layout != 'LAYOUT':
+        config_name = config_name + config.search_layout.lower() + '_'
 
     mode = 'SINGLE'
     if config.is_split:
