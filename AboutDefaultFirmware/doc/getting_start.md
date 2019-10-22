@@ -1,59 +1,98 @@
 # Getting start
+- [Getting start](#getting-start)
+  - [ブートローダ・アプリケーションのアップデート](#ブートローダアプリケーションのアップデート)
+    - [ブートローダの起動](#ブートローダの起動)
+    - [uf2を使ったアップデート](#uf2を使ったアップデート)
+    - [nrfutilを使ったアップデート](#nrfutilを使ったアップデート)
+      - [nrfutilの準備](#nrfutilの準備)
+      - [アップデートの実行](#アップデートの実行)
+  - [config.jsonの書き込み](#configjsonの書き込み)
+  - [keymap.jsonの設定](#keymapjsonの設定)
+  - [tapping_term.jsonの設定](#tapping_termjsonの設定)
+  - [config.jsonの設定 (一般ユーザ向け)](#configjsonの設定-一般ユーザ向け)
+    - [開発者向け情報](#開発者向け情報)
+  - [設定ファイルのアップデート](#設定ファイルのアップデート)
+  - [設定ファイルの削除](#設定ファイルの削除)
 
-BLE Micro Proはブートローダとアプリケーションファームウェアがセットになって動作します。  
-アップデートする場合ブートローダとアプリケーションのメジャーバージョン・マイナバージョンを一致させるようにしてください。バージョン番号の表記は下記のとおりです。
-```
-  version number: <major>.<minor>.<revision>
-```
+## ブートローダ・アプリケーションのアップデート
+BLE Micro Proはブートローダとアプリケーションファームウェアがセットになって動作します
 
-[ブートローダ](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/releases)と[コンパイル済みアプリケーションファームウェア](https://github.com/sekigon-gonnoc/qmk_firmware/releases)はReleaseページから入手できます。  
-コンパイル済みアプリケーションにはQMKのビルドオプションとしてTAPPING_TERM_PER_KEY, PERMISSIVE_HOLD などが設定してあります。  
-最新版のファームウェアを使いたい場合、自分の好きなオプションを設定したい場合やカスタムキーコードを設定したい場合は[自分でビルドする](build_bmp_qmk_firmware.md)必要があります。  
+- アップデートする場合ブートローダとアプリケーションのメジャーバージョン・マイナバージョンを一致させてください。バージョン番号の表記は下記のとおりです。
+  ```
+    version number: <major>.<minor>.<revision>
+  ```
+
+- アップデートはブートローダ -> アプリケーションの順に行ってください。
+
+- [ブートローダ](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/releases)と[コンパイル済みアプリケーション](https://github.com/sekigon-gonnoc/qmk_firmware/releases)はReleaseページから入手できます。  
+  - コンパイル済みアプリケーションにはQMKのビルドオプションとしてTAPPING_TERM_PER_KEY, PERMISSIVE_HOLD などが設定してあります。  
+  - 最新版のファームウェアを使いたい場合、自分の好きなオプションを設定したい場合やカスタムキーコードを設定したい場合は[自分でビルドする](build_bmp_qmk_firmware.md)必要があります。  
  
-## uf2を使ったアップデート (対応ブートローダのみ)
-- キーボードのリセットボタンを押しながらUSB接続、または[CLI](cli.md)からdfuコマンドを送信するとブートローダが起動します。  
-- BLE Micro Proがマスストレージデバイスとして認識され、中に`INFO_UF2.TXT`があることを確認してください。  
-- アップデートしたいuf2ファイルをコピーするとアップデートが始まります。アップデート中はケーブルを外さないでください。
-- アップデート完了後、自動的に再起動します。`VERSION.TXT`などを確認してアップデートが完了していることを確認してください。
+### ブートローダの起動
+- キーボードのリセットボタンを押しながらUSB接続するとブートローダが起動します
 
-## nrfutilを使ったアップデート
-### nrfutilの準備
-事前に[nrfutil](https://github.com/NordicSemiconductor/pc-nrfutil)を用意してください。
+- 既にキーボードとして動作する場合には[CLI](cli.md)からdfuコマンドを送信することでも起動できます  
+
+- v0.2以降のブートローダとそれ以前ではアップデート方法が異なります。バージョンに応じた手順でファームウェアとブートローダをアップデートしてください
+  - [マスストレージデバイスとして認識される場合](uf2を使ったアップデート)
+  - [マスストレージデバイスとして認識されないが、シリアルポートとしては認識される場合](nrfutilを使ったアップデート)
+    - どのポートがBLE Micro Proかわからない場合は、起動前後のシリアルポート一覧を比較してください
+
+### uf2を使ったアップデート
+- BLE Micro Proがマスストレージデバイスとして認識され、中に`INFO_UF2.TXT`があることを確認してください。このファイルがない場合、ブートローダの起動に失敗しているので再起動してください。
+- アップデートしたいuf2ファイルをコピーするとアップデートが始まります。アップデート中はケーブルを外さないでください
+- アップデートが完了すると自動でアンマウントされます
+- ブートローダをアップデートした場合、手動で再起動(USBケーブルを抜き差し)してください。`INFO_UF2.TXT`を開いてアップデート完了を確認してください
+- アプリケーションのアップデートの場合は、自動的に再起動します。`VERSION.TXT`を開いてアップデート完了を確認してください
+
+### nrfutilを使ったアップデート
+#### nrfutilの準備
+書き込みソフトである[nrfutil](https://github.com/NordicSemiconductor/pc-nrfutil)を用意します。
 
 - Windowsの場合  
     nrfutil.exeを[ダウンロード](https://github.com/NordicSemiconductor/pc-nrfutil/releases)してください
 
 - Linux, Macの場合  
-    pip2でnrfutilをインストールしてください
+    pipでnrfutilをインストールしてください。以前はpython2.x向けでしたが現在はpython3系で動作するようです。
     ```
-      pip2 install --user nrfutil
+      pip install --user nrfutil
     ```
 
-### アップデート方法
+#### アップデートの実行
 - キーボードのリセットボタンを押しながらUSB接続、またはターミナルソフトからdfuコマンドを送信してから以下を実行します。パッケージ名、ポート名は状況に応じて書き換えてください  
     ```
    nrfutil dfu usb-serial -pkg <パッケージ名>.zip -p <ポート名>
     ```
  
-## 設定ファイルの書き込み
- - BLE Micro Pro をPC等にUSBで接続するとマスストレージデバイスとして認識されます  
-   アプリケーションが起動している場合は`KEYMAP.JSN`や`CONFIG.JSN`といったファイルが確認できます。
- - 使いたいキーボードのconfig.jsonとkeymap.jsonをコピーしてから電源を再投入してください。
- - keymap.json, tapping_term.jsonは即時反映されるので再起動は必要ありません。
+## config.jsonの書き込み
+ - BLE Micro ProをPC等にUSBで接続するとマスストレージデバイスとして認識されます  
+   アプリケーションが起動している場合は`KEYMAP.JSN`や`CONFIG.JSN`といったファイルが確認できます
 
-### keymap.jsonの設定
+ - 使いたいキーボードのconfig.jsonをコピーしてください。[keyboards](../keyboards)フォルダに使いたいキーボードがない場合は[スクリプトを使ってQMKから生成](define_new_keyboard.h)できます
+
+ - コピー完了後、BLE Micro Proを再起動してください
+
+## keymap.jsonの設定
  - [QMK Configurator](https://config.qmk.fm)で生成したkeymap.jsonをそのまま読み込むことができます。
+
+ - keymap.json, tapping_term.jsonは即時反映されるので再起動は必要ありません
+
  - 認識できる KC_XX はQMK Configurator準拠です  
     `"KC_EXLM", "KC_AT", "KC_HASH"`
+
  - 書き込み時にはKC_を付けなくても認識されます。読み出し時には自動でKC_が付きます  
     `"KC_A", "A", "a"` 
+
  - !, @, # などの記号をそのまま書き込むこともできます。`\`, `"` を設定するときはエスケープしてください。  
     `"!", "@", "#", "\\", "\""`
- - USキーボードとJPキーボードでキーコードが違う記号を書き込んだ場合にどちらで解釈されるかはconfig.jsonの設定によります。（例: ：JPのとき "@" -> JP_A) 
+
+ - USキーボードとJPキーボードでキーコードが違う記号を書き込んだ場合にどちらで解釈されるかはconfig.jsonの設定によります。（例: "@"： USのとき-> KC_AT, JPのとき -> JP_AT) 
+
  - カスタムキーコードとして[BLE Micro Pro固有のキーコード](bmp_custom_keycode.md)にも対応しています 
+
  - 自分でファームウェアをビルドしてカスタムキーコードを設定した場合でも辞書を定義しておけば認識できます。ANY(1255)などして数値で直接指定する方法もあります。
  
-### tapping_term.jsonの設定
+## tapping_term.jsonの設定
  - get_tapping_term()で返すキーコードとタッピングタームのペアを設定します
  - デフォルトのタッピングタームはKC_NOに設定します
   ```
@@ -63,7 +102,7 @@ BLE Micro Proはブートローダとアプリケーションファームウェ�
         }}
   ```
 
-### config.jsonの設定 (一般ユーザ向け)
+## config.jsonの設定 (一般ユーザ向け)
 |キー|値|内容|
 |---|---|---|
 |debounce|1 ~|debounceの設定。1増やすと17ms伸びる|
