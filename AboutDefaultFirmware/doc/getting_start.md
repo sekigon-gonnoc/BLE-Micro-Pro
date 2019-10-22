@@ -53,6 +53,8 @@ BLE Micro Proはブートローダとアプリケーションファームウェ�
 
 - アプリケーションのアップデートの場合は、自動的に再起動します。`VERSION.TXT`を開いてアップデート完了を確認してください
 
+ブートローダ、アプリケーションのアップデートが完了したら次の手順は[config.jsonの書き込み](#config.jsonの書き込み)です
+
 ### nrfutilを使ったアップデート
 拡張子が`.zip`のファイルを使って書き込みます
 
@@ -78,7 +80,7 @@ BLE Micro Proはブートローダとアプリケーションファームウェ�
  - BLE Micro ProをPC等にUSBで接続するとマスストレージデバイスとして認識されます  
    アプリケーションが起動している場合は`KEYMAP.JSN`や`CONFIG.JSN`といったファイルが確認できます
 
- - 使いたいキーボードのconfig.jsonをコピーしてください。[keyboards](../keyboards)フォルダに使いたいキーボードがない場合は[スクリプトを使ってQMKから生成](define_new_keyboard.h)できます
+ - 使いたいキーボードのconfig.jsonをコピーしてください。[keyboards](../keyboards)フォルダに使いたいキーボードがない場合は[スクリプトを使ってQMKから生成](define_new_keyboard.md)できます
 
  - コピー完了後、BLE Micro Proを再起動してください
 
