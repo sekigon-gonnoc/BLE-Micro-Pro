@@ -46,7 +46,7 @@ class ConfigConverter:
         lines = f.readlines()
         layout_detect = False
         layout_str = ''
-        line = 0
+        line = 1
         for string in lines:
             string = self.remove_comment(string)
             layout_name = re.match(r'^\s*#define\s+LAYOUT\S*\s*', string)
