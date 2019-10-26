@@ -22,7 +22,7 @@ BLE Micro Proはブートローダとアプリケーションファームウェ�
     version number: <major>.<minor>.<revision>
   ```
 
-- アップデートはブートローダ -> アプリケーションの順に行ってください。
+- アップデートはブートローダ -> アプリケーションの順に行ってください。また、アプリケーションをアップデートする前にKEYMAP.JSNなどの設定ファイルのバックアップを取ってください
 
 - [ブートローダ](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/releases)と[コンパイル済みアプリケーション](https://github.com/sekigon-gonnoc/qmk_firmware/releases)はReleaseページから入手できます。  
   - コンパイル済みアプリケーションにはQMKのビルドオプションとしてTAPPING_TERM_PER_KEY, PERMISSIVE_HOLD などが設定してあります。  
