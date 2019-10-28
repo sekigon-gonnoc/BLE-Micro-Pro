@@ -362,3 +362,26 @@ if __name__ == '__main__':
         )
 
     print(f' ** Output to {config_name} ** \n')
+
+    config_name = config_name.replace('slave_right_', 'lpme_left_')
+    lpme_row = ([int(r) for r in config.row_pins.strip('[]').split(',')])
+    lpme_row.extend([int(r) for r in config.row_pins_right.strip('[]').split(',')])
+    lpme_col = ([int(r) for r in config.col_pins.strip('[]').split(',')])
+    lpme_col.extend([int(r) for r in config.col_pins_right.strip('[]').split(',')])
+    mode = 'SINGLE'
+    with open(config_name, 'w') as f:
+    f.write(
+            config_file_format.format(
+                config.vid, config.pid, config.name, config.manufacture,
+                config.description, config.row_num, config.col_num,
+                len(config.row_pins.split(',')), len(config.col_pins.split(',')),
+                str(int(config.diode_direction) + 2),
+                str(lpme_row),
+                str(lpme_col),
+                config.layout.replace('\n', '\n\t\t\t'),
+                mode,
+                config.led_pin, config.led_num
+                )
+           )
+
+    print(f' ** Output to {config_name} ** \n')
