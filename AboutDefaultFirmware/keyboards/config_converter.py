@@ -370,7 +370,7 @@ if __name__ == '__main__':
     lpme_col.extend([int(r) for r in config.col_pins_right.strip('[]').split(',')])
     mode = 'SINGLE'
     with open(config_name, 'w') as f:
-    f.write(
+        f.write(
             config_file_format.format(
                 config.vid, config.pid, config.name, config.manufacture,
                 config.description, config.row_num, config.col_num,
