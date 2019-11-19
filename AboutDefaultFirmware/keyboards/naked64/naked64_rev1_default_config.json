@@ -1,0 +1,20 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0xFEED","pid":"0x3060",
+			"name":"naked64","manufacture":"Salicylic_Acid","description":"A custom keyboard"},
+		"matrix":{"rows":8,"cols":8,"device_rows":8, "device_cols":8,
+			"debounce":1,"is_left_hand":1,"diode_direction":0,
+			"row_pins":[5, 6, 7, 8, 9, 10, 11, 12],
+			"col_pins":[20, 19, 18, 17, 16, 15, 14, 1],
+		"layout":[1, 17, 57, 26, 3, 43, 12, 52, 29, 6, 38, 15, 55, 32, 0,
+			 9, 25, 2, 34, 11, 51, 20, 60, 37, 14, 46, 23, 63, 40, 0,
+			 33, 10, 42, 19, 59, 28, 5, 45, 22, 54, 31, 8, 48, 0,
+			 41, 18, 50, 27, 4, 36, 13, 53, 30, 62, 39, 16, 56, 0,
+			 49, 58, 35, 44, 21, 61, 7, 47, 24, 64]},
+		"mode":"SINGLE","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":13, "num":12},
+		"keymap":{"locale":"US","use_ascii":0}
+}}
