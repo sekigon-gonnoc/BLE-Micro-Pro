@@ -1,0 +1,19 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0xC0C0","pid":"0x4000",
+			"name":"cocoa40","manufacture":"recompile keys","description":"A 40% keyboard for programmers."},
+		"matrix":{"rows":8,"cols":8,"device_rows":4, "device_cols":8,
+			"debounce":1,"is_left_hand":1,"diode_direction":2,
+			"row_pins":[20, 19, 18, 17, 20, 19, 18, 17],
+			"col_pins":[12, 11, 10, 9, 8, 7, 6, 5, 12, 11, 10, 9, 8, 7, 6, 5],
+		"layout":[1, 2, 3, 4, 5, 6, 33, 34, 35, 36, 37, 38, 39, 40, 0,
+			 9, 10, 11, 12, 13, 14, 41, 42, 43, 44, 45, 46, 47, 0,
+			 17, 18, 19, 20, 21, 22, 49, 50, 51, 52, 53, 54, 55, 0,
+			 26, 27, 28, 57, 59, 60]},
+		"mode":"SINGLE","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":255, "num":0},
+		"keymap":{"locale":"US","use_ascii":0}
+}}
