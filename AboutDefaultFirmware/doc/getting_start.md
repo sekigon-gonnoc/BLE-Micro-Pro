@@ -132,7 +132,7 @@ nrfutilを使う場合は経由せずに直接アップデートできます
 |peripheral||マスター、一体型の場合: PC等との接続に使われる設定<br>スレーブの場合: マスターとの接続に使われる設定|
 |cetral||マスターの場合のみ: スレーブとの接続に使われる設定|
 
-無線接続時に遅延を感じる場合は peripheral, central の max_interval, min_interval を小さくしてください  
+無線接続時に遅延を感じる場合は peripheral, central の max_interval, min_interval を小さくしてください。最小値は10msで、5ms刻みで変更できます  
 また、OSのBLEに関する省電力設定も確認してみてください
 
 ### [開発者向け情報](define_new_keyboard.md)
