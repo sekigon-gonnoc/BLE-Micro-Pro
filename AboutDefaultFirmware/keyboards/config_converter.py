@@ -50,7 +50,7 @@ class ConfigConverter:
         for string in lines:
             string = self.remove_comment(string)
             layout_name = re.match(r'^\s*#define\s+LAYOUT\S*\s*', string)
-            if not layout_name is None:
+            if layout_name is not None:
                 layout_name = layout_name.group().split("#define")[1]
                 layout_name = layout_name.replace('(', '')
                 layout_name = layout_name.strip()
@@ -93,12 +93,18 @@ class ConfigConverter:
         return pin_str
 
     def convert_layout(self, arg):
+        # remove "#define LAYOUTxxx(" from arg 
         str2 = re.sub(r'(\(|{|})', '', arg)
         str2 = str2.replace('#define', '')
         str2 = str2.replace(self.search_layout, '')
         str2 = str2.replace(' ', '')
 
+        # split layout macro to "LAYOUT macro" arguments and array definition
+        # place = "R00, R01\nL01, L00"
+        # array = "R00, R01, L00, L01"
         [place, array] = str2.split(')')
+
+        # remove spaces
         array = array.replace('\n', '')
         array = array.replace('\r', '')
         array = array.replace('\t', '')
@@ -109,6 +115,7 @@ class ConfigConverter:
 
         array = array.split(',')
 
+        # pick up a element from LAYOUT macro arguments and find it from array 
         layout = []
         for row in place.split('\n'):
             if row == '':
@@ -185,7 +192,7 @@ class ConfigConverter:
                     self.waring_multiple_definition('DIODE_DIRECTION', f, line)
                 else:
                     direction = string.split('DIODE_DIRECTION')[1].replace('\n', '').strip()
-                    if direction is 'ROW2COL':
+                    if direction == 'ROW2COL':
                         self.diode_direction = 1
                     else:
                         self.diode_direction = 0
@@ -247,15 +254,15 @@ class ConfigConverter:
         return res
 
     def apply_default(self):
-        if self.diode_direction is '':
+        if self.diode_direction == '':
             print('DIODE_DIRECTION is not found. Apply ROW2COL.')
             self.diode_direction = '0'
 
-        if self.led_pin is '':
+        if self.led_pin == '':
             print('RGB_DI_PIN is not found. Apply 255(not used)')
             self.led_pin = '255'
 
-        if self.led_num is '':
+        if self.led_num == '':
             print('RGBLED_NUM is not found. Apply 0(not used)')
             self.led_num = '0'
 
