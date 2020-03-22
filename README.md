@@ -3,6 +3,8 @@ Pro Microとの互換性を意識したBL654(nrf52840モジュール)のブレ�
 
 [標準ファームウェア(beta版)](AboutDefaultFirmware)をリリースしました
 
+**質問等は [Self Made Keyboard in Japan の Discord](https://discordapp.com/invite/zXCss8T) #ble-micro-proチャンネルまで。質問の前に過去ログを参照してください**
+
 ## 販売リンク
 [BOOTH](https://nogikes.booth.pm/items/1177319)  
 [遊舎工房](https://yushakobo.jp/shop/ble-micro-pro/)

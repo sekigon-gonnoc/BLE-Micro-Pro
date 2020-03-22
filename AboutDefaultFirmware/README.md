@@ -15,7 +15,7 @@
  その場合でもビルド環境の用意は以前より簡単になっています
 
 ## 使い方 
-- [Getting start](doc/getting_start.md)
+- [Getting started](doc/getting_started.md)
 - [ビルド方法](doc/build_bmp_qmk_firmware.md)
 - [Command Line Interface](doc/cli.md)
 - [キーボード開発者向け情報](doc/define_new_keyboard.md)
