@@ -13,7 +13,7 @@
             19]},
   "mode":"SINGLE", "startup":1,
   "peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
-  "central":{"max_interval":0,"min_interval":0,"slave_latency":0}
-  "led":{"pin":255, "num":0}
+  "central":{"max_interval":0,"min_interval":0,"slave_latency":0},
+  "led":{"pin":255, "num":0},
   "keymap":{"locale":"US","use_ascii":0}
 }}

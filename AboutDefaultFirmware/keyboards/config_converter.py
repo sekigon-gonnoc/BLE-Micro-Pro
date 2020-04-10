@@ -49,7 +49,7 @@ class ConfigConverter:
         line = 1
         for string in lines:
             string = self.remove_comment(string)
-            layout_name = re.match(r'^\s*#define\s+LAYOUT\S*\s*', string)
+            layout_name = re.match(r'^\s*#\s*define\s+LAYOUT[^\r\n\t\f\v \\]*\s*', string)
             if layout_name is not None:
                 layout_name = layout_name.group().split("#define")[1]
                 layout_name = layout_name.replace('(', '')
