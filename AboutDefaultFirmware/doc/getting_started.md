@@ -23,6 +23,8 @@ BLE Micro Proはブートローダとアプリケーションファームウェ�
 
 - アップデートはブートローダ -> アプリケーションの順に行ってください。また、アプリケーションをアップデートする前にKEYMAP.JSNなどの設定ファイルのバックアップを取ってください
 
+- Google chromeを使ってアップデートできるようになりました: [BLE Micro Pro WebConfigurator](https://sekigon-gonnoc.github.io/BLE-Micro-Pro-WebConfigurator/)
+
 - [ブートローダ](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/releases)と[コンパイル済みアプリケーション](https://github.com/sekigon-gonnoc/qmk_firmware/releases)はReleaseページから入手できます。  
   - コンパイル済みアプリケーションにはQMKのビルドオプションとしてTAPPING_TERM_PER_KEY, PERMISSIVE_HOLD などが設定してあります。  
   - 最新版のファームウェアを使いたい場合、自分の好きなオプションを設定したい場合やカスタムキーコードを設定したい場合は[自分でビルドする](build_bmp_qmk_firmware.md)必要があります。  
