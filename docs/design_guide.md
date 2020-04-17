@@ -78,4 +78,4 @@ Windows10, Android5.0.2, Raspbianとの接続を確認しています。ただ�
 
   - ペアリング完了：長めに1回点滅します。
 
-- LEDと抵抗または定電流ダイオードを直列にBLE Micro Proのピンに接続し、インジケータLEDを接続したピンの番号をCONFIG.JSNのreserved[1]に指定してください。
+- LEDと抵抗または定電流ダイオードを直列にBLE Micro Proのピンに接続し、そのピン番号をCONFIG.JSNのreserved[1]に指定してください。
