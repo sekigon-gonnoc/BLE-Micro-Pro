@@ -14,7 +14,7 @@ BLE Micro ProはPro Microとの互換性を意識したBL654(nrf52840モジュ�
   - Helix, Ergo42, Corne, Lily58, ErgoDash, 7skb など多くのキットで無線化の実績があります
 
 - [BLE Micro Proに対応したキーボードを設計したい](design_guide.md)
-  - 自分でキーボードを設計するときに無線化を想定した注意点などをまとめています
+  - 自分でキーボードを設計するときの注意点などをまとめています
 
 ## 困ったときは
 
