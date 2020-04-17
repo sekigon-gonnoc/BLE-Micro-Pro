@@ -7,7 +7,7 @@ BLE Micro ProはPro Microとの互換性を意識したBL654(nrf52840モジュ�
 [BOOTH](https://nogikes.booth.pm/items/1177319)  
 [遊舎工房](https://yushakobo.jp/shop/ble-micro-pro/)
 
-## 始めよう
+## スタートガイド
 
 - [買ってきた自作キーボードキットを無線化したい](getting_started.md)
   - 遊舎工房やBOOTHで購入したキットを無線化する場合はこちら
