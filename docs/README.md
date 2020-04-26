@@ -18,5 +18,7 @@ BLE Micro ProはPro Microとの互換性を意識したBL654(nrf52840モジュ�
 
 ## 困ったときは
 
-質問等は [Self Made Keyboard in Japan の Discord](https://discordapp.com/invite/zXCss8T) #ble-micro-proチャンネルまで。過去ログを検索すると役立つ情報があるかもしれません。
+- [よくある質問](FAQ.md)
+
+- そのほかの質問等は [Self Made Keyboard in Japan の Discord](https://discordapp.com/invite/zXCss8T) #ble-micro-proチャンネルまで。過去ログを検索すると役立つ情報があるかもしれません。
 
