@@ -30,7 +30,8 @@ LAYOUTマクロなどが複数定義されている場合は検出されたレ�
 |mode|SPLIT_MASTER, SPLIT_SLAVE, SINGLE|分割マスター、分割スレーブ、一体型|
 |led->pin|int array|LED(ws2812系)のピン。番号はPINxxに対応|
 |led->num|int|LEDの数|
-|reserved|uint8_t[8]|予約領域。現時点では[0]はKugel用の設定、[1]はインジケータLEDのピン設定に使われています|
+|keymap->locale|"US" or "JP"|USキーボードとして接続するか、JPキーボードとして接続するかの設定。keymap.jsonの変換・表示の挙動に影響|
+|reserved|uint8_t[8]|予約領域。現時点では[0]はKugel用の設定、[1]はインジケータLEDのピン設定に使用|
 
 ### 通信間隔の設定
 

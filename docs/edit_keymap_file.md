@@ -15,7 +15,7 @@
 - !, @, # などの記号をそのまま書き込むこともできます。`\`, `"` を設定するときはエスケープしてください。  
     `"!", "@", "#", "\\", "\""`
 
-- USキーボードとJPキーボードでキーコードが違う記号を書き込んだ場合にどちらで解釈されるかはconfig.jsonの設定によります。（例: "@"： USのとき-> KC_AT, JPのとき -> JP_AT) 
+- JPキーボードとして使いたい場合は、config.jsonのlocaleをJPに設定した上で、[QMK Configurator](https://sekigon-gonnoc.github.io/qmk_configurator/)のJPタブからキーコードを選択してください
 
 - カスタムキーコードとして[BLE Micro Pro固有のキーコード](#ble-micro-pro固有のキーコード)にも対応しています。
 
