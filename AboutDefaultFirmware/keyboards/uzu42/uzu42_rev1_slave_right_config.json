@@ -1,0 +1,19 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0xFEED","pid":"0x3060",
+			"name":"uzu42","manufacture":"nrtkbb","description":"A split keyboard with 4x5 vertically staggered keys and 1 thumb keys"},
+		"matrix":{"rows":8,"cols":6,"device_rows":4, "device_cols":6,
+			"debounce":1,"is_left_hand":0,"diode_direction":0,
+			"row_pins":[7, 8, 9, 10],
+			"col_pins":[20, 19, 18, 17, 16, 15],
+		"layout":[1, 2, 3, 4, 5, 26, 25, 24, 23, 22, 0,
+			 6, 7, 8, 9, 10, 31, 30, 29, 28, 27, 0,
+			 11, 12, 13, 14, 15, 36, 35, 34, 33, 32, 0,
+			 16, 17, 18, 19, 20, 21, 42, 41, 40, 39, 38, 37]},
+		"mode":"SPLIT_SLAVE","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":1, "num":54},
+		"keymap":{"locale":"US","use_ascii":0}
+}}
