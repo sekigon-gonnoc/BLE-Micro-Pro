@@ -31,7 +31,7 @@ LAYOUTマクロなどが複数定義されている場合は検出されたレ�
 |led->pin|int array|LED(ws2812系)のピン。番号はPINxxに対応|
 |led->num|int|LEDの数|
 |keymap->locale|"US" or "JP"|USキーボードとして接続するか、JPキーボードとして接続するかの設定。keymap.jsonの変換・表示の挙動に影響|
-|reserved|uint8_t[8]|予約領域。現時点では[0]はKugel用の設定、[1]はインジケータLEDのピン設定に使用|
+|reserved|uint8_t[8]|予約領域。現時点では[0]はKugel用の設定、[1]はインジケータLEDのピン設定、[2]はオートスリープの時間設定に使用|
 
 ### 通信間隔の設定
 
@@ -75,3 +75,12 @@ layout配列の数値はキーマトリクスの行->列の順に1から降っ�
 ```
 
 <img src="https://raw.githubusercontent.com/sekigon-gonnoc/BLE-Micro-Pro/master/pin%20assign.jpg" width=300px/>
+
+
+### オートスリープ
+
+電池駆動時に一定時間無入力の状態が続くと自動的にスリープします。
+
+スリープまでの時間は`config.reserve[2]*10min`です。
+
+オートスリープを無効にするには`reserve[2]`に0を指定してください。

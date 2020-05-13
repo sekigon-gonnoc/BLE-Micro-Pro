@@ -9,6 +9,9 @@ BLE Micro Proを導入する手順はいくつかありますが、初めての�
   - [ファームウェアのアップデート](#ファームウェアのアップデート)
   - [設定ファイルの書き込み](#設定ファイルの書き込み)
   - [キーマップの書き込み](#キーマップの書き込み)
+    - [QMK Configuratorを使う場合(USB接続)](#qmk-configuratorを使う場合usb接続)
+    - [QMK Configuratorを使う場合(BLE接続)](#qmk-configuratorを使う場合ble接続)
+    - [VIA Configuratorを使う場合(非推奨)](#via-configuratorを使う場合非推奨)
 - [BLE Micro Pro上のファイルを直接操作する](#ble-micro-pro上のファイルを直接操作する)
   - [UF2ファイルでファームウェアをアップデートする](#uf2ファイルでファームウェアをアップデートする)
     - [ブートローダの起動](#ブートローダの起動)
@@ -123,7 +126,11 @@ BLE Micro ProのCOMポートを選択したら`接続`ボタンを押してく�
 
 ### キーマップの書き込み
 
-キーマップの書き換えにはBLE Micro Pro用の変更を加えたQMK Configuratorを使います。
+QMK ConfiguratorまたはVIA Configurator(非推奨)からキーマップを変更します。
+
+#### QMK Configuratorを使う場合(USB接続)
+
+キーマップの書き換えにはBLE Micro Pro用の変更を加えた[QMK Configurator](https://sekigon-gonnoc.github.io/qmk_configurator/)を使います。
 
 - `CONNECT BY SERIAL`ボタンを押してシリアルポートを開く。
   - 一度キーマップを設定済みのBLE Micro Proに接続した場合、自動的にBLE Micro Proから現在のキーマップがロードされます。
@@ -132,7 +139,26 @@ BLE Micro ProのCOMポートを選択したら`接続`ボタンを押してく�
 - `CONNECT BY SERIAL`の左側のボタンを押して設定したキーマップをキーボードに反映する。
 - 試しに入力してみて問題なければ`SAVE KEYMAP`ボタンを押してキーボードに保存する。
 
-以上で設定は完了です。QMKの設定を変えたり、カスタムキーコードを追加したりしたい場合は[ファームウェアをビルドする](build_firmware.md)に進んでください。
+以上でBLE Micro Proの設定は完了です。QMKの設定を変えたり、カスタムキーコードを追加したりしたい場合は[ファームウェアをビルドする](build_firmware.md)に進んでください。
+
+#### QMK Configuratorを使う場合(BLE接続)
+
+この方法は一度USB接続でキーマップを書き込んでから使えるようになります。
+
+- [CLI](cli.md)から`web`コマンドを実行する、またはENT_WEBキーを押してConfiguratorモードを起動する。
+  - ConfiguratorモードではBLE経由でのキー入力はできません
+- `CONNECT BY BT`ボタンを押してシリアルポートを開く。
+- `CONNECT BY BT`の右側のボタンを押してキーボードからキーマップをロードする。
+- `CONNECT BY BT`の左側のボタンを押して設定したキーマップをキーボードに反映する。
+  - BLE経由の場合は反映した時点で永続化されます
+
+#### VIA Configuratorを使う場合(非推奨)
+
+- VIA Configuratorからキーマップを変更できます。ただし、LEDとマクロの設定はできません。
+
+- BLE Micro Pro用QMK Configuratorと違い、BLE Micro Pro用のキーコードが設定できず、また、レイヤを追加することもできません。
+
+- 書き換えの方法はVIA Configuratorのマニュアルを参照してください。書き換えられたキーマップは一時的なものなので、永続化するにはInsertキーを5秒以上押してから話してください。
 
 ## BLE Micro Pro上のファイルを直接操作する
 

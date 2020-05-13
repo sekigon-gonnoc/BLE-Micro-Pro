@@ -7,11 +7,20 @@ BLE Micro ProはPro Microとの互換性を意識したBL654(nrf52840モジュ�
 [BOOTH](https://nogikes.booth.pm/items/1177319)  
 [遊舎工房](https://yushakobo.jp/shop/ble-micro-pro/)
 
+## 特徴
+
+[機能一覧](features.md)
+- BLEでの無線接続
+  - BLE Micro Proを2台使用した分割キーボードの完全無線化
+  - BLE Micro ProとLPME-IOを使用した部分無線化
+- USBでの有線接続
+- プログラミングレスでのファームウェア更新・設定変更・キーマップ書き換え
+
 ## スタートガイド
 
 - [買ってきた自作キーボードキットを無線化したい](getting_started.md)
   - 遊舎工房やBOOTHで購入したキットを無線化する場合はこちら
-  - Helix, Ergo42, Corne, Lily58, ErgoDash, 7skb など多くのキットで無線化の実績があります
+  - Helix, Ergo42, Corne, Lily58, ErgoDash, 7skb など多くのキットで[無線化の実績](keyboard_list.md)があります
 
 - [BLE Micro Proに対応したキーボードを設計したい](design_guide.md)
   - 自分でキーボードを設計するときの注意点などをまとめています
