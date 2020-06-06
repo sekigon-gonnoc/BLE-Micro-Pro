@@ -24,7 +24,7 @@ BLE Micro ProのCLIを開くには、[QMK Configurator](https://sekigon-gonnoc.g
 | web     | Start web config mode                       |
 | i2c     | Test i2c                                    |
 
-## adv <id>
+## adv `<id>`
 
  id番目のペアリング済みデバイスに向けてアドバタイズを開始します。分割マスター設定の場合、スレーブデバイスのスキャンも開始します。idを指定しない場合はペアリングしていないデバイスも含めすべてのデバイスに向けてアドバタイズを開始します。  
  ペアリング済みデバイス一覧はshowコマンドで確認できます
@@ -33,21 +33,21 @@ BLE Micro ProのCLIを開くには、[QMK Configurator](https://sekigon-gonnoc.g
 
 BLEのペアリング状況(ID, role, MAC)を表示します。
 
-## del <id>
+## del `<id>`
 
 id番のデバイスとのペアリングを削除します。別途相手デバイス側に残っているペアリング情報も削除してください  
 idを指定しない場合すべてのペアリング情報を削除します
 
-## conv <string>
+## conv `<string>`
 
-<string>をキーコードに変換します。keymap.jsonに使える文字列かどうか確認できます。
+`<string>`をキーコードに変換します。keymap.jsonに使える文字列かどうか確認できます。
 
-## remove <id>
+## remove `<id>`
 
 マスストレージ上のファイルを削除しデフォルトのファイルを復元します。  
 0: config.json, 1: keymap.json, 2:tapping_term.json
 
-## led <pattern>
+## led `<pattern>`
 
 LEDを点灯します
 
