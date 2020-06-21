@@ -1,0 +1,21 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0xFEED","pid":"0x3060",
+			"name":"jisplit89","manufacture":"Salicylic_Acid","description":"A custom keyboard"},
+		"matrix":{"rows":14,"cols":8,"device_rows":7, "device_cols":8,
+			"debounce":1,"is_left_hand":0,"diode_direction":0,
+			"row_pins":[5, 6, 7, 8, 9, 10, 11],
+			"col_pins":[20, 19, 18, 17, 16, 15, 14, 12],
+		"layout":[1, 2, 3, 4, 5, 6, 57, 58, 59, 60, 61, 62, 63, 64, 105, 0,
+			 9, 10, 11, 12, 13, 14, 65, 66, 67, 68, 69, 70, 71, 72, 106, 107, 0,
+			 17, 18, 19, 20, 21, 22, 73, 74, 75, 76, 77, 78, 79, 80, 108, 0,
+			 25, 26, 27, 28, 29, 30, 81, 82, 83, 84, 85, 86, 87, 88, 0,
+			 33, 34, 35, 36, 37, 38, 89, 90, 91, 92, 93, 94, 95, 96, 104, 0,
+			 41, 42, 43, 44, 45, 46, 97, 98, 99, 100, 101, 102, 103, 109]},
+		"mode":"SPLIT_SLAVE","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":1, "num":31},
+		"keymap":{"locale":"US","use_ascii":0}
+}}
