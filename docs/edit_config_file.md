@@ -2,7 +2,7 @@
 
 ## QMK用の設定から変換する
 
-Pro Micro用のQMKがすでにある場合、[変換スクリプト](../keyboards/config_converter.py)を用いて`config.json`を生成できます。
+Pro Micro用のQMKがすでにある場合、[変換スクリプト](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/blob/master/AboutDefaultFirmware/keyboards/config_converter.py)を用いて`config.json`を生成できます。
 
 ```
 ./keyboards/config_converter.py ~/qmk_firmware/helix/rev2
