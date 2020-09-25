@@ -1,0 +1,6 @@
+{
+    "tapping_term": {
+        "LT(2,KC_SPC)": 150,
+        "KC_NO": 200
+    }
+}
