@@ -43,7 +43,8 @@ BLE Micro Proを導入する手順はいくつかありますが、初めての�
 
 ## BLE Micro Pro Web Configuratorを使う
 
-Google ChromeからBLE Micro Pro Web Configuratorにアクセスするとブラウザからファームウェアのアップデートや各種設定ができます。
+Google ChromeからBLE Micro Pro Web Configuratorにアクセスするとブラウザからファームウェアのアップデートや各種設定ができます。  
+* ブラウザに依存するトラブルを避けるためその他のChromium系ブラウザではなくChromeを使ってください
 
 ### 事前準備
 
