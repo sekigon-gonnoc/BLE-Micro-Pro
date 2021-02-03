@@ -169,7 +169,7 @@ QMK ConfiguratorまたはVIA Configurator(非推奨)からキーマップを変�
 
 - BLE Micro Pro用QMK Configuratorと違い、BLE Micro Pro用のキーコードが設定できず、また、レイヤを追加することもできません。
 
-- 書き換えの方法はVIA Configuratorのマニュアルを参照してください。書き換えられたキーマップは一時的なものなので、永続化するにはInsertキーを5秒以上押してから話してください。
+- 書き換えの方法はVIA Configuratorのマニュアルを参照してください。書き換えられたキーマップは一時的なものなので、永続化するにはInsertキーを5秒以上押してから離してください。
 
 ## BLE Micro Pro上のファイルを直接操作する
 
