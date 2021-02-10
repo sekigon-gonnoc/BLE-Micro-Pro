@@ -1,0 +1,21 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0x04D8","pid":"0xEA54",
+			"name":"ergoarrows","manufacture":"Salicylic_Acid","description":""},
+		"matrix":{"rows":12,"cols":7,"device_rows":6, "device_cols":7,
+			"debounce":1,"is_left_hand":1,"diode_direction":0,
+			"row_pins":[7, 8, 9, 10, 11, 12],
+			"col_pins":[20, 19, 18, 17, 16, 15, 14],
+		"layout":[1, 2, 3, 4, 5, 6, 7, 49, 48, 47, 46, 45, 44, 43, 0,
+			 8, 9, 10, 11, 12, 13, 14, 56, 55, 54, 53, 52, 51, 50, 0,
+			 15, 16, 17, 18, 19, 20, 21, 63, 62, 61, 60, 59, 58, 57, 0,
+			 22, 23, 24, 25, 26, 27, 28, 70, 69, 68, 67, 66, 65, 64, 0,
+			 29, 30, 31, 32, 33, 34, 35, 77, 76, 75, 74, 73, 72, 71, 0,
+			 37, 38, 39, 81, 80, 79]},
+		"mode":"SPLIT_MASTER","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":1, "num":86},
+		"keymap":{"locale":"US","use_ascii":0}
+}}
