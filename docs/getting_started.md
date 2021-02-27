@@ -35,7 +35,7 @@ BLE Micro Proを導入する手順はいくつかありますが、初めての�
 - 電源の準備
   - 導入の段階ではUSBケーブルで接続をしてUSB端子から電源供給を受けるので必須ではありません。
   - 無線運用するときには電池かそれに相当するものから電源供給する必要があります。
-  - 電池基板([遊舎工房販売ページ](https://yushakobo.jp/shop/ble-micro-pro-battery-board/)、[BOOTH販売ページ](https://nogikes.booth.pm/items/1655285))を使ってください。  
+  - BLE Micro Pro用に設計されたものとしては単4電池基板([BOOTH販売ページ](https://nogikes.booth.pm/items/2710739))またはコイン電池基板([遊舎工房販売ページ](https://yushakobo.jp/shop/ble-micro-pro-battery-board/)、[BOOTH販売ページ](https://nogikes.booth.pm/items/1655285))があります。  
     - 電池基板とBLE Micro Proの接続にはコンスルー、ピンヘッダもしくは銅線を使ってください。
     - キーボードキットによってはキーボード上に電池基板に相当する機能を取り付けられるオプションがあります。そのオプションを使う場合は電池基板は不要です。
   - 電源を自分で作る場合には[デザインガイド](design_guide.md#電源)を参照してください。

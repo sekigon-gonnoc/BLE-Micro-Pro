@@ -12,6 +12,8 @@ LAYOUTマクロなどが複数定義されている場合は検出されたレ�
 
 ## config.jsonの説明
 
+- 設定例についてはリポジトリを参照してください
+
 |キー|値|内容|
 |---|---|---|
 |version|2|config構造体のバージョン。 ブートローダ内の構造体の定義が変わらない限り変えない|
@@ -40,6 +42,8 @@ LAYOUTマクロなどが複数定義されている場合は検出されたレ�
 
 ### マトリクスの構成
 
+- diode_direction
+ 
 数値|構成
 ---|---
 0|COL2ROW
@@ -48,6 +52,11 @@ LAYOUTマクロなどが複数定義されている場合は検出されたレ�
 3|ROW2COL with LPME
 4|COL2ROW2COL
 5|ROW2COL2ROW
+
+- row_pins, col_pins
+  -  COL2ROW, ROW2COLの場合: 通常のマトリクスの設定。device_rows/colsに指定したのと同じ数だけピンを設定する
+  -  with LPMEの場合: LPMEを使ったマトリクスの設定。BLE Micro Proが制御するマトリクスのピン設定に続けて、LPMEが制御するマトリクスのピン設定を書く。合計でrows/colsに設定したのと同じ数だけピンを設定する
+  -  duplex matrixの場合: 通常のマトリクスと同じ設定を書く。
 
 ### layoutの設定
 
