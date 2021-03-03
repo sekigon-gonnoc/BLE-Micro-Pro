@@ -1,4 +1,4 @@
-#BLE-USB HIDブリッジドングル
+# BLE-USB HIDブリッジドングル
 
 (開発中)BLE Micro ProやMDBT50Q-RXを使って、BLEとUSBのHIDをブリッジします。
 ```
