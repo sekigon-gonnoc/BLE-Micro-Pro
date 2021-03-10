@@ -48,9 +48,10 @@ Google ChromeからBLE Micro Pro Web Configuratorにアクセスするとブラ�
 
 ### 事前準備
 
-Google Chromeのアドレスバーに `chrome://flags#enable-experimental-web-platform-features`を入力して、**Experimental Web Platform featuresをEnabled**にします。
+Google Chromeを起動して、 [Web Configurator](https://sekigon-gonnoc.github.io/BLE-Micro-Pro-WebConfigurator/) にアクセスしてください。
 
-[Web Configuraor](https://sekigon-gonnoc.github.io/BLE-Micro-Pro-WebConfigurator/)にアクセスしたとき警告が出なければ設定完了です。
+Chrome 89 Stableから、特にChromeの設定を変更することなく、Web Configuratorを利用することができるようになりました。もし Chrome 89 Stable 以前のバージョンをお使いの際には、Chromeのアドレスバーに `chrome://flags#enable-experimental-web-platform-features`を入力して、**Experimental Web Platform featuresをEnabled**にしてください。
+
 
 ### キーボードを選ぶ
 
