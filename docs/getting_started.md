@@ -9,6 +9,7 @@ BLE Micro Proを導入する手順はいくつかありますが、初めての�
   - [ファームウェアのアップデート](#ファームウェアのアップデート)
   - [設定ファイルの書き込み](#設定ファイルの書き込み)
   - [キーマップの書き込み](#キーマップの書き込み)
+    - [Remapを使う場合(USB接続)](#remapを使う場合usb接続)
     - [QMK Configuratorを使う場合(USB接続)](#qmk-configuratorを使う場合usb接続)
     - [QMK Configuratorを使う場合(BLE接続)](#qmk-configuratorを使う場合ble接続)
     - [VIA Configuratorを使う場合(非推奨)](#via-configuratorを使う場合非推奨)
@@ -138,7 +139,23 @@ BLE Micro ProのCOMポートを選択したら`接続`ボタンを押してく�
 
 ### キーマップの書き込み
 
-QMK ConfiguratorまたはVIA Configurator(非推奨)からキーマップを変更します。
+Remap, QMK Configurator, VIA Configurator(非推奨)のいずれかでキーマップを変更します。
+- Remapは拡張キーコードの設定に対応していません。
+- キーボードの定義がRemapまたはQMK Configuratorのどちらかにしかない場合がありあます。一方に接続してうまく行かないときはもう一方も試してください。
+  - またはRemapに設定用のjsonファイルをアップロードしてください。
+- BLE Micro Pro用に無線接続関連など[いくつかのカスタムキーコード](edit_keymap_file.md#カスタムキーコード)が組み込まれています。最低限、以下のキーコードをキーマップに設定することをおすすめします
+
+  |キーコード|機能|
+  |-|-|
+  |AD_WO_L|ホストの接続、スレーブの探索を開始する。新しいデバイスとペアリングできる|
+  |ADV_IDn|n番目にペアリングしたデバイスと接続しようとする|
+  |SEL_USB|USB接続を経由して送信する|
+  |SEL_BLE|BLE接続を経由して送信する|
+  |BATT_LV|バッテリーの電圧を表示する(文字列が自動で入力されます)|
+  |ENT_SLP|スリープモードに入る|
+
+#### Remapを使う場合(USB接続)
+BLE Micro Proのバージョンがbootloader:0.9.3, firmware:0.9.4以上の場合、[Remap](https://remap-keys.app/)からキーマップを書き換えることができます。
 
 #### QMK Configuratorを使う場合(USB接続)
 
