@@ -1,8 +1,8 @@
 {"config":
 	{
 		"version":2,
-		"device_info":{"vid":"0xFEED","pid":"0x3060",
-			"name":"Corne Keyboard (crkbd)","manufacture":"foostan","description":"A split keyboard with 3x6 vertically staggered keys and 3 thumb keys"},
+		"device_info":{"vid":"0x4653","pid":"0x0001",
+			"name":"Corne","manufacture":"foostan","description":"A split keyboard with 3x6 vertically staggered keys and 3 thumb keys"},
 		"matrix":{"rows":8,"cols":6,"device_rows":4, "device_cols":6,
 			"debounce":1,"is_left_hand":0,"diode_direction":0,
 			"row_pins":[7, 8, 9, 10],

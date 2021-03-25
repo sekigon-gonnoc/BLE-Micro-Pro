@@ -15,6 +15,6 @@
 		"mode":"SPLIT_SLAVE","startup":1,
 		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
 		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
-		"led":{"pin":1, "num":10},
+		"led":{"pin":1, "num":12},
 		"keymap":{"locale":"US","use_ascii":0}
 }}

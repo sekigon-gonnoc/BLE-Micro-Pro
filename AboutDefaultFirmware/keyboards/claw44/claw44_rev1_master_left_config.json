@@ -1,7 +1,7 @@
 {"config":
 	{
 		"version":2,
-		"device_info":{"vid":"0xFEED","pid":"0x3060",
+		"device_info":{"vid":"0x5946","pid":"0x0001",
 			"name":"claw44","manufacture":"yfuku","description":"A split keyboard with 3x6 vertically staggered keys and 4 thumb keys"},
 		"matrix":{"rows":8,"cols":6,"device_rows":4, "device_cols":6,
 			"debounce":1,"is_left_hand":1,"diode_direction":0,
