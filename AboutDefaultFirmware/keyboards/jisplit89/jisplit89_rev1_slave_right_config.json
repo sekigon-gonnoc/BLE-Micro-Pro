@@ -1,7 +1,7 @@
 {"config":
 	{
 		"version":2,
-		"device_info":{"vid":"0xFEED","pid":"0x3060",
+		"device_info":{"vid":"0x04D8","pid":"0xEB4F",
 			"name":"jisplit89","manufacture":"Salicylic_Acid","description":"A custom keyboard"},
 		"matrix":{"rows":14,"cols":8,"device_rows":7, "device_cols":8,
 			"debounce":1,"is_left_hand":0,"diode_direction":0,
