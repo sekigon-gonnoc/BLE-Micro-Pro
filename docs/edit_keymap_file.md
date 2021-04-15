@@ -1,6 +1,7 @@
 # キーマップの設定
 
 ## KEYMAP.JSNの編集
+- 489キー分の設定を保存できます
 
 - [QMK Configurator](https://sekigon-gonnoc.github.io/qmk_configurator/)で生成したkeymap.jsonをそのまま読み込めます。
 
