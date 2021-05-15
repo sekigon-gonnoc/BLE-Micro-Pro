@@ -44,14 +44,14 @@ LAYOUTマクロなどが複数定義されている場合は検出されたレ�
 
 - diode_direction
  
-数値|構成
----|---
-0|COL2ROW
-1|ROW2COL
-2|COL2ROW with LPME
-3|ROW2COL with LPME
-4|COL2ROW2COL
-5|ROW2COL2ROW
+|数値|構成
+|---|---
+|0|COL2ROW
+|1|ROW2COL
+|2|COL2ROW with LPME
+|3|ROW2COL with LPME
+|4|COL2ROW2COL
+|5|ROW2COL2ROW
 
 - row_pins, col_pins
   -  COL2ROW, ROW2COLの場合: 通常のマトリクスの設定。device_rows/colsに指定したのと同じ数だけピンを設定する
