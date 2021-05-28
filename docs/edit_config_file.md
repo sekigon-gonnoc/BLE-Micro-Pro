@@ -2,7 +2,7 @@
 
 ## QMK用の設定から変換する
 
-Pro Micro用のQMKがすでにある場合、[変換スクリプト](../keyboards/config_converter.py)を用いて`config.json`を生成できます。
+Pro Micro用のQMKがすでにある場合、[変換スクリプト](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/blob/master/AboutDefaultFirmware/keyboards/config_converter.py)を用いて`config.json`を生成できます。
 
 ```
 ./keyboards/config_converter.py ~/qmk_firmware/helix/rev2
@@ -11,6 +11,8 @@ Pro Micro用のQMKがすでにある場合、[変換スクリプト](../keyboard
 LAYOUTマクロなどが複数定義されている場合は検出されたレイアウトの一覧が表示されるので、使いたい定義を選択してください。
 
 ## config.jsonの説明
+
+- 設定例についてはリポジトリを参照してください
 
 |キー|値|内容|
 |---|---|---|
@@ -40,14 +42,21 @@ LAYOUTマクロなどが複数定義されている場合は検出されたレ�
 
 ### マトリクスの構成
 
-数値|構成
----|---
-0|COL2ROW
-1|ROW2COL
-2|COL2ROW with LPME
-3|ROW2COL with LPME
-4|COL2ROW2COL
-5|ROW2COL2ROW
+- diode_direction
+ 
+|数値|構成
+|---|---
+|0|COL2ROW
+|1|ROW2COL
+|2|COL2ROW with LPME
+|3|ROW2COL with LPME
+|4|COL2ROW2COL
+|5|ROW2COL2ROW
+
+- row_pins, col_pins
+  -  COL2ROW, ROW2COLの場合: 通常のマトリクスの設定。device_rows/colsに指定したのと同じ数だけピンを設定する
+  -  with LPMEの場合: LPMEを使ったマトリクスの設定。BLE Micro Proが制御するマトリクスのピン設定に続けて、LPMEが制御するマトリクスのピン設定を書く。合計でrows/colsに設定したのと同じ数だけピンを設定する
+  -  duplex matrixの場合: 通常のマトリクスと同じ設定を書く。
 
 ### layoutの設定
 

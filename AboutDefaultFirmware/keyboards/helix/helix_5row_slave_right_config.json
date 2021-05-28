@@ -1,7 +1,7 @@
 {"config":
   {
   "version":2,
-  "device_info":{"vid":"0xFEED","pid":"0x3060",
+  "device_info":{"vid":"0x3265","pid":"0x0000",
     "name":"Helix","manufacture":"Yushakobo","description":"A split keyboard for the cheap makers"},
   "matrix":{"rows":10,"cols":7,"device_rows":5, "device_cols":7,
     "debounce":1,"is_left_hand":1,"diode_direction":0,

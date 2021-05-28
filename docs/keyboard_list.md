@@ -12,7 +12,7 @@
 |Blockey|||電池基板|
 |Bootleg31|||電池ボックス内蔵|
 |Choco60|✔|?|電池基板|
-|Claw44|✔|?|電池基板||
+|Claw44|✔|?|電池基板|
 |Cocoa40|✔|?|電池基板|
 |Corne Cherry (Light), Chocolate|✔|✔*|電池基板|
 |cscs64|||電池ボックス内蔵|
@@ -22,8 +22,9 @@
 |Helix|✔|✔*|電池基板|
 |Iris rev?||?|電池基板|
 |Kugel-1|✔||電池ボックス内蔵|
-|Let's Split|✔|?|電池基板||
+|Let's Split|✔|?|電池基板|
 |Lily58 (Lite)|✔|✔*|電池基板|
+|Lunakey Mini|✔|?|電池基板|
 |Meishi|✔||電池基板|
 |Mint60|✔|✔*|電池基板|
 |Naked48LED|✔||電池基板|

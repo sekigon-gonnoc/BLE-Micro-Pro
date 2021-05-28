@@ -1,6 +1,7 @@
 # キーマップの設定
 
 ## KEYMAP.JSNの編集
+- 489キー分の設定を保存できます
 
 - [QMK Configurator](https://sekigon-gonnoc.github.io/qmk_configurator/)で生成したkeymap.jsonをそのまま読み込めます。
 
@@ -33,8 +34,8 @@ BLE Micro Pro用のQMKには、QMKのカスタムキーコードとして定義�
 | BLE_EN  | Enable BLE HID sending               |
 | USB_DIS | Disable USB HID sending              |
 | USB_EN  | Enable USB HID sending               |
-| BLE_SEL | Enable BLE and disable USB           |
-| USB_SEL | Enable USB and disable BLE           |
+| SEL_BLE | Enable BLE and disable USB           |
+| SEL_USB | Enable USB and disable BLE           |
 | ADV_ID0 | Start advertising to PeerID 0        |
 | ADV_ID1 | Start advertising to PeerID 1        |
 | ADV_ID2 | Start advertising to PeerID 2        |

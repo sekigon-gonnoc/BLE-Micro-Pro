@@ -9,6 +9,7 @@ BLE Micro Proを導入する手順はいくつかありますが、初めての�
   - [ファームウェアのアップデート](#ファームウェアのアップデート)
   - [設定ファイルの書き込み](#設定ファイルの書き込み)
   - [キーマップの書き込み](#キーマップの書き込み)
+    - [Remapを使う場合(USB接続)](#remapを使う場合usb接続)
     - [QMK Configuratorを使う場合(USB接続)](#qmk-configuratorを使う場合usb接続)
     - [QMK Configuratorを使う場合(BLE接続)](#qmk-configuratorを使う場合ble接続)
     - [VIA Configuratorを使う場合(非推奨)](#via-configuratorを使う場合非推奨)
@@ -21,25 +22,37 @@ BLE Micro Proを導入する手順はいくつかありますが、初めての�
 
 ## ハードウェアの準備
 
-- Pro Microの代わりにBLE Micro Proを取り付ける
-  - コンスルーに合わせた穴径となっているためハンダ付けは必要ありません。
+- BLE Micro Proを取り付ける準備
+  - BLE Micro ProはPro Microの代わりに取り付けられます。
+  - ピンヘッダでなくコンスルーを使う場合ははんだ付けは必要ありません([遊舎工房販売ページ](https://yushakobo.jp/shop/a01mc-00/), [TALP keyboard販売ページ](https://talpkeyboard.stores.jp/items/5e056626d790db16e2889233), [Switch Science 販売ページ](https://www.switch-science.com/catalog/3763/))
+    - BLE Micro Proはコンスルー対応なのでBLE Micro Pro側にはんだづけが必要ありません。
+    - Pro Microはコンスルー非対応なので、Pro Micro側にはんだ付けが必要です。
+    - 国内キーボード基板はコンスルー対応基板が多いですが、海外キーボード基板の場合は非対応の場合が多く、キーボード基板側をはんだ付けする必要があります。
+  - キーボード基板に電源ピンが用意されている場合は13ピンのコンスルーが必要な場合があります。キーボードキットの必要部品をよく確認してください。
+    - 7skbやKugel-1のように、USBコネクタ側に寄せてコンスルーを取り付けることで12ピンでも動作するキットもあります。
+  - キーボード基板に電源ピンが用意されていない場合は12ピンのコンスルーを調達してください。
+    - BLE micro pro対応を明示していないキーボードの場合はこちらの可能性が高いです。
 
-- 電源を用意する
-  - 導入の段階ではUSBケーブルで接続するので必須ではありませんが、無線運用するときには電池などから電源供給する必要があります。
-  - キーボードキットに用意されているオプションや、遊舎工房、BOOTHで販売している電池基板を使ってください。  
-    - 電池基板とBLE Micro Proの接続にはコンスルー・ピンヘッダや銅線を使ってください。
+- 電源の準備
+  - 導入の段階ではUSBケーブルで接続をしてUSB端子から電源供給を受けるので必須ではありません。
+  - 無線運用するときには電池かそれに相当するものから電源供給する必要があります。
+  - BLE Micro Pro用に設計されたものとしては単4電池基板([BOOTH販売ページ](https://nogikes.booth.pm/items/2710739))またはコイン電池基板([遊舎工房販売ページ](https://yushakobo.jp/shop/ble-micro-pro-battery-board/)、[BOOTH販売ページ](https://nogikes.booth.pm/items/1655285))があります。  
+    - 電池基板とBLE Micro Proの接続にはコンスルー、ピンヘッダもしくは銅線を使ってください。
+    - キーボードキットによってはキーボード上に電池基板に相当する機能を取り付けられるオプションがあります。そのオプションを使う場合は電池基板は不要です。
   - 電源を自分で作る場合には[デザインガイド](design_guide.md#電源)を参照してください。
 
 
 ## BLE Micro Pro Web Configuratorを使う
 
-Google ChromeからBLE Micro Pro Web Configuratorにアクセスするとブラウザからファームウェアのアップデートや各種設定ができます。
+Google ChromeからBLE Micro Pro Web Configuratorにアクセスするとブラウザからファームウェアのアップデートや各種設定ができます。  
+* ブラウザに依存するトラブルを避けるためその他のChromium系ブラウザではなくChromeを使ってください
 
 ### 事前準備
 
-Google Chromeのアドレスバーに `chrome://flags#enable-experimental-web-platform-features`を入力して、**Experimental Web Platform featuresをEnabled**にします。
+Google Chromeを起動して、 [Web Configurator](https://sekigon-gonnoc.github.io/BLE-Micro-Pro-WebConfigurator/) にアクセスしてください。
 
-[Web Configuraor](https://sekigon-gonnoc.github.io/BLE-Micro-Pro-WebConfigurator/)にアクセスしたとき警告が出なければ設定完了です。
+Chrome 89 Stableから、特にChromeの設定を変更することなく、Web Configuratorを利用することができるようになりました。もし Chrome 89 Stable 以前のバージョンをお使いの際には、Chromeのアドレスバーに `chrome://flags#enable-experimental-web-platform-features`を入力して、**Experimental Web Platform featuresをEnabled**にしてください。
+
 
 ### キーボードを選ぶ
 
@@ -126,7 +139,26 @@ BLE Micro ProのCOMポートを選択したら`接続`ボタンを押してく�
 
 ### キーマップの書き込み
 
-QMK ConfiguratorまたはVIA Configurator(非推奨)からキーマップを変更します。
+Remap, QMK Configurator, VIA Configurator(非推奨)のいずれかでキーマップを変更します。
+- 合計で489キー分の設定を保存できます。何レイヤにあたるかはキーボードによって異なります
+  - Remap, VIAに接続すると設定できる最大レイヤと同じ数のレイヤが自動で表示されます。
+  - QMK Configurator, KEYMAP.JSNを直接編集する場合、上限を超えたキーの設定は無視されます。
+- Remapは拡張キーコードの設定に対応していません。
+- キーボードの定義がRemapまたはQMK Configuratorのどちらかにしかない場合がありあます。一方に接続してうまく行かないときはもう一方も試してください。
+  - またはRemapに設定用のjsonファイルをアップロードしてください。
+- BLE Micro Pro用に無線接続関連など[いくつかのカスタムキーコード](edit_keymap_file.md#カスタムキーコード)が組み込まれています。最低限、以下のキーコードをキーマップに設定することをおすすめします
+
+  |キーコード|機能|
+  |-|-|
+  |AD_WO_L|ホストの接続、スレーブの探索を開始する。新しいデバイスとペアリングできる|
+  |ADV_IDn|n番目にペアリングしたデバイスと接続しようとする|
+  |SEL_USB|USB接続を経由して送信する|
+  |SEL_BLE|BLE接続を経由して送信する|
+  |BATT_LV|バッテリーの電圧を表示する(文字列が自動で入力されます)|
+  |ENT_SLP|スリープモードに入る|
+
+#### Remapを使う場合(USB接続)
+BLE Micro Proのバージョンがbootloader:0.9.3, firmware:0.9.4以上の場合、[Remap](https://remap-keys.app/)からキーマップを書き換えることができます。
 
 #### QMK Configuratorを使う場合(USB接続)
 
@@ -158,7 +190,7 @@ QMK ConfiguratorまたはVIA Configurator(非推奨)からキーマップを変�
 
 - BLE Micro Pro用QMK Configuratorと違い、BLE Micro Pro用のキーコードが設定できず、また、レイヤを追加することもできません。
 
-- 書き換えの方法はVIA Configuratorのマニュアルを参照してください。書き換えられたキーマップは一時的なものなので、永続化するにはInsertキーを5秒以上押してから話してください。
+- 書き換えの方法はVIA Configuratorのマニュアルを参照してください。書き換えられたキーマップは一時的なものなので、永続化するにはInsertキーを5秒以上押してから離してください。
 
 ## BLE Micro Pro上のファイルを直接操作する
 
