@@ -84,3 +84,9 @@ Pro Microとの互換性を意識して設計されていますが、以下の�
   - ペアリング完了：長めに1回点滅します。
 
 - LEDと抵抗または定電流ダイオードを直列にBLE Micro Proのピンに接続し、そのピン番号をCONFIG.JSNのreserved[1]に指定してください。
+
+## プルリクエスト
+
+BLE Micro Pro Web Configurator に設定ファイルを登録したい場合は、[BLE-Micro-Pro/AboutDefaultFirmware/keyboards](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/tree/master/AboutDefaultFirmware/keyboards)以下にファイルを追加してプルリクエストしてください。マージ後、Web Configuratorへの追加はこちらで処理します。
+
+また、Remapのキーマップ共有機能でデフォルトキーマップを共有しておくとキット購入者が組み立てるときの助けになると思います。
