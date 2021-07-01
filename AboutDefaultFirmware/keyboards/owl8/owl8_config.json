@@ -1,0 +1,19 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0x5946","pid":"0x0008",
+			"name":"owl8","manufacture":"yfuku","description":""},
+		"matrix":{"rows":1,"cols":16,"device_rows":1, "device_cols":16,
+			"debounce":1,"is_left_hand":1,"diode_direction":0,
+			"row_pins":['NO_'],
+			"col_pins":[20, 17, 15, 13, 19, 18, 16, 14, 7, 8, 9, 10, 'NO_', 'NO_', 'NO_', 'NO_'],
+		"layout":[13, 14, 15, 16, 0,
+			 9, 10, 11, 12, 0,
+			 1, 2, 3, 4, 0,
+			 5, 6, 7, 8]},
+		"mode":"SINGLE","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":255, "num":0},
+		"keymap":{"locale":"US","use_ascii":0}
+}}
