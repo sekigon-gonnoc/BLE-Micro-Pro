@@ -17,7 +17,7 @@
 
 ### ファームウェアのリポジトリをクローンする
 
-- QMK公式のqmk_firmwareリポジトリとは別にBLE micro pro用のリポジトリをクローンする必要があります。
+- QMK公式のqmk_firmwareリポジトリとは別にBLE Micro Pro用のリポジトリをクローンする必要があります。
 - ここでは `qmk_firmware_bmp` という名前でクローンします。
 
 ``` 
