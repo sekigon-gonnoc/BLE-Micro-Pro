@@ -1,66 +1,89 @@
 # ファームウェアをビルドする
 
-ファームウェアのビルド方法などは基本的にQMKそのものです。ここでは、BLE Micro Proに特有の手順のみ説明します。
-
 - [環境構築](#環境構築)
-  - [ビルドする](#ビルドする)
-    - [uf2ファイルを生成する](#uf2ファイルを生成する)
-    - [nrfutilで書き込む](#nrfutilで書き込む)
-  - [新しいキーボードのフォルダをつくる](#新しいキーボードのフォルダをつくる)
-  - [カスタムキーコードを追加する](#カスタムキーコードを追加する)
+  - [BLE Micro Pro用のQMK firmwareをクローンする](#BLE Micro Pro用のQMK firmwareをクローンする)
+  - [必要なツールをインストールする](#必要なツールをインストールする)
+- [ビルドする](#ビルドする)
+  - [uf2ファイルを生成する](#uf2ファイルを生成する)
+- [生成したファームウェアを書き込む](#生成したファームウェアを書き込む)
+  - [nrfutilで書き込む](#nrfutilで書き込む)
+- [新しいキーボードのフォルダをつくる](#新しいキーボードのフォルダをつくる)
+- [カスタムキーコードを追加する](#カスタムキーコードを追加する)
 
 ## 環境構築
 
-QMKの導入手順にしたがって必要ソフトをインストールしてください。
-Pro Microを使う場合とは異なり、`arm-none-eabi-gcc`とその関連ソフトも必須です。
-なお、submoduleのlufaやChibiOSには依存していないため、これらの導入は飛ばしても構いません。
+導入手順はQMKとほとんど同様です。基本的にはQMKの導入手順にしたがって必要ソフトをインストールしてください。
 
-- BLE Micro Pro用のQMK Firmwareを`qmk_firmware_bmp`という名前でクローンします。
 
-  ``` 
-  git clone --depth 1 -b dev/ble_micro_pro https://github.com/sekigon-gonnoc/qmk_firmware.git qmk_firmware_bmp
-  ```
+### BLE Micro Pro用のQMK firmwareをクローンする
 
-- ビルドに必要なツールをインストールします。
-  ```
-  cd qmk_firmware_bmp
-  ./util/qmk_install.sh
-  ```
+- QMK公式のqmk_firmwareリポジトリとは別にBLE micro pro用のリポジトリをクローンする必要があります。
+- ここでは `qmk_firmware_bmp` という名前でクローンします。
 
-- uf2ではなくnrfutilを使って書き込む場合、追加でnrfutilもインストールします。
-  ```
-  pip install nrfutil --user
-  ```
+``` 
+git clone --depth 1 -b dev/ble_micro_pro https://github.com/sekigon-gonnoc/qmk_firmware.git qmk_firmware_bmp
+```
 
-### ビルドする
+### 必要なツールをインストールする
 
-#### uf2ファイルを生成する
+以下のコマンドを実行してビルドに必要なツールをインストールします。
+
+```
+cd qmk_firmware_bmp
+./util/qmk_install.sh
+```
+
+QMK公式とは異なりsubmoduleのlufaやChibiOSには依存していないため、`make git-submodules`は実行する必要がありません。
+
+uf2ではなくnrfutilを使って書き込む場合、追加でnrfutilもインストールします。
+```
+pip install nrfutil --user
+```
+
+## ビルドする
+
+### uf2ファイルを生成する
+
 以下のコマンドでuf2ファイルが生成されます。
 
 ```
-  make ble_micro_pro:default:uf2
+make ble_micro_pro:default:uf2
 ```
 
-または
+後述の方法で新しく定義したキーボードをビルドする場合は以下の形式になります。
 
 ```
-  make <keyboard>:<keymap>:uf2
+make <keyboard>:<keymap>:uf2
 ```
 
-次にブートローダを起動してください。リセットボタンを押しながらUSBケーブルで接続する、[CLI](cli.md)からdfuコマンドを発行する、リセットボタンを長押しする（ver0.4から）のいずれかにより行なえます。
+## 生成したファームウェアを書き込む
 
-最後にブートローダ起動後に出てくる外部メディア(BLEMICROPROと名前がついているもの)へ生成されたuf2ファイルをコピーすることでファームウェアがアップデートされます。
+ブートローダを起動してください。ブートローダの軌道は以下のいずれかにより行えます。
 
-#### nrfutilで書き込む
+- リセットボタンを押しながらUSBケーブルで接続する
+- [CLI](cli.md)からdfuコマンドを発行する
+- リセットボタンを長押しする（ver0.4から）
 
-以下のコマンドでnrfutil用のzipファイルを生成し、書き込み待機状態になったらBLE Micro Proのブートローダを起動します。
-ブートローダを起動するには、リセットボタンを押しながらUSBケーブルで接続する、[CLI](cli.md)からdfuコマンドを発行する、リセットボタンを長押しする（ver0.4から）のいずれかをおこなってください。
+ブートローダを起動すると外部メディアとして認識されます。外部メディアは `BLEMICROPRO` という名前です。
+この外部メディアに生成されたuf2ファイルをコピーすることでファームウェアがアップデートされます。
+
+### nrfutilで書き込む
+
+以下のコマンドを実行します。
 
 ```
-  make <keyboard>:<keymap>:nrfutil
+make <keyboard>:<keymap>:nrfutil
 ```
 
-### 新しいキーボードのフォルダをつくる
+出力を見てnrfutil用のzipファイルを生成され、書き込み待機状態になったらBLE Micro Proのブートローダを起動します。
+ブートローダを起動する方法は以下のいずれかです。
+
+- リセットボタンを押しながらUSBケーブルで接続する
+- [CLI](cli.md)からdfuコマンドを発行する
+- リセットボタンを長押しする（ver0.4から）
+
+
+## 新しいキーボードのフォルダをつくる
 
 既存のフォルダ(`ble_micro_pro`など)をコピーするか、以下のスクリプトを使って用意してください。
 
@@ -85,7 +108,7 @@ To start working on things, cd into keyboards/name,
 or open the directory in your favourite text editor.
 ```
 
-### カスタムキーコードを追加する
+## カスタムキーコードを追加する
 
 QMK Firmwareのカスタムキーコードのページを参考に、keymap.cに追加します。
 KEYMAP.JSNから指定できるようにするには、`custum_keys_user`にカスタムキーコードとそれを表す文字列を追加してください。
