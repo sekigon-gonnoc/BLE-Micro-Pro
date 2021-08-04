@@ -45,6 +45,7 @@ Macro\nTest
   ```
 
 - MACRO01: (Windowsの場合)画面ロック
+  - `\T`を使わずに`\D(KC_LGUI)l\U(KC_LGUI)`としても同じ動作です。
 
 ## tapping_term.jsonの設定
 
