@@ -191,7 +191,7 @@ BLE Micro Proのバージョンがbootloader:0.9.3, firmware:0.9.4以上の場�
 
 #### VIA Configuratorを使う場合(非推奨)
 
-- VIA Configuratorからキーマップを変更できます。ただし、LEDとマクロの設定はできません。
+- VIA Configuratorからキーマップを変更できます。ただし、LEDの設定はできません。0.10.2以降ではマクロも設定できます。
 
 - BLE Micro Pro用QMK Configuratorと違い、BLE Micro Pro用のキーコードが設定できず、また、レイヤを追加することもできません。
 
@@ -222,14 +222,27 @@ nrfutilを使う場合は経由せずに直接アップデートできます
 
 - アップデートが完了すると自動でアンマウントされます
 
-- ブートローダをアップデートした場合、`INFO_UF2.TXT`を開いてアップデート完了を確認してください
+- 再度マウントするとuf2ファイルは消えていますが、下記の方法でアップデートが完了していることを確認してください
 
-- アプリケーションのアップデートの場合は`VERSION.TXT`を開いてアップデート完了を確認してください
+  - ブートローダをアップデートした場合、`INFO_UF2.TXT`を開いてアップデート完了を確認してください
+
+  - アプリケーションのアップデートの場合は`VERSION.TXT`を開いてアップデート完了を確認してください
 
 ### 設定ファイルの書き込み
 
 BLE Micro Proがアプリケーションを起動している状態で設定ファイルをコピーすると自動的に書き込みが始まります。
 BLE Micro Pro上のファイルを直接編集することもできますが、バックアップの意味も兼ねて一度PC上にコピーしてから編集、転送することを推奨します。
+
+|ファイル名|役割|
+|-|-|
+|CONFIG.JSN|キーボードのマトリクスの割り当てなどを設定する|
+|KEYAMP.JSN|キーマップを設定する|
+|TAPTERM.JSN|TAPPING TERMを設定する|
+|ENCODER.JSN|ロータリーエンコーダの割り当てを設定する|
+|MACRO.TXT|マクロを設定する|
+|VERSION.TXT|書き込まれているファームの情報を表示する|
+|INDEX.HTM|ドキュメントへのリンク|
+|MAP_EDIT.HTM|QMK Configuratorへのリンク|
 
 コンフィグ用ファイル（CONFIG.JSN）は[BLE Micro Proのリポジトリから探す](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/tree/master/AboutDefaultFirmware/keyboards)か、キーボードの作者が提供しているものを使うか、[自分で作成する](edit_config_file.md)か、いずれかの方法で用意してください。
 なお、書き込むときにファイル名をCONFIG.JSNにリネームする必要はありません。再起動後に自動でリネームされます。
@@ -237,7 +250,7 @@ BLE Micro Pro上のファイルを直接編集することもできますが、�
 キーマップ用ファイル（KEYMAP.JSN）はQMK Configuratorを使って生成するか、テキストエディタなどで編集してください。
 書き方は[こちら](edit_keymap_file.md)
 
-その他に、TAPPING TERMの調整、ロータリーエンコーダの設定ができます。
+TAPPING TERMの調整、ロータリーエンコーダの設定、マクロの設定については[こちら](edit_other_config_file.md)。
 
 ### 設定ファイルの削除
 

@@ -34,7 +34,7 @@
 |マウス|✔|
 |System/Consumer(音量など)|✔|
 |エンコーダ|✔|
-|VIA|✔|マクロ・LEDは未対応|
+|VIA|✔|LEDは未対応。0.10.2からマクロに対応|
 |Console|✔|HIDではなくシリアルポートによる実装。print/dprintに加えて[CLI](cli.md)を提供|
 |Raw|✔|
 |DynamicKeymap|✔|QMKの実装とはことなるが同等の機能を提供|
