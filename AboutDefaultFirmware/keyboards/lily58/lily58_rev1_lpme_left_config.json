@@ -1,7 +1,7 @@
 {"config":
 	{
 		"version":2,
-		"device_info":{"vid":"0xFC51","pid":"0x0058",
+		"device_info":{"vid":"0x04D8","pid":"0xEB2D",
 			"name":"Lily58","manufacture":"F_YUUCHI","description":"Lily58 is 6×4+5keys column-staggered split keyboard."},
 		"matrix":{"rows":10,"cols":6,"device_rows":5, "device_cols":6,
 			"debounce":1,"is_left_hand":1,"diode_direction":2,
