@@ -1,7 +1,7 @@
 {"config":
 	{
 		"version":2,
-		"device_info":{"vid":"0xFEED","pid":"0x3060",
+		"device_info":{"vid":"0x04D8","pid":"0xEB5C",
 			"name":"naked60","manufacture":"Salicylic_Acid","description":"Ortholinear 60 Keys Keyboard"},
 		"matrix":{"rows":5,"cols":12,"device_rows":5, "device_cols":12,
 			"debounce":1,"is_left_hand":1,"diode_direction":0,
