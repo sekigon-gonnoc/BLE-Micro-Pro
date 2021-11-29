@@ -1,0 +1,20 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0x04D8","pid":"0xE887",
+			"name":"keyfuda01_tenkey","manufacture":"Salicylic_Acid","description":"Tenkeypad"},
+		"matrix":{"rows":1,"cols":18,"device_rows":1, "device_cols":18,
+			"debounce":1,"is_left_hand":1,"diode_direction":0,
+			"row_pins":[0],
+			"col_pins":[12, 11, 10, 9, 8, 7, 6, 5, 2, 13, 1, 14, 15, 16, 17, 20, 19, 18],
+		"layout":[1,  6, 11, 16, 0,
+			      2,  7, 12, 17, 0,
+			      3,  8, 13,     0,
+				  4,  9, 14, 18, 0,
+			      5, 10, 15]},
+		"mode":"SINGLE","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":255, "num":0},
+		"keymap":{"locale":"US","use_ascii":0}
+}}
