@@ -1,0 +1,22 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0x04D8","pid":"0xE887",
+			"name":"keyfuda02_media","manufacture":"Salicylic_Acid","description":"Mediapad"},
+		"matrix":{"rows":1,"cols":14,"device_rows":1, "device_cols":14,
+			"debounce":1,"is_left_hand":1,"diode_direction":0,
+			"row_pins":[0],
+			"col_pins":[1, 5, 7, 8, 9, 10, 11, 2, 6, 20, 19, 18, 0, 0],
+		"layout":[
+			 1, 8, 0,
+			 2, 9, 0,
+			 3,10, 0,
+			 4,11, 0,
+			 5,12, 0,
+			 6, 7 ]},
+		"mode":"SINGLE","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":255, "num":0},
+		"keymap":{"locale":"US","use_ascii":0}
+}}
