@@ -1,0 +1,36 @@
+{
+    "encoder": {
+        "enabled": 1,
+        "definition": [
+            {
+                "pin": [
+                    9,
+                    10
+                ],
+                "step": 1,
+                "action": [
+                    [
+                        "KC_WH_U",
+                        "KC_WH_D"
+                    ],
+                    [
+                        "LCTL(KC_Z)",
+                        "LCTL(KC_Y)"
+                    ],
+                    [
+                        "LSFT(KC_UP)",
+                        "LSFT(KC_DOWN)"
+                    ],
+                    [
+                        "KC_NO",
+                        "KC_NO"
+                    ],
+                    [
+                        "KC_NO",
+                        "KC_NO"
+                    ]
+                ]
+            }
+        ]
+    }
+}
