@@ -1,0 +1,20 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0xF516","pid":"0x9674",
+			"name":"9674GL","manufacture":"otahinosame","description":""},
+		"matrix":{"rows":10,"cols":8,"device_rows":5, "device_cols":8,
+			"debounce":1,"is_left_hand":1,"diode_direction":4,
+			"row_pins":[5, 6, 7, 8, 9, 5, 6, 7, 8, 9],
+			"col_pins":[20, 19, 18, 17, 16, 15, 14, 10, 20, 19, 18, 17, 16, 15, 14, 10],
+		"layout":[1, 2, 3, 4, 5, 6, 14, 7, 8, 41, 42, 43, 44, 45, 46, 47, 0,
+			 9, 10, 11, 12, 13, 22, 15, 16, 49, 50, 51, 52, 53, 54, 55, 0,
+			 17, 18, 19, 20, 21, 30, 23, 24, 57, 58, 59, 60, 61, 62, 63, 0,
+			 25, 26, 27, 28, 29, 38, 31, 32, 65, 66, 67, 68, 69, 70, 71, 0,
+			 33, 34, 35, 36, 37, 39, 73, 74, 75, 76, 77, 78, 79]},
+		"mode":"SINGLE","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":255, "num":0},
+		"keymap":{"locale":"US","use_ascii":0}
+}}
