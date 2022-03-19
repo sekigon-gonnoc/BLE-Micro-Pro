@@ -76,3 +76,4 @@ BLE Micro Pro用のQMKには、QMKのカスタムキーコードとして定義�
 | TLT(layer1, layer2, layer3, kc) | LTとtri_layer_updateを組み合わせたもの               |
 | TDD(kc1, kc2)                   | 一回タップするとkc1, 二回タップするとkc2が入力される |
 | TDH(kc1, kc2)                   | タップするとkc1, ホールドするとkc2が入力される       |
+| CMB(kc1, kc2, kc3)              | コンボの設定。このキー自体を押しても何も起きない。kc1とkc2を同時押しすることでkc3が入力される。kc2には8bitコードしか指定できない       |
