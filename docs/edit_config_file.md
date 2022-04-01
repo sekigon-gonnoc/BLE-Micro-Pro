@@ -30,6 +30,7 @@ LAYOUTマクロなどが複数定義されている場合は検出されたレ�
 |col_pins|int array|マトリクスの列ピン。番号はPINxxに対応|
 |layout|int array|qmkのレイアウトマクロに対応するもの。詳細は後述|
 |mode|SPLIT_MASTER, SPLIT_SLAVE, SINGLE|分割マスター、分割スレーブ、一体型|
+|startup|電源が入ったタイミングでBLEのアドバタイズを実行するかどうか。 [0]は実行しない、[1]で実行する。|
 |led->pin|int array|LED(ws2812系)のピン。番号はPINxxに対応|
 |led->num|int|LEDの数|
 |keymap->locale|"US" or "JP"|USキーボードとして接続するか、JPキーボードとして接続するかの設定。keymap.jsonの変換・表示の挙動に影響|
