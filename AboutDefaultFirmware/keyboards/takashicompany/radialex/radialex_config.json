@@ -1,0 +1,14 @@
+{"config":{"version":2,
+"device_info":{"vid":"0x7463","pid":"0x0019","name":"Radialex","manufacture":"takashicompany","description":""},
+"matrix":{"rows":7,"cols":7,"device_rows":7,"device_cols":7,"debounce":1,"is_left_hand":1,"diode_direction":0,"row_pins":[13,7,8,9,10,11,12],"col_pins":[20,19,18,17,16,15,14],
+"layout":[
+  1,  2,  3,  4,  5,  6,  7,  8,  9, 10,  0,
+ 41, 11, 12, 13, 14, 15, 45, 16, 17, 18, 19, 20, 43,  0,
+ 42, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 44,  0,
+ 31, 32, 33, 34, 35, 36, 37, 38, 39, 40]},
+"mode":"SINGLE","startup":1,
+"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+"led":{"pin":1,"num":12},
+"keymap":{"locale":"US","use_ascii":0},
+"reserved":[0,0,0,0,0,0,0,0]}}
