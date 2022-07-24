@@ -1,0 +1,20 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0x04D8","pid":"0xE76E",
+			"name":"keyfuda04_grid","manufacture":"Salicylic_Acid","description":""},
+		"matrix":{"rows":5,"cols":4,"device_rows":5, "device_cols":4,
+			"debounce":1,"is_left_hand":1,"diode_direction":0,
+			"row_pins":[20, 19, 18, 17, 16],
+			"col_pins":[8, 7, 6, 5],
+		"layout":[1, 2, 3, 4, 0,
+			 5, 6, 7, 8, 0,
+			 9, 10, 11, 12, 0,
+			 13, 14, 15, 16, 0,
+			 17, 18, 19, 20]},
+		"mode":"SINGLE","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":13, "num":1},
+		"keymap":{"locale":"US","use_ascii":0}
+}}
