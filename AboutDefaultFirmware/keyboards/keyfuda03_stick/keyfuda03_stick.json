@@ -1,0 +1,22 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0x04D8","pid":"0xE76F",
+			"name":"keyfuda03_stick","manufacture":"Salicylic_Acid","description":"Stickpad"},
+		"matrix":{"rows":1,"cols":8,"device_rows":1, "device_cols":8,
+			"debounce":1,"is_left_hand":1,"diode_direction":0,
+			"row_pins":[0],
+			"col_pins":[2, 6, 20, 19, 10, 18, 0, 0],
+		"layout":[
+			 1, 0,
+			 2, 0,
+			 3, 0,
+			 4, 0,
+			 5, 0,
+			 6]},
+		"mode":"SINGLE","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":255, "num":0},
+		"keymap":{"locale":"US","use_ascii":0}
+}}
