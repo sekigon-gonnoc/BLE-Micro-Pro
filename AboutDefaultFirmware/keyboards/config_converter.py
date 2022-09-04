@@ -262,11 +262,11 @@ class ConfigConverter:
             print(red('ERROR') + ': Failed to find MATRIX_ROWS')
             res = False
 
-        if (int(self.col_num) != len(self.col_pins.split(',')) or int(self.row_num) != len(self.row_pins.split(','))):
+        if (int(eval(self.col_num)) != len(self.col_pins.split(',')) or int(eval(self.row_num)) != len(self.row_pins.split(','))):
             self.is_split = True
             print('This keyboard is split keyboard')
 
-        if (int(self.col_num) != len(self.col_pins.split(',')) and int(self.row_num) != len(self.row_pins.split(','))):
+        if (int(eval(self.col_num)) != len(self.col_pins.split(',')) and int(eval(self.row_num)) != len(self.row_pins.split(','))):
             print(yellow('warning') +
                   ': MATRIX len and PINS len do not match in both row and col.')
 
@@ -368,7 +368,7 @@ if __name__ == '__main__':
     with open(config_name, 'w') as f:
         f.write(
             config_file_format.format(
-                config.vid, config.pid, config.name, config.manufacture, config.description, config.row_num, config.col_num, len(
+                config.vid, config.pid, config.name, config.manufacture, config.description, eval(config.row_num), eval(config.col_num), len(
                     config.row_pins.split(',')), len(config.col_pins.split(',')), config.diode_direction, config.row_pins, config.col_pins,
                 config.layout.replace(
                     '\n', '\n\t\t\t'), mode, config.led_pin, config.led_num
