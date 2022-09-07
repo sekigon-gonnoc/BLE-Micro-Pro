@@ -1,0 +1,21 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0x3265","pid":"0x000E",
+			"name":"primer79","manufacture":"yushakobo","description":""},
+		"matrix":{"rows":10,"cols":9,"device_rows":5, "device_cols":9,
+			"debounce":1,"is_left_hand":1,"diode_direction":4,
+			"row_pins":[18, 17, 16, 14, 15, 18, 17, 16, 14, 15],
+			"col_pins":[7, 8, 9, 10, 11, 2, 1, 12, 13, 7, 8, 9, 10, 11, 2, 1, 12, 13],
+			"layout":[54, 47, 3, 48, 49, 5, 50, 8, 17, 26, 35, 44, 53, 0,
+				1, 46, 2, 56, 12, 57, 4, 58, 14, 59, 6, 51, 7, 52, 0,
+				10, 55, 11, 65, 21, 66, 13, 67, 23, 68, 15, 60, 16, 61, 62, 80, 0,
+				19, 64, 20, 74, 30, 75, 22, 76, 32, 77, 24, 69, 25, 71, 89, 0,
+				28, 73, 29, 83, 39, 84, 31, 85, 41, 86, 33, 34, 70, 0,
+				37, 82, 38, 40, 42, 78, 87, 43, 79, 88]},
+		"mode":"SINGLE","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":255, "num":0},
+		"keymap":{"locale":"US","use_ascii":0}
+}}

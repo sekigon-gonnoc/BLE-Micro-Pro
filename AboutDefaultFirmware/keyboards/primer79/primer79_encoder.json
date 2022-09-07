@@ -1,0 +1,6 @@
+{"encoder":
+{"enabled":1,
+"definition":[
+{"pin":[5,6],"step":1,"action":[["KC_VOLU","KC_VOLD"],["LCTL(KC_Z)","LCTL(KC_Y)"],["KC_NO","KC_NO"],["KC_NO","KC_NO"],["KC_NO","KC_NO"]]},
+{"pin":[19,20],"step":1,"action":[["KC_WH_U","KC_WH_D"],["LCTL(KC_Z)","LCTL(KC_Y)"],["KC_NO","KC_NO"],["KC_NO","KC_NO"],["KC_NO","KC_NO"]]}
+]}}
