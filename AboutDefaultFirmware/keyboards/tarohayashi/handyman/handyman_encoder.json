@@ -1,0 +1,7 @@
+{"encoder":
+{"enabled":1,
+"definition":[
+{"pin":[2,5],"step":4,"action":[["ANY(1)","ANY(0)"], ["ANY(12)","ANY(6)"], ["ANY(0)","ANY(0)"], ["ANY(0)","ANY(0)"], ["ANY(0)","ANY(0)"]]},
+{"pin":[6,7],"step":4,"action":[["ANY(1)","ANY(0)"], ["ANY(24)","ANY(18)"], ["ANY(0)","ANY(0)"], ["ANY(0)","ANY(0)"], ["ANY(0)","ANY(0)"]]},
+{"pin":[8,9],"step":4,"action":[["ANY(1)","ANY(0)"], ["ANY(36)","ANY(30)"], ["ANY(0)","ANY(0)"], ["ANY(0)","ANY(0)"], ["ANY(0)","ANY(0)"]]}
+]}}
