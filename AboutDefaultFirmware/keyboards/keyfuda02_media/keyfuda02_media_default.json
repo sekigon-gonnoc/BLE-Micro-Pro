@@ -9,8 +9,24 @@
         "KC_P2", "KC_P7",
         "KC_P3", "KC_P8",
         "KC_P4", "KC_P9",
-        "KC_P5","KC_MUTE",
-      "SEL_BLE","SEL_USB"
+        "KC_P5","KC_MUTE","KC_VOLU",
+      "SEL_BLE","SEL_USB","KC_VOLD"
+    ],
+    [
+        "KC_P1", "KC_P6",
+        "KC_P2", "KC_P7",
+        "KC_P3", "KC_P8",
+        "KC_P4", "KC_P9",
+        "KC_P5","KC_MUTE","KC_VOLU",
+      "SEL_BLE","SEL_USB","KC_VOLD"
+    ],
+    [
+        "KC_P1", "KC_P6",
+        "KC_P2", "KC_P7",
+        "KC_P3", "KC_P8",
+        "KC_P4", "KC_P9",
+        "KC_P5","KC_MUTE","KC_VOLU",
+      "SEL_BLE","SEL_USB","KC_VOLD"
     ]
   ]
 }
