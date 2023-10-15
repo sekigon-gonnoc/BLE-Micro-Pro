@@ -17,6 +17,6 @@
 		"mode":"SINGLE","startup":1,
 		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
 		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
-		"led":{"pin":255, "num":0},
+		"led":{"pin":2, "num":3},
 		"keymap":{"locale":"US","use_ascii":0}
 }}	
