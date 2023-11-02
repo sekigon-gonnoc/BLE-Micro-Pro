@@ -12,6 +12,7 @@
   - [BLE Miro Pro Web Configuratorに登録するための手順](#ble-miro-pro-web-configuratorに登録するための手順)
     - [デフォルトキーマップ用binファイルを用意する](#デフォルトキーマップ用binファイルを用意する)
     - [2種類のjsonファイルとデフォルトキーマップ用binファイルを登録する](#2種類のjsonファイルとデフォルトキーマップ用binファイルを登録する)
+  - [ファームウェアをビルドする](#ファームウェアをビルドする)
 
 
 ## Remap(>QMK 0.19), Vial 対応
@@ -99,3 +100,13 @@ EEPROMリセット時に反映されるデフォルトキーマップを各キ�
 #### 2種類のjsonファイルとデフォルトキーマップ用binファイルを登録する
 
 BLE Miro Proのリポジトリの `bmp-vial-config/` にvial.json, config.json, default.binファイルを追加してプルリクエストを作成してください。
+
+### ファームウェアをビルドする
+
+デフォルトのファームウェアに変更を加えたい場合は[リポジトリ](https://github.com/sekigon-gonnoc/vial-qmk)からソースコードを取得してビルドしてください。
+
+```
+make ble_micro_pro:vial:uf2 
+```
+
+でき上がったuf2ファイルをブートローダ状態のBLE Micro Proにドラッグアンドドロップすることで書き込めます
