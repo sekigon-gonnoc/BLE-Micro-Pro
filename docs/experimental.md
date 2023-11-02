@@ -24,7 +24,7 @@ Vialはブラウザ上だけでなくローカル環境での実行ファイル�
 
 ### BLE Miro Proを更新して設定ファイルを書き込む手順
 
-Vial対応のファームウェア(bmp-vial)の手順は以下の3ステップです。
+Vial対応のファームウェア(bmp-vial)の導入手順は以下の3ステップです。
 
 1. [BLE Micro Pro Web Configurator](https://sekigon-gonnoc.github.io/BLE-Micro-Pro-WebConfigurator/#/home)でVial対応のファームウェア(`ble_micro_pro_bootloader_1_x_x` と `ble_micro_pro_vial_1_x_x`)を書き込む
 1. bmp-vial対応の設定ファイルを用意する
@@ -34,13 +34,13 @@ Vial対応のファームウェア(bmp-vial)の手順は以下の3ステップ�
 
 従来のファームウェアと同様にWebブラウザからファームウェアを更新できます。
 bmp-vialではファームウェアのメジャーバージョンが1となっています。
-そのため、ブートローダは `ble_micro_pro_bootloader_1_x_x` の系を、アプリケーションは `ble_micro_pro_vial_1_x_x` 系を書き込んでください。現時点ではMass Storage機能が有効なファームウェアしかないので、`Disable Mass Storage Class`のチェックボックスは必ず外してください。
+そのため、ブートローダは `ble_micro_pro_bootloader_1_x_x` 系を、アプリケーションは `ble_micro_pro_vial_1_x_x` 系を書き込んでください。現時点ではMass Storage機能が有効なファームウェアしかないので、`Disable Mass Storage Class`のチェックボックスは必ず外してください。
 
 現時点では設定ファイルをWebブラウザから書き込めないためEdit Configのページはスキップしてください。
 
 #### bmp-vial対応の設定ファイルを用意する
 
-従来の設定ファイルが用意されていたキーボードのうち、QMK公式にinfo.jsonが存在しているか、こちらでinfo.jsonの所在を把握していたキーボードについては[Release](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/releases/tag/bmp-vial-1.0.0-rc)ページに設定ファイルを用意しています。
+従来の設定ファイルが用意されていたキーボードのうち、QMK公式にinfo.jsonが存在しているか、こちらでinfo.jsonの所在を把握していたキーボードについては[Release](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/releases/tag/bmp-vial-1.0.0-rc)ページに書き込み用設定ファイルを、[github](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/tree/master/bmp-vial-config)に 書き込み用ファイルの元となったjsonファイルを用意しています。
 
 それ以外のキーボードや修正が必要な場合は下記の手順に沿って設定ファイルを用意してください。
 設定ファイルは下記の3種類必要です。
@@ -98,4 +98,4 @@ EEPROMリセット時に反映されるデフォルトキーマップを各キ�
 
 #### 2種類のjsonファイルとデフォルトキーマップ用binファイルを登録する
 
-BLE Miro Proのリポジトリの `bmp-vial-config/` にファイルを追加してプルリクエストを作成してください。
+BLE Miro Proのリポジトリの `bmp-vial-config/` にvial.json, config.json, default.binファイルを追加してプルリクエストを作成してください。
