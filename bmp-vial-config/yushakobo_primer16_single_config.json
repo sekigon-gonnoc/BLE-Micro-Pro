@@ -1,0 +1,71 @@
+{
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0x3265",
+            "pid": "0x000D",
+            "name": "primer16",
+            "manufacture": "yushakobo"
+        },
+        "matrix": {
+            "rows": 5,
+            "cols": 4,
+            "layer": 8,
+            "device_rows": 5,
+            "device_cols": 4,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 0,
+            "row_pins": [
+                15,
+                6,
+                5,
+                2,
+                1
+            ],
+            "col_pins": [
+                10,
+                9,
+                8,
+                16
+            ]
+        },
+        "mode": "SINGLE",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 7,
+            "num": 1
+        },
+        "encoder": {
+            "pin_a": [
+                18,
+                20
+            ],
+            "pin_b": [
+                17,
+                19
+            ],
+            "resolution": []
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    }
+}

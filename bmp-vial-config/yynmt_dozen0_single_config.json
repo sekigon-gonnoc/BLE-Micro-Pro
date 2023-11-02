@@ -1,0 +1,66 @@
+{
+    "single": {
+        "config": {
+            "version": 2,
+            "device_info": {
+                "vid": "0x04D8",
+                "pid": "0xEA4F",
+                "name": "Dozen0",
+                "manufacture": "yynmt"
+            },
+            "matrix": {
+                "rows": 1,
+                "cols": 12,
+                "layer": 8,
+                "device_rows": 1,
+                "device_cols": 12,
+                "debounce": 1,
+                "is_left_hand": 1,
+                "diode_direction": 0,
+                "row_pins": [
+                    20
+                ],
+                "col_pins": [
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7
+                ]
+            },
+            "mode": "SINGLE",
+            "startup": 1,
+            "peripheral": {
+                "max_interval": 30,
+                "min_interval": 30,
+                "slave_latency": 16
+            },
+            "central": {
+                "max_interval": 30,
+                "min_interval": 30,
+                "slave_latency": 0
+            },
+            "led": {
+                "pin": 1,
+                "num": 2
+            },
+            "reserved": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        }
+    }
+}

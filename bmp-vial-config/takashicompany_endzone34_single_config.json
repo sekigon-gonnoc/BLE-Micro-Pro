@@ -1,0 +1,67 @@
+{
+    "single": {
+        "config": {
+            "version": 2,
+            "device_info": {
+                "vid": "0x7463",
+                "pid": "0x0006",
+                "name": "EndZone34",
+                "manufacture": "takashicompany"
+            },
+            "matrix": {
+                "rows": 4,
+                "cols": 10,
+                "layer": 8,
+                "device_rows": 4,
+                "device_cols": 10,
+                "debounce": 1,
+                "is_left_hand": 1,
+                "diode_direction": 0,
+                "row_pins": [
+                    15,
+                    14,
+                    13,
+                    12
+                ],
+                "col_pins": [
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            },
+            "mode": "SINGLE",
+            "startup": 1,
+            "peripheral": {
+                "max_interval": 30,
+                "min_interval": 30,
+                "slave_latency": 16
+            },
+            "central": {
+                "max_interval": 30,
+                "min_interval": 30,
+                "slave_latency": 0
+            },
+            "led": {
+                "pin": 1,
+                "num": 9
+            },
+            "reserved": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        }
+    }
+}

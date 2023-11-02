@@ -14,6 +14,8 @@
   * [CLIから操作する](cli.md)
   * [セーフモードについて](safemode.md)
 
+* [試験的機能](experimental.md)
+
 * その他
   * [BLE-USB HIDブリッジドングル](bridge_dongle.md)
 

@@ -1,0 +1,75 @@
+{
+    "single": {
+        "config": {
+            "version": 2,
+            "device_info": {
+                "vid": "0x04D8",
+                "pid": "0xE8CF",
+                "name": "n51gl",
+                "manufacture": "Salicylic_Acid"
+            },
+            "matrix": {
+                "rows": 8,
+                "cols": 7,
+                "layer": 8,
+                "device_rows": 4,
+                "device_cols": 7,
+                "debounce": 1,
+                "is_left_hand": 1,
+                "diode_direction": 4,
+                "row_pins": [
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "col_pins": [
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14
+                ]
+            },
+            "mode": "SINGLE",
+            "startup": 1,
+            "peripheral": {
+                "max_interval": 30,
+                "min_interval": 30,
+                "slave_latency": 16
+            },
+            "central": {
+                "max_interval": 30,
+                "min_interval": 30,
+                "slave_latency": 0
+            },
+            "led": {
+                "pin": 1,
+                "num": 15
+            },
+            "encoder": {
+                "pin_a": [
+                    9
+                ],
+                "pin_b": [
+                    10
+                ],
+                "resolution": [
+                    3
+                ]
+            },
+            "reserved": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        }
+    }
+}

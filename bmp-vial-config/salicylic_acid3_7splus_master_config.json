@@ -1,0 +1,134 @@
+{
+    "master": {
+        "config": {
+            "version": 2,
+            "device_info": {
+                "vid": "0x04D8",
+                "pid": "0xEAE7",
+                "name": "7splus",
+                "manufacture": "Salicylic_Acid"
+            },
+            "matrix": {
+                "rows": 14,
+                "cols": 8,
+                "layer": 8,
+                "device_rows": 7,
+                "device_cols": 8,
+                "debounce": 1,
+                "is_left_hand": 1,
+                "diode_direction": 0,
+                "row_pins": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ],
+                "col_pins": [
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    12
+                ]
+            },
+            "mode": "SPLIT_MASTER",
+            "startup": 1,
+            "peripheral": {
+                "max_interval": 30,
+                "min_interval": 30,
+                "slave_latency": 16
+            },
+            "central": {
+                "max_interval": 30,
+                "min_interval": 30,
+                "slave_latency": 0
+            },
+            "led": {
+                "pin": 1,
+                "num": 31
+            },
+            "reserved": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        }
+    },
+    "slave": {
+        "config": {
+            "version": 2,
+            "device_info": {
+                "vid": "0x04D8",
+                "pid": "0xEAE7",
+                "name": "7splus",
+                "manufacture": "Salicylic_Acid"
+            },
+            "matrix": {
+                "rows": 14,
+                "cols": 8,
+                "layer": 8,
+                "device_rows": 7,
+                "device_cols": 8,
+                "debounce": 1,
+                "is_left_hand": 0,
+                "diode_direction": 0,
+                "row_pins": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ],
+                "col_pins": [
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    12
+                ]
+            },
+            "mode": "SPLIT_SLAVE",
+            "startup": 1,
+            "peripheral": {
+                "max_interval": 30,
+                "min_interval": 30,
+                "slave_latency": 16
+            },
+            "central": {
+                "max_interval": 30,
+                "min_interval": 30,
+                "slave_latency": 0
+            },
+            "led": {
+                "pin": 1,
+                "num": 31
+            },
+            "reserved": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        }
+    }
+}

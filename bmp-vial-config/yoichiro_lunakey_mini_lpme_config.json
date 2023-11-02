@@ -1,0 +1,195 @@
+{
+    "master": {
+        "config": {
+            "version": 2,
+            "device_info": {
+                "vid": "0x5954",
+                "pid": "0x0001",
+                "name": "Lunakey Mini",
+                "manufacture": "yoichiro"
+            },
+            "matrix": {
+                "rows": 8,
+                "cols": 6,
+                "layer": 8,
+                "device_rows": 4,
+                "device_cols": 6,
+                "debounce": 1,
+                "is_left_hand": 1,
+                "diode_direction": 0,
+                "row_pins": [
+                    7,
+                    9,
+                    10,
+                    11
+                ],
+                "col_pins": [
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15
+                ]
+            },
+            "mode": "SPLIT_MASTER",
+            "startup": 1,
+            "peripheral": {
+                "max_interval": 30,
+                "min_interval": 30,
+                "slave_latency": 16
+            },
+            "central": {
+                "max_interval": 30,
+                "min_interval": 30,
+                "slave_latency": 0
+            },
+            "led": {
+                "pin": 1,
+                "num": 12
+            },
+            "reserved": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        }
+    },
+    "slave": {
+        "config": {
+            "version": 2,
+            "device_info": {
+                "vid": "0x5954",
+                "pid": "0x0001",
+                "name": "Lunakey Mini",
+                "manufacture": "yoichiro"
+            },
+            "matrix": {
+                "rows": 8,
+                "cols": 6,
+                "layer": 8,
+                "device_rows": 4,
+                "device_cols": 6,
+                "debounce": 1,
+                "is_left_hand": 0,
+                "diode_direction": 0,
+                "row_pins": [
+                    7,
+                    9,
+                    10,
+                    11
+                ],
+                "col_pins": [
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15
+                ]
+            },
+            "mode": "SPLIT_SLAVE",
+            "startup": 1,
+            "peripheral": {
+                "max_interval": 30,
+                "min_interval": 30,
+                "slave_latency": 16
+            },
+            "central": {
+                "max_interval": 30,
+                "min_interval": 30,
+                "slave_latency": 0
+            },
+            "led": {
+                "pin": 1,
+                "num": 12
+            },
+            "reserved": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        }
+    },
+    "lpme": {
+        "config": {
+            "version": 2,
+            "device_info": {
+                "vid": "0x5954",
+                "pid": "0x0001",
+                "name": "Lunakey Mini",
+                "manufacture": "yoichiro"
+            },
+            "matrix": {
+                "rows": 8,
+                "cols": 6,
+                "layer": 8,
+                "device_rows": 4,
+                "device_cols": 6,
+                "debounce": 1,
+                "is_left_hand": 1,
+                "diode_direction": 2,
+                "row_pins": [
+                    7,
+                    9,
+                    10,
+                    11,
+                    7,
+                    9,
+                    10,
+                    11
+                ],
+                "col_pins": [
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15
+                ]
+            },
+            "mode": "SINGLE",
+            "startup": 1,
+            "peripheral": {
+                "max_interval": 30,
+                "min_interval": 30,
+                "slave_latency": 16
+            },
+            "central": {
+                "max_interval": 30,
+                "min_interval": 30,
+                "slave_latency": 0
+            },
+            "led": {
+                "pin": 1,
+                "num": 12
+            },
+            "reserved": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        }
+    }
+}

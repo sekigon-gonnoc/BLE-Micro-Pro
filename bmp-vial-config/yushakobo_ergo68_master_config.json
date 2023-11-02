@@ -1,0 +1,63 @@
+{
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0x3265",
+            "pid": "0x0011",
+            "name": "ergo68",
+            "manufacture": "yushakobo"
+        },
+        "matrix": {
+            "rows": 10,
+            "cols": 7,
+            "layer": 8,
+            "device_rows": 5,
+            "device_cols": 7,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 0,
+            "row_pins": [
+                7,
+                8,
+                9,
+                10,
+                11
+            ],
+            "col_pins": [
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14
+            ]
+        },
+        "mode": "SPLIT_MASTER",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 1,
+            "num": 0
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    }
+}
