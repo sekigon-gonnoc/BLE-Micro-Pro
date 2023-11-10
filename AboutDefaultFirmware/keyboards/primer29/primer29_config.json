@@ -1,0 +1,23 @@
+{"config":
+	{
+		"version":2,
+		"device_info":{"vid":"0x3265","pid":"0x0012",
+			"name":"primer29","manufacture":"yushakobo","description":""},
+		"matrix":{"rows":10,"cols":4,"device_rows":5, "device_cols":4,
+			"debounce":1,"is_left_hand":1,"diode_direction":4,
+			"row_pins":[ 8,  9, 10, 11, 12,  8,  9, 10, 11, 12],
+			"col_pins":[20, 19, 18, 17, 20, 19, 18, 17],
+			"layout":[
+				 1, 21,  2, 22,  3, 23,  4,
+				 5, 25,  6, 26,  7, 27,
+							30, 11, 31, 12,
+				13, 33, 14, 34, 15, 35,
+				17, 37, 18, 	19, 39, 20
+				]
+			},	
+		"mode":"SINGLE","startup":1,
+		"peripheral":{"max_interval":60,"min_interval":30,"slave_latency":7},
+		"central":{"max_interval":60,"min_interval":30,"slave_latency":0},
+		"led":{"pin":2, "num":3},
+		"keymap":{"locale":"US","use_ascii":0}
+}}	
