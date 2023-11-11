@@ -1,211 +1,79 @@
 {
-    "master": {
-        "config": {
-            "version": 2,
-            "device_info": {
-                "vid": "0x5946",
-                "pid": "0x0004",
-                "name": "wings42 rev1_extkeys",
-                "manufacture": "yfuku"
-            },
-            "matrix": {
-                "rows": 12,
-                "cols": 8,
-                "layer": 8,
-                "device_rows": 6,
-                "device_cols": 8,
-                "debounce": 1,
-                "is_left_hand": 1,
-                "diode_direction": 0,
-                "row_pins": [
-                    7,
-                    8,
-                    9,
-                    10,
-                    14,
-                    11
-                ],
-                "col_pins": [
-                    15,
-                    16,
-                    17,
-                    18,
-                    19,
-                    20,
-                    13,
-                    12
-                ]
-            },
-            "mode": "SPLIT_MASTER",
-            "startup": 1,
-            "peripheral": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 16
-            },
-            "central": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 0
-            },
-            "led": {
-                "pin": 255,
-                "num": 0
-            },
-            "reserved": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0x5946",
+            "pid": "0x0004",
+            "name": "wings42 rev1_extkeys",
+            "manufacture": "yfuku"
+        },
+        "matrix": {
+            "rows": 12,
+            "cols": 8,
+            "layer": 8,
+            "device_rows": 6,
+            "device_cols": 8,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 2,
+            "row_pins": [
+                7,
+                8,
+                9,
+                10,
+                14,
+                11,
+                7,
+                8,
+                9,
+                10,
+                14,
+                11
+            ],
+            "col_pins": [
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                13,
+                12,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                13,
+                12
             ]
-        }
-    },
-    "slave": {
-        "config": {
-            "version": 2,
-            "device_info": {
-                "vid": "0x5946",
-                "pid": "0x0004",
-                "name": "wings42 rev1_extkeys",
-                "manufacture": "yfuku"
-            },
-            "matrix": {
-                "rows": 12,
-                "cols": 8,
-                "layer": 8,
-                "device_rows": 6,
-                "device_cols": 8,
-                "debounce": 1,
-                "is_left_hand": 0,
-                "diode_direction": 0,
-                "row_pins": [
-                    7,
-                    8,
-                    9,
-                    10,
-                    14,
-                    11
-                ],
-                "col_pins": [
-                    15,
-                    16,
-                    17,
-                    18,
-                    19,
-                    20,
-                    13,
-                    12
-                ]
-            },
-            "mode": "SPLIT_SLAVE",
-            "startup": 1,
-            "peripheral": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 16
-            },
-            "central": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 0
-            },
-            "led": {
-                "pin": 255,
-                "num": 0
-            },
-            "reserved": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        }
-    },
-    "lpme": {
-        "config": {
-            "version": 2,
-            "device_info": {
-                "vid": "0x5946",
-                "pid": "0x0004",
-                "name": "wings42 rev1_extkeys",
-                "manufacture": "yfuku"
-            },
-            "matrix": {
-                "rows": 12,
-                "cols": 8,
-                "layer": 8,
-                "device_rows": 6,
-                "device_cols": 8,
-                "debounce": 1,
-                "is_left_hand": 1,
-                "diode_direction": 2,
-                "row_pins": [
-                    7,
-                    8,
-                    9,
-                    10,
-                    14,
-                    11,
-                    7,
-                    8,
-                    9,
-                    10,
-                    14,
-                    11
-                ],
-                "col_pins": [
-                    15,
-                    16,
-                    17,
-                    18,
-                    19,
-                    20,
-                    13,
-                    12,
-                    15,
-                    16,
-                    17,
-                    18,
-                    19,
-                    20,
-                    13,
-                    12
-                ]
-            },
-            "mode": "SINGLE",
-            "startup": 1,
-            "peripheral": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 16
-            },
-            "central": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 0
-            },
-            "led": {
-                "pin": 255,
-                "num": 0
-            },
-            "reserved": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        }
+        },
+        "mode": "SINGLE",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 255,
+            "num": 0
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
     }
 }

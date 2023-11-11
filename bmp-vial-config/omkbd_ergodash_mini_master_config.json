@@ -1,199 +1,62 @@
 {
-    "master": {
-        "config": {
-            "version": 2,
-            "device_info": {
-                "vid": "0xFEED",
-                "pid": "0x6060",
-                "name": "ErgoDash Mini",
-                "manufacture": "Omkbd"
-            },
-            "matrix": {
-                "rows": 8,
-                "cols": 7,
-                "layer": 8,
-                "device_rows": 4,
-                "device_cols": 7,
-                "debounce": 1,
-                "is_left_hand": 1,
-                "diode_direction": 0,
-                "row_pins": [
-                    9,
-                    10,
-                    11,
-                    12
-                ],
-                "col_pins": [
-                    20,
-                    19,
-                    18,
-                    17,
-                    16,
-                    15,
-                    14
-                ]
-            },
-            "mode": "SPLIT_MASTER",
-            "startup": 1,
-            "peripheral": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 16
-            },
-            "central": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 0
-            },
-            "led": {
-                "pin": 1,
-                "num": 20
-            },
-            "reserved": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0xFEED",
+            "pid": "0x6060",
+            "name": "ErgoDash Mini",
+            "manufacture": "Omkbd"
+        },
+        "matrix": {
+            "rows": 8,
+            "cols": 7,
+            "layer": 8,
+            "device_rows": 4,
+            "device_cols": 7,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 0,
+            "row_pins": [
+                9,
+                10,
+                11,
+                12
+            ],
+            "col_pins": [
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14
             ]
-        }
-    },
-    "slave": {
-        "config": {
-            "version": 2,
-            "device_info": {
-                "vid": "0xFEED",
-                "pid": "0x6060",
-                "name": "ErgoDash Mini",
-                "manufacture": "Omkbd"
-            },
-            "matrix": {
-                "rows": 8,
-                "cols": 7,
-                "layer": 8,
-                "device_rows": 4,
-                "device_cols": 7,
-                "debounce": 1,
-                "is_left_hand": 0,
-                "diode_direction": 0,
-                "row_pins": [
-                    9,
-                    10,
-                    11,
-                    12
-                ],
-                "col_pins": [
-                    20,
-                    19,
-                    18,
-                    17,
-                    16,
-                    15,
-                    14
-                ]
-            },
-            "mode": "SPLIT_SLAVE",
-            "startup": 1,
-            "peripheral": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 16
-            },
-            "central": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 0
-            },
-            "led": {
-                "pin": 1,
-                "num": 20
-            },
-            "reserved": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        }
-    },
-    "lpme": {
-        "config": {
-            "version": 2,
-            "device_info": {
-                "vid": "0xFEED",
-                "pid": "0x6060",
-                "name": "ErgoDash Mini",
-                "manufacture": "Omkbd"
-            },
-            "matrix": {
-                "rows": 8,
-                "cols": 7,
-                "layer": 8,
-                "device_rows": 4,
-                "device_cols": 7,
-                "debounce": 1,
-                "is_left_hand": 1,
-                "diode_direction": 2,
-                "row_pins": [
-                    9,
-                    10,
-                    11,
-                    12,
-                    9,
-                    10,
-                    11,
-                    12
-                ],
-                "col_pins": [
-                    20,
-                    19,
-                    18,
-                    17,
-                    16,
-                    15,
-                    14,
-                    20,
-                    19,
-                    18,
-                    17,
-                    16,
-                    15,
-                    14
-                ]
-            },
-            "mode": "SINGLE",
-            "startup": 1,
-            "peripheral": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 16
-            },
-            "central": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 0
-            },
-            "led": {
-                "pin": 1,
-                "num": 20
-            },
-            "reserved": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        }
+        },
+        "mode": "SPLIT_MASTER",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 1,
+            "num": 20
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
     }
 }

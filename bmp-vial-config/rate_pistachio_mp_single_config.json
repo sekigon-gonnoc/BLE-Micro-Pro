@@ -1,71 +1,69 @@
 {
-    "single": {
-        "config": {
-            "version": 2,
-            "device_info": {
-                "vid": "0x5255",
-                "pid": "0xE212",
-                "name": "pistachio_mp",
-                "manufacture": "rate"
-            },
-            "matrix": {
-                "rows": 5,
-                "cols": 4,
-                "layer": 8,
-                "device_rows": 5,
-                "device_cols": 4,
-                "debounce": 1,
-                "is_left_hand": 1,
-                "diode_direction": 1,
-                "row_pins": [
-                    11,
-                    10,
-                    9,
-                    8,
-                    7
-                ],
-                "col_pins": [
-                    15,
-                    16,
-                    17,
-                    18
-                ]
-            },
-            "mode": "SINGLE",
-            "startup": 1,
-            "peripheral": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 16
-            },
-            "central": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 0
-            },
-            "led": {
-                "pin": 2,
-                "num": 3
-            },
-            "encoder": {
-                "pin_a": [
-                    20
-                ],
-                "pin_b": [
-                    19
-                ],
-                "resolution": []
-            },
-            "reserved": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0x5255",
+            "pid": "0xE212",
+            "name": "pistachio_mp",
+            "manufacture": "rate"
+        },
+        "matrix": {
+            "rows": 5,
+            "cols": 4,
+            "layer": 8,
+            "device_rows": 5,
+            "device_cols": 4,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 1,
+            "row_pins": [
+                11,
+                10,
+                9,
+                8,
+                7
+            ],
+            "col_pins": [
+                15,
+                16,
+                17,
+                18
             ]
-        }
+        },
+        "mode": "SINGLE",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 2,
+            "num": 3
+        },
+        "encoder": {
+            "pin_a": [
+                20
+            ],
+            "pin_b": [
+                19
+            ],
+            "resolution": []
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
     }
 }

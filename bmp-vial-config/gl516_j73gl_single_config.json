@@ -1,66 +1,64 @@
 {
-    "single": {
-        "config": {
-            "version": 2,
-            "device_info": {
-                "vid": "0x04D8",
-                "pid": "0xE8D0",
-                "name": "j73gl",
-                "manufacture": "Salicylic_Acid"
-            },
-            "matrix": {
-                "rows": 10,
-                "cols": 8,
-                "layer": 8,
-                "device_rows": 5,
-                "device_cols": 8,
-                "debounce": 1,
-                "is_left_hand": 1,
-                "diode_direction": 4,
-                "row_pins": [
-                    5,
-                    6,
-                    7,
-                    8,
-                    9
-                ],
-                "col_pins": [
-                    20,
-                    19,
-                    18,
-                    17,
-                    16,
-                    15,
-                    14,
-                    10
-                ]
-            },
-            "mode": "SINGLE",
-            "startup": 1,
-            "peripheral": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 16
-            },
-            "central": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 0
-            },
-            "led": {
-                "pin": 1,
-                "num": 73
-            },
-            "reserved": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0x04D8",
+            "pid": "0xE8D0",
+            "name": "j73gl",
+            "manufacture": "Salicylic_Acid"
+        },
+        "matrix": {
+            "rows": 10,
+            "cols": 8,
+            "layer": 8,
+            "device_rows": 5,
+            "device_cols": 8,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 4,
+            "row_pins": [
+                5,
+                6,
+                7,
+                8,
+                9
+            ],
+            "col_pins": [
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14,
+                10
             ]
-        }
+        },
+        "mode": "SINGLE",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 1,
+            "num": 73
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
     }
 }

@@ -1,128 +1,63 @@
 {
-    "master": {
-        "config": {
-            "version": 2,
-            "device_info": {
-                "vid": "0xC0C0",
-                "pid": "0x4000",
-                "name": "Cocoa40",
-                "manufacture": "recompile keys"
-            },
-            "matrix": {
-                "rows": 8,
-                "cols": 8,
-                "layer": 8,
-                "device_rows": 4,
-                "device_cols": 8,
-                "debounce": 1,
-                "is_left_hand": 1,
-                "diode_direction": 0,
-                "row_pins": [
-                    20,
-                    19,
-                    18,
-                    17
-                ],
-                "col_pins": [
-                    12,
-                    11,
-                    10,
-                    9,
-                    8,
-                    7,
-                    6,
-                    5
-                ]
-            },
-            "mode": "SPLIT_MASTER",
-            "startup": 1,
-            "peripheral": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 16
-            },
-            "central": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 0
-            },
-            "led": {
-                "pin": 255,
-                "num": 0
-            },
-            "reserved": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0xC0C0",
+            "pid": "0x4000",
+            "name": "Cocoa40",
+            "manufacture": "recompile keys"
+        },
+        "matrix": {
+            "rows": 8,
+            "cols": 8,
+            "layer": 8,
+            "device_rows": 4,
+            "device_cols": 8,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 0,
+            "row_pins": [
+                20,
+                19,
+                18,
+                17
+            ],
+            "col_pins": [
+                12,
+                11,
+                10,
+                9,
+                8,
+                7,
+                6,
+                5
             ]
-        }
-    },
-    "slave": {
-        "config": {
-            "version": 2,
-            "device_info": {
-                "vid": "0xC0C0",
-                "pid": "0x4000",
-                "name": "Cocoa40",
-                "manufacture": "recompile keys"
-            },
-            "matrix": {
-                "rows": 8,
-                "cols": 8,
-                "layer": 8,
-                "device_rows": 4,
-                "device_cols": 8,
-                "debounce": 1,
-                "is_left_hand": 0,
-                "diode_direction": 0,
-                "row_pins": [
-                    20,
-                    19,
-                    18,
-                    17
-                ],
-                "col_pins": [
-                    12,
-                    11,
-                    10,
-                    9,
-                    8,
-                    7,
-                    6,
-                    5
-                ]
-            },
-            "mode": "SPLIT_SLAVE",
-            "startup": 1,
-            "peripheral": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 16
-            },
-            "central": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 0
-            },
-            "led": {
-                "pin": 255,
-                "num": 0
-            },
-            "reserved": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        }
+        },
+        "mode": "SPLIT_MASTER",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 255,
+            "num": 0
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
     }
 }

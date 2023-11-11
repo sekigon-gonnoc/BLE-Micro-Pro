@@ -1,136 +1,67 @@
 {
-    "master": {
-        "config": {
-            "version": 2,
-            "device_info": {
-                "vid": "0x04D8",
-                "pid": "0xE8BA",
-                "name": "naked48",
-                "manufacture": "Salicylic_Acid"
-            },
-            "matrix": {
-                "rows": 8,
-                "cols": 12,
-                "layer": 8,
-                "device_rows": 4,
-                "device_cols": 12,
-                "debounce": 1,
-                "is_left_hand": 1,
-                "diode_direction": 0,
-                "row_pins": [
-                    5,
-                    6,
-                    7,
-                    8
-                ],
-                "col_pins": [
-                    20,
-                    19,
-                    18,
-                    17,
-                    16,
-                    15,
-                    14,
-                    13,
-                    9,
-                    10,
-                    11,
-                    12
-                ]
-            },
-            "mode": "SPLIT_MASTER",
-            "startup": 1,
-            "peripheral": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 16
-            },
-            "central": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 0
-            },
-            "led": {
-                "pin": 1,
-                "num": 48
-            },
-            "reserved": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0x04D8",
+            "pid": "0xE8BA",
+            "name": "naked48",
+            "manufacture": "Salicylic_Acid"
+        },
+        "matrix": {
+            "rows": 8,
+            "cols": 12,
+            "layer": 8,
+            "device_rows": 4,
+            "device_cols": 12,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 0,
+            "row_pins": [
+                5,
+                6,
+                7,
+                8
+            ],
+            "col_pins": [
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14,
+                13,
+                9,
+                10,
+                11,
+                12
             ]
-        }
-    },
-    "slave": {
-        "config": {
-            "version": 2,
-            "device_info": {
-                "vid": "0x04D8",
-                "pid": "0xE8BA",
-                "name": "naked48",
-                "manufacture": "Salicylic_Acid"
-            },
-            "matrix": {
-                "rows": 8,
-                "cols": 12,
-                "layer": 8,
-                "device_rows": 4,
-                "device_cols": 12,
-                "debounce": 1,
-                "is_left_hand": 0,
-                "diode_direction": 0,
-                "row_pins": [
-                    7,
-                    8,
-                    9,
-                    10
-                ],
-                "col_pins": [
-                    20,
-                    19,
-                    18,
-                    17,
-                    16,
-                    15,
-                    14,
-                    13,
-                    11,
-                    12,
-                    14,
-                    14
-                ]
-            },
-            "mode": "SPLIT_SLAVE",
-            "startup": 1,
-            "peripheral": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 16
-            },
-            "central": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 0
-            },
-            "led": {
-                "pin": 1,
-                "num": 48
-            },
-            "reserved": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        }
+        },
+        "mode": "SPLIT_MASTER",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 1,
+            "num": 48
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
     }
 }

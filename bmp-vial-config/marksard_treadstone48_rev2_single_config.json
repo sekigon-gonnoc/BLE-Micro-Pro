@@ -1,67 +1,65 @@
 {
-    "single": {
-        "config": {
-            "version": 2,
-            "device_info": {
-                "vid": "0xFEED",
-                "pid": "0xDFA3",
-                "name": "Treadstone48",
-                "manufacture": "marksard"
-            },
-            "matrix": {
-                "rows": 8,
-                "cols": 6,
-                "layer": 8,
-                "device_rows": 8,
-                "device_cols": 6,
-                "debounce": 1,
-                "is_left_hand": 1,
-                "diode_direction": 0,
-                "row_pins": [
-                    20,
-                    19,
-                    18,
-                    17,
-                    16,
-                    15,
-                    14,
-                    13
-                ],
-                "col_pins": [
-                    7,
-                    8,
-                    9,
-                    10,
-                    11,
-                    12
-                ]
-            },
-            "mode": "SINGLE",
-            "startup": 1,
-            "peripheral": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 16
-            },
-            "central": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 0
-            },
-            "led": {
-                "pin": 1,
-                "num": 12
-            },
-            "reserved": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0xFEED",
+            "pid": "0xDFA3",
+            "name": "Treadstone48",
+            "manufacture": "marksard"
+        },
+        "matrix": {
+            "rows": 8,
+            "cols": 6,
+            "layer": 8,
+            "device_rows": 8,
+            "device_cols": 6,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 0,
+            "row_pins": [
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14,
+                13
+            ],
+            "col_pins": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
             ]
-        }
+        },
+        "mode": "SINGLE",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 1,
+            "num": 12
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
     }
 }

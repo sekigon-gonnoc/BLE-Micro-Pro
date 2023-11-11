@@ -1,69 +1,67 @@
 {
-    "single": {
-        "config": {
-            "version": 2,
-            "device_info": {
-                "vid": "0x5946",
-                "pid": "0x0010",
-                "name": "stickey4",
-                "manufacture": "yfuku"
-            },
-            "matrix": {
-                "rows": 1,
-                "cols": 4,
-                "layer": 8,
-                "device_rows": 1,
-                "device_cols": 4,
-                "debounce": 1,
-                "is_left_hand": 1,
-                "diode_direction": 0,
-                "row_pins": [
-                    0
-                ],
-                "col_pins": [
-                    7,
-                    8,
-                    9,
-                    10
-                ]
-            },
-            "mode": "SINGLE",
-            "startup": 1,
-            "peripheral": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 16
-            },
-            "central": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 0
-            },
-            "led": {
-                "pin": 255,
-                "num": 0
-            },
-            "encoder": {
-                "pin_a": [
-                    7,
-                    9
-                ],
-                "pin_b": [
-                    8,
-                    10
-                ],
-                "resolution": []
-            },
-            "reserved": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0x5946",
+            "pid": "0x0010",
+            "name": "stickey4",
+            "manufacture": "yfuku"
+        },
+        "matrix": {
+            "rows": 1,
+            "cols": 4,
+            "layer": 8,
+            "device_rows": 1,
+            "device_cols": 4,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 0,
+            "row_pins": [
                 0
+            ],
+            "col_pins": [
+                7,
+                8,
+                9,
+                10
             ]
-        }
+        },
+        "mode": "SINGLE",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 255,
+            "num": 0
+        },
+        "encoder": {
+            "pin_a": [
+                7,
+                9
+            ],
+            "pin_b": [
+                8,
+                10
+            ],
+            "resolution": []
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
     }
 }

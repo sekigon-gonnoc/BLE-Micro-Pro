@@ -1,70 +1,68 @@
 {
-    "single": {
-        "config": {
-            "version": 2,
-            "device_info": {
-                "vid": "0xFEED",
-                "pid": "0x4DD7",
-                "name": "Rect44",
-                "manufacture": "koshinoya"
-            },
-            "matrix": {
-                "rows": 4,
-                "cols": 13,
-                "layer": 8,
-                "device_rows": 4,
-                "device_cols": 13,
-                "debounce": 1,
-                "is_left_hand": 1,
-                "diode_direction": 0,
-                "row_pins": [
-                    1,
-                    2,
-                    19,
-                    20
-                ],
-                "col_pins": [
-                    18,
-                    17,
-                    16,
-                    15,
-                    14,
-                    5,
-                    6,
-                    7,
-                    8,
-                    9,
-                    10,
-                    11,
-                    12
-                ]
-            },
-            "mode": "SINGLE",
-            "startup": 1,
-            "peripheral": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 16
-            },
-            "central": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 0
-            },
-            "led": {
-                "pin": 13,
-                "num": 12
-            },
-            "reserved": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0xFEED",
+            "pid": "0x4DD7",
+            "name": "Rect44",
+            "manufacture": "koshinoya"
+        },
+        "matrix": {
+            "rows": 4,
+            "cols": 13,
+            "layer": 8,
+            "device_rows": 4,
+            "device_cols": 13,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 0,
+            "row_pins": [
+                1,
+                2,
+                19,
+                20
+            ],
+            "col_pins": [
+                18,
+                17,
+                16,
+                15,
+                14,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
             ]
-        }
+        },
+        "mode": "SINGLE",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 13,
+            "num": 12
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
     }
 }

@@ -1,68 +1,66 @@
 {
-    "single": {
-        "config": {
-            "version": 2,
-            "device_info": {
-                "vid": "0xFEED",
-                "pid": "0xE80A",
-                "name": "NumAtreus",
-                "manufacture": "yohewi"
-            },
-            "matrix": {
-                "rows": 4,
-                "cols": 11,
-                "layer": 8,
-                "device_rows": 4,
-                "device_cols": 11,
-                "debounce": 1,
-                "is_left_hand": 1,
-                "diode_direction": 1,
-                "row_pins": [
-                    8,
-                    9,
-                    10,
-                    11
-                ],
-                "col_pins": [
-                    20,
-                    19,
-                    18,
-                    17,
-                    16,
-                    15,
-                    14,
-                    2,
-                    5,
-                    6,
-                    7
-                ]
-            },
-            "mode": "SINGLE",
-            "startup": 1,
-            "peripheral": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 16
-            },
-            "central": {
-                "max_interval": 30,
-                "min_interval": 30,
-                "slave_latency": 0
-            },
-            "led": {
-                "pin": 1,
-                "num": 6
-            },
-            "reserved": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0xFEED",
+            "pid": "0xE80A",
+            "name": "NumAtreus",
+            "manufacture": "yohewi"
+        },
+        "matrix": {
+            "rows": 4,
+            "cols": 11,
+            "layer": 8,
+            "device_rows": 4,
+            "device_cols": 11,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 1,
+            "row_pins": [
+                8,
+                9,
+                10,
+                11
+            ],
+            "col_pins": [
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14,
+                2,
+                5,
+                6,
+                7
             ]
-        }
+        },
+        "mode": "SINGLE",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 1,
+            "num": 6
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
     }
 }
