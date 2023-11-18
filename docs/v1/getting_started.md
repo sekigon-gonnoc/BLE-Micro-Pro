@@ -50,7 +50,7 @@ Google Chromeから[BLE Micro Pro Web Configurator](https://sekigon-gonnoc.githu
 `ナビゲーション付きでセットアップを開始する`ボタンを押すとキーボードの選択画面が表示されます。
 リストから無線化したいキーボードを選んでください。
 
-無線化したいキーボードがリストにない場合には、[キーボードの設定を生成して](edit_config_file.md)、ここでは`ble_micro_pro`または`ble_micro_pro_split`を選択してください。
+無線化したいキーボードがリストにない場合には、[キーボードの設定を生成して](about_config_files.md)、ここでは`ble_micro_pro`または`ble_micro_pro_split`を選択してください。
 
 このページでは2つのオプションが選択できます。
 
