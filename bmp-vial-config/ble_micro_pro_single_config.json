@@ -1,0 +1,71 @@
+{
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0x0000",
+            "pid": "0x0000",
+            "name": "ble-micro-pro",
+            "manufacture": "sekigon-gonnoc"
+        },
+        "matrix": {
+            "rows": 1
+            "cols": 19,
+            "layer": 8,
+            "device_rows": 1,
+            "device_cols": 19,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 0,
+            "row_pins": [
+                33
+            ],
+            "col_pins": [
+				1,
+				2,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				22
+            ]
+        },
+        "mode": "SINGLE",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 255,
+            "num": 0
+        },
+        "encoder": {
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    }
+}

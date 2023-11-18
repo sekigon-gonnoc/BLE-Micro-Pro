@@ -1,6 +1,6 @@
 # 自作キーボードキットを無線化する
 
-BLE Micro Proを導入する手順はいくつかありますが、初めての場合は[BLE Micro Pro Web Configurator](https://sekigon-gonnoc.github.io/BLE-Micro-Pro-WebConfigurator/)を使った方法がおすすめです。
+BLE Micro Proを導入する手順はいくつかありますが、初めての場合は[BLE Micro Pro Web Configurator](https://sekigon-gonnoc.github.io/BLE-Micro-Pro-WebConfigurator/legacy)を使った方法がおすすめです。
 
 - [ハードウェアの準備](#ハードウェアの準備)
 - [BLE Micro Pro Web Configuratorを使う](#ble-micro-pro-web-configuratorを使う)
@@ -52,7 +52,7 @@ Google ChromeからBLE Micro Pro Web Configuratorにアクセスするとブラ�
 
 ### 事前準備
 
-Google Chromeを起動して、 [Web Configurator](https://sekigon-gonnoc.github.io/BLE-Micro-Pro-WebConfigurator/) にアクセスしてください。
+Google Chromeを起動して、 [Web Configurator](https://sekigon-gonnoc.github.io/BLE-Micro-Pro-WebConfigurator/legacy) にアクセスしてください。
 
 Chrome 89 Stableから、特にChromeの設定を変更することなく、Web Configuratorを利用することができるようになりました。もし Chrome 89 Stable 以前のバージョンをお使いの際には、Chromeのアドレスバーに `chrome://flags#enable-experimental-web-platform-features`を入力して、**Experimental Web Platform featuresをEnabled**にしてください。
 

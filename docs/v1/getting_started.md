@@ -4,15 +4,12 @@ BLE Micro Proを導入する手順はいくつかありますが、初めての�
 
 - [ハードウェアの準備](#ハードウェアの準備)
 - [BLE Micro Pro Web Configuratorを使う](#ble-micro-pro-web-configuratorを使う)
-  - [事前準備](#事前準備)
   - [キーボードを選ぶ](#キーボードを選ぶ)
   - [ファームウェアのアップデート](#ファームウェアのアップデート)
   - [設定ファイルの書き込み](#設定ファイルの書き込み)
   - [キーマップの書き込み](#キーマップの書き込み)
-    - [Remapを使う場合(USB接続)](#remapを使う場合usb接続)
-    - [QMK Configuratorを使う場合(USB接続)](#qmk-configuratorを使う場合usb接続)
-    - [QMK Configuratorを使う場合(BLE接続)](#qmk-configuratorを使う場合ble接続)
-    - [VIA Configuratorを使う場合(非推奨)](#via-configuratorを使う場合非推奨)
+    - [Remapを使う場合(USB/BLE接続)](#remapを使う場合usbble接続)
+    - [Vialを使う場合](#vialを使う場合)
   - [ペアリングする](#ペアリングする)
     - [(分割型のみ)マスターとスレーブの接続](#分割型のみマスターとスレーブの接続)
     - [パソコン等とのペアリング](#パソコン等とのペアリング)
@@ -21,20 +18,19 @@ BLE Micro Proを導入する手順はいくつかありますが、初めての�
     - [ブートローダの起動](#ブートローダの起動)
     - [ファームウェアの書き込み](#ファームウェアの書き込み)
   - [設定ファイルの書き込み](#設定ファイルの書き込み-1)
-  - [設定ファイルの削除](#設定ファイルの削除)
 
 ## ハードウェアの準備
 
 - BLE Micro Proを取り付ける準備
   - BLE Micro ProはPro Microの代わりに取り付けられます。
   - ピンヘッダでなくコンスルーを使う場合ははんだ付けは必要ありません([遊舎工房販売ページ](https://yushakobo.jp/shop/a01mc-00/), [TALP keyboard販売ページ](https://talpkeyboard.stores.jp/items/5e056626d790db16e2889233), [Switch Science 販売ページ](https://www.switch-science.com/catalog/3763/))
-    - BLE Micro Proはコンスルー対応なのでBLE Micro Pro側にはんだづけが必要ありません。
+    - BLE Micro Proはコンスルー対応なのでBLE Micro Pro側はんだづけ不要です。
     - Pro Microはコンスルー非対応なので、Pro Micro側にはんだ付けが必要です。
     - 国内キーボード基板はコンスルー対応基板が多いですが、海外キーボード基板の場合は非対応の場合が多く、キーボード基板側をはんだ付けする必要があります。
   - キーボード基板に電源ピンが用意されている場合は13ピンのコンスルーが必要な場合があります。キーボードキットの必要部品をよく確認してください。
     - 7skbやKugel-1のように、USBコネクタ側に寄せてコンスルーを取り付けることで12ピンでも動作するキットもあります。
   - キーボード基板に電源ピンが用意されていない場合は12ピンのコンスルーを調達してください。
-    - BLE micro pro対応を明示していないキーボードの場合はこちらの可能性が高いです。
+    - BLE Micro Pro対応を明示していないキーボードの場合はこちらの可能性が高いです。
 
 - 電源の準備
   - 導入の段階ではUSBケーブルで接続をしてUSB端子から電源供給を受けるので必須ではありません。
@@ -47,22 +43,12 @@ BLE Micro Proを導入する手順はいくつかありますが、初めての�
 
 ## BLE Micro Pro Web Configuratorを使う
 
-Google ChromeからBLE Micro Pro Web Configuratorにアクセスするとブラウザからファームウェアのアップデートや各種設定ができます。  
-* ブラウザに依存するトラブルを避けるためその他のChromium系ブラウザではなくChromeを使ってください
-
-### 事前準備
-
-Google Chromeを起動して、 [Web Configurator](https://sekigon-gonnoc.github.io/BLE-Micro-Pro-WebConfigurator/) にアクセスしてください。
-
-Chrome 89 Stableから、特にChromeの設定を変更することなく、Web Configuratorを利用することができるようになりました。もし Chrome 89 Stable 以前のバージョンをお使いの際には、Chromeのアドレスバーに `chrome://flags#enable-experimental-web-platform-features`を入力して、**Experimental Web Platform featuresをEnabled**にしてください。
-
+Google Chromeから[BLE Micro Pro Web Configurator](https://sekigon-gonnoc.github.io/BLE-Micro-Pro-WebConfigurator/)にアクセスするとブラウザからファームウェアのアップデートや各種設定ができます。  
 
 ### キーボードを選ぶ
 
 `ナビゲーション付きでセットアップを開始する`ボタンを押すとキーボードの選択画面が表示されます。
 リストから無線化したいキーボードを選んでください。
-
-ErgoDashやRunner3680のようにキー配置が複数選べる場合はレイアウトが選択できるので、自分が作ったキーボードのレイアウトを選択してください。
 
 無線化したいキーボードがリストにない場合には、[キーボードの設定を生成して](edit_config_file.md)、ここでは`ble_micro_pro`または`ble_micro_pro_split`を選択してください。
 
@@ -88,9 +74,9 @@ BLE Micro Proにはブートローダとアプリケーションという2種類
 また、大容量記憶デバイスの無効化オプションはブートローダとアプリケーションのそれぞれで設定でき、初期設定は最初の画面で選んだとおりになっています。
 
 アップデートしたいBLE Micro ProをUSBケーブルで接続したら、`Update`ボタンを押してください。
-[事前準備](#事前準備)が終わっていれば、ブラウザの左上からCOMポートの選択画面が表示されます。
+ブラウザの左上からCOMポートの選択画面が表示されます。
 BLE Micro ProのCOMポートを選択したら`接続`ボタンを押してください。
-どのポートがBLE Micro Proのものかわからない場合は、接続する前後で比較してみてください。
+どのポートがBLE Micro Proのものかわからない場合は、接続する前後でCOMポートのリストを比較してみてください。
 
 ブートローダが起動したという表示が出た場合はもう一度`Update`ボタンを押します。
 
@@ -116,18 +102,15 @@ BLE Micro ProのCOMポートを選択したら`接続`ボタンを押してく�
 - Is Left（分割型のみ）
   - いま設定しているBLE Micro Proを左手に取り付ける場合にはチェックを入れてください。
 
-- Show keymap.json using JP_XX
-  - キーマップ設定の表示を、OSの設定がJISキーボードとなっているときに適した表示にします。
-
 - Debounce
   - キー入力のチャタリング除去のパラメータです。デフォルトは1で、チャタリングがひどい場合にはチャタリングが無くなるまで1ずつ増やしてみてください。
 
-- Connection inteval(Peripheral)
+- Connection interval(Peripheral)
   - 通信間隔の設定です。短くすると入力のラグが減る一方で、電力消費が増加します。
     - 一体型キーボード、または分割型キーボードのMasterを設定している場合はPCとの通信間隔を設定します。
     - 分割型キーボードのSlaveを設定している場合はMasterとの通信間隔を設定します。後述のMaster側の設定と合わせてください。
   
-- Connection inteval(Central)（分割型Masterのみ）
+- Connection interval(Central)（分割型Masterのみ）
   - 分割型キーボードのSlaverとの通信間隔を設定します。前述のSlave側の設定と合わせてください。
 
 オプションを設定したら`Update`ボタンを押すとシリアルポートの選択が表示され、BLE Micro Proを接続したシリアルポートを選択するとアップデートが始まります。
@@ -142,13 +125,8 @@ BLE Micro ProのCOMポートを選択したら`接続`ボタンを押してく�
 
 ### キーマップの書き込み
 
-Remap, QMK Configurator, VIA Configurator(非推奨)のいずれかでキーマップを変更します。
-- 合計で489キー分の設定を保存できます。何レイヤにあたるかはキーボードによって異なります
-  - Remap, VIAに接続すると設定できる最大レイヤと同じ数のレイヤが自動で表示されます。
-  - QMK Configurator, KEYMAP.JSNを直接編集する場合、上限を超えたキーの設定は無視されます。
-- Remapは拡張キーコードの設定に対応していません。
-- キーボードの定義がRemapまたはQMK Configuratorのどちらかにしかない場合がありあます。一方に接続してうまく行かないときはもう一方も試してください。
-  - またはRemapに設定用のjsonファイルをアップロードしてください。
+- 上部メニューの`Write Default Keymap`から登録されているデフォルトキーマップを書き込めます。登録されていない場合はバックアップしたEEPROM.BINをアップロードして書き込めます。
+- Remap, Vialのいずれかでキーマップを変更します。
 - BLE Micro Pro用に無線接続関連など[いくつかのカスタムキーコード](edit_keymap_file.md#カスタムキーコード)が組み込まれています。最低限、以下のキーコードをキーマップに設定することをおすすめします
 
   |キーコード|機能|
@@ -160,45 +138,18 @@ Remap, QMK Configurator, VIA Configurator(非推奨)のいずれかでキーマ�
   |BATT_LV|バッテリーの電圧を表示する(文字列が自動で入力されます)|
   |ENT_SLP|スリープモードに入る|
 
-#### Remapを使う場合(USB接続)
+#### Remapを使う場合(USB/BLE接続)
 
-BLE Micro Proのバージョンがbootloader:0.9.3, firmware:0.9.4以上の場合、[Remap](https://remap-keys.app/)からキーマップを書き換えることができます。
+Web Configuratorにデフォルトキーマップが設定されていない場合はすべてのキーを設定する必要があります。
+Remapにキーマップが保存されている場合はSAVE/RESTORE機能をBLE Micro Pro上に復元してください。
 
-はじめて設定する場合、キーマップはすべて`KC_NO`になってしまっています。Remapの共有機能でデフォルトキーマップが共有されている場合はそれを適用できます。
-あるいは、有線版で組み立てたことがある場合はRemapのSAVE/RESTORE機能を使ってPro Microのキーマップを保存しておいてからBLE Micro Pro上に復元してください。
 
-#### QMK Configuratorを使う場合(USB接続)
+#### Vialを使う場合
 
-キーマップの書き換えにはBLE Micro Pro用の変更を加えた[QMK Configurator](https://sekigon-gonnoc.github.io/qmk_configurator/)を使います。
+* Vialを利用する場合、ローカル版のVialでは電源投入後の初回の接続には必ず失敗してしまいます。エラーが表示されたらRefreshボタンを押して再読み込みしてください。ブラウザ版では自動でリトライされるため、再読み込みの操作は必要ありません
+* 一度Vialと接続した場合、リセットするまでRemapには接続できなくなります。Remapに再接続したい場合は、リセットするか電源を再投入してください
+* Remapのマクロ定義とVialのマクロ定義が異なるため、一方で編集したマクロはもう一方で正しく表示されない場合があります。どちらで定義してもマクロの実行は可能です
 
-- `CONNECT BY SERIAL`ボタンを押してシリアルポートを開く。
-  - 一度キーマップを設定済みのBLE Micro Proに接続した場合、自動的にBLE Micro Proから現在のキーマップがロードされます。
-- はじめて設定する場合、キーボードリストから設定したいキーボードを選択してキーマップを設定する。
-  - デフォルトキーマップが登録されている場合はそれが表示されます。されていない場合はすべて`KC_NO`になってしまっているので、自分で全部設定するか、Remapを試してみてください。
-  - キーボードリストにキーボードがない場合、`CONNECT BY SERIAL`の右側にあるボタンを押してキーマップをロードするとconfig.jsonの中身に応じた暫定のキー配置でキーマップが表示されます。他のキーボードのようにレイアウトしたい場合はQMK Configurator(公式)にプルリクエストを出してください。
-- `CONNECT BY SERIAL`の左側のボタンを押して設定したキーマップをキーボードに反映する。
-- 試しに入力してみて問題なければ`SAVE KEYMAP`ボタンを押してキーボードに保存する。
-
-以上でBLE Micro Proの設定は完了です。QMKの設定を変えたり、カスタムキーコードを追加したりしたい場合は[ファームウェアをビルドする](build_firmware.md)に進んでください。
-
-#### QMK Configuratorを使う場合(BLE接続)
-
-この方法は一度USB接続でキーマップを書き込んでから使えるようになります。
-
-- [CLI](cli.md)から`web`コマンドを実行する、またはENT_WEBキーを押してConfiguratorモードを起動する。
-  - ConfiguratorモードではBLE経由でのキー入力はできません
-- `CONNECT BY BT`ボタンを押してシリアルポートを開く。
-- `CONNECT BY BT`の右側のボタンを押してキーボードからキーマップをロードする。
-- `CONNECT BY BT`の左側のボタンを押して設定したキーマップをキーボードに反映する。
-  - BLE経由の場合は反映した時点で永続化されます
-
-#### VIA Configuratorを使う場合(非推奨)
-
-- VIA Configuratorからキーマップを変更できます。ただし、LEDの設定はできません。0.10.2以降ではマクロも設定できます。
-
-- BLE Micro Pro用QMK Configuratorと違い、BLE Micro Pro用のキーコードが設定できず、また、レイヤを追加することもできません。
-
-- 書き換えの方法はVIA Configuratorのマニュアルを参照してください。書き換えられたキーマップは一時的なものなので、永続化するにはInsertキーを5秒以上押してから離してください。
 
 ### ペアリングする
 
@@ -222,54 +173,27 @@ BLE Micro Proのバージョンがbootloader:0.9.3, firmware:0.9.4以上の場�
 #### ブートローダの起動
 
 - キーボードのリセットボタンを押しながらUSB接続するとブートローダが起動します
-
 - すでにキーボードとして動作する場合には[CLI](cli.md)からdfuコマンドを送信することでも起動できます  
-
-- v0.4.0以降のQMK for BMPを使用している場合、起動中にリセットスイッチ長押しでも起動します
 
 #### ファームウェアの書き込み
 
-拡張子が`.uf2`のファイルを使って書き込みます  
-**[ブートローダーv0.2.0, v0.3.0からアップデートする場合はv0.2.1, v0.3.1を経由してください](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/issues/10)**  
-nrfutilを使う場合は経由せずに直接アップデートできます
+拡張子が`.uf2`のファイルを使って書き込みます
 
 - BLE Micro Proがマスストレージデバイスとして認識され、中に`INFO_UF2.TXT`があることを確認してください。このファイルがない場合、ブートローダの起動に失敗しているので再起動してください
-  - v0.4.0以降、ブートローダ起動時のボリュームラベルはBLEMICROPRO、キーボード起動時のボリュームラベルは設定したキーボード名になるので、これで判別することもできます
-
 - アップデートしたいuf2ファイルをコピーするとアップデートが始まります。アップデート中はケーブルを外さないでください
-
 - アップデートが完了すると自動でアンマウントされます
-
 - 再度マウントするとuf2ファイルは消えていますが、下記の方法でアップデートが完了していることを確認してください
-
   - ブートローダをアップデートした場合、`INFO_UF2.TXT`を開いてアップデート完了を確認してください
-
   - アプリケーションのアップデートの場合は`VERSION.TXT`を開いてアップデート完了を確認してください
 
 ### 設定ファイルの書き込み
 
 BLE Micro Proがアプリケーションを起動している状態で設定ファイルをコピーすると自動的に書き込みが始まります。
-BLE Micro Pro上のファイルを直接編集することもできますが、バックアップの意味も兼ねて一度PC上にコピーしてから編集、転送することを推奨します。
 
-|ファイル名|役割|
+|ファイル名|R/W|役割|
 |-|-|
-|CONFIG.JSN|キーボードのマトリクスの割り当てなどを設定する|
-|KEYAMP.JSN|キーマップを設定する|
-|TAPTERM.JSN|TAPPING TERMを設定する|
-|ENCODER.JSN|ロータリーエンコーダの割り当てを設定する|
-|MACRO.TXT|マクロを設定する|
-|VERSION.TXT|書き込まれているファームの情報を表示する|
-|INDEX.HTM|ドキュメントへのリンク|
-|MAP_EDIT.HTM|QMK Configuratorへのリンク|
-
-コンフィグ用ファイル（CONFIG.JSN）は[BLE Micro Proのリポジトリから探す](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/tree/master/AboutDefaultFirmware/keyboards)か、キーボードの作者が提供しているものを使うか、[自分で作成する](edit_config_file.md)か、いずれかの方法で用意してください。
-なお、書き込むときにファイル名をCONFIG.JSNにリネームする必要はありません。再起動後に自動でリネームされます。
-
-キーマップ用ファイル（KEYMAP.JSN）はQMK Configuratorを使って生成するか、テキストエディタなどで編集してください。
-書き方は[こちら](edit_keymap_file.md)
-
-TAPPING TERMの調整、ロータリーエンコーダの設定、マクロの設定については[こちら](edit_other_config_file.md)。
-
-### 設定ファイルの削除
-
-PCから見えているファイルを削除してもBLE Micro Proを再起動すると復活します。完全に削除してデフォルトに戻したい場合は[CLI](cli.md)からremoveコマンドを使ってください。
+|CONFIG.BIN|RW|キーボードの設定やVialの設定・バックアップ用|
+|DEFAULT.BIN|RW|EEPROMのデフォルト状態(デフォルトキーマップなど)の設定・バックアップ用|
+|EEPROM.BIN|R|現在のEEPROM状態のバックアップ用|
+|VERSION.TXT|R|現在のファームウェアのバージョン|
+|VIALJSON.BIN|R|vial.jsonを7zで圧縮したバイナリのバックアップ用|
