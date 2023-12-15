@@ -17,7 +17,7 @@
 - ここでは `qmk_firmware_bmp_vial` という名前でクローンします。
 
 ``` 
-git clone --depth 1 -b dev/ble_micro_pro https://github.com/sekigon-gonnoc/vial-qmk.git qmk_firmware_bmp_vial
+git clone --depth 1 -b dev/ble-micro-pro https://github.com/sekigon-gonnoc/vial-qmk.git qmk_firmware_bmp_vial
 ```
 
 uf2ではなくnrfutilを使って書き込む場合、追加でnrfutilをインストールします。
