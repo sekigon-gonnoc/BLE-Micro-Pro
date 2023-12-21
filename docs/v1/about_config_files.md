@@ -20,11 +20,12 @@
 
 1. 左側のテキストボックスにQMKのinfo.jsonを記入する
    1. QMK公式のリポジトリにinfo.jsonが存在する場合はテキストボックス下部にあるリストから選択できます。
-2. 左下の`Generate`ボタンをクリックしてvial.jsonとconfig.binを生成する
+2. 左下の`Generate`ボタンをクリックしてvial.jsonとconfig.jsonを生成する
    1. 自動生成されたvial.jsonでは内容が不十分な場合はテキストボックスの中身を書き換えてください
 3. 中央下の`Append BMP custom keycodes`ボタンをクリックして、BLE Micro Pro用のカスタムキーコードリストをvial.jsonに追加する
 4. `Download vial.json`ボタンをクリックしてvial.jsonをダウンロードする
 5. 分割キーボードの場合は右下のリストからconfig.jsonの対象(master, slave, lpme)を選択する
+   1. 自動生成されたconfig.jsonでは内容が不十分な場合はテキストボックスの中身を書き換えてください。通常のマトリクスであればinfo.jsonからの自動変換で十分な場合が多いですが、duplex-matrixは修正が必要な場合があります。→[config.jsonの説明](edit_config_file.md)
 6. `Download config.json`ボタンをクリックしてconfig.jsonをダウンロードする
 7. `Downliad config.bin`ボタンをクリックしてconfig.binをダウンロードする
 
