@@ -1,0 +1,79 @@
+{
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0xFEED",
+            "pid": "0x0888",
+            "name": "HandymanMACROPAD",
+            "manufacture": "hayashi"
+        },
+        "matrix": {
+            "rows": 6,
+            "cols": 5,
+            "layer": 6,
+            "device_rows": 6,
+            "device_cols": 5,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 1,
+            "row_pins": [
+                13,
+                14,
+                15,
+                12,
+                11,
+                10
+            ],
+            "col_pins": [
+                20,
+                19,
+                18,
+                17,
+                16
+            ]
+        },
+        "mode": "SINGLE",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 1,
+            "num": 28
+        },
+        "encoder": {
+            "pin_a": [
+                2,
+                6,
+                8
+            ],
+            "pin_b": [
+                5,
+                7,
+                9
+            ],
+            "resolution": [
+                4,
+                4,
+                4
+            ]
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    }
+}

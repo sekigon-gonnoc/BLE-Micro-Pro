@@ -1,0 +1,368 @@
+{
+    "name": "CannonballCURSORPAD",
+    "vendorId": "0xFEED",
+    "productId": "0x0887",
+    "matrix": {
+        "rows": 4,
+        "cols": 5
+    },
+    "layouts": {
+        "labels": [
+      [ "Direction", "Left", "Right", "Down", "Up" ]
+    ],
+        "keymap": [
+            [
+    {
+      "x": 0.25
+    },
+    "0,0\n\n\n0,0\n\n\n\n\n\ne",
+    "1,0\n\n\n0,0\n\n\n\n\n\ne",
+    {
+      "x": 1
+    },
+    "2,0\n\n\n0,0\n\n\n\n\n\ne"
+  ],
+  [
+    {
+      "x": 0.25
+    },
+    "0,1\n\n\n0,0\n\n\n\n\n\ne",
+    "1,1\n\n\n0,0\n\n\n\n\n\ne",
+    {
+      "x": 1
+    },
+    "2,1\n\n\n0,0\n\n\n\n\n\ne"
+  ],
+  [
+    {
+      "y": 0.25,
+      "x": 1.25
+    },
+    "0,1\n\n\n0,0",
+    "0,2\n\n\n0,0",
+    "0,3\n\n\n0,0",
+    "0,4\n\n\n0,0"
+  ],
+  [
+    {
+      "x": 0.25
+    },
+    "1,0\n\n\n0,0",
+    "1,1\n\n\n0,0",
+    "1,2\n\n\n0,0",
+    "1,3\n\n\n0,0",
+    {
+      "h": 2
+    },
+    "2,4\n\n\n0,0"
+  ],
+  [
+    {
+      "x": 1.25
+    },
+    "2,1\n\n\n0,0",
+    "2,2\n\n\n0,0",
+    "2,3\n\n\n0,0"
+  ],
+  [
+    {
+      "y": 0.25
+    },
+    "3,4\n\n\n0,0",
+    "3,2\n\n\n0,0",
+    "3,0\n\n\n0,0"
+  ],
+  [
+    {
+      "y": 0.75,
+      "x": 1
+    },
+    "2,0\n\n\n0,1\n\n\n\n\n\ne",
+    {
+      "x": 1
+    },
+    "1,0\n\n\n0,1\n\n\n\n\n\ne",
+    "0,0\n\n\n0,1\n\n\n\n\n\ne"
+  ],
+  [
+    {
+      "x": 1
+    },
+    "2,1\n\n\n0,1\n\n\n\n\n\ne",
+    {
+      "x": 1
+    },
+    "1,1\n\n\n0,1\n\n\n\n\n\ne",
+    "0,1\n\n\n0,1\n\n\n\n\n\ne"
+  ],
+  [
+    {
+      "y": 0.25,
+      "h": 2
+    },
+    "2,4\n\n\n0,1",
+    "2,3\n\n\n0,1",
+    "2,2\n\n\n0,1",
+    "2,1\n\n\n0,1"
+  ],
+  [
+    {
+      "x": 1
+    },
+    "1,3\n\n\n0,1",
+    "1,2\n\n\n0,1",
+    "1,1\n\n\n0,1",
+    "1,0\n\n\n0,1"
+  ],
+  [
+    "0,4\n\n\n0,1",
+    "0,3\n\n\n0,1",
+    "0,2\n\n\n0,1",
+    "0,1\n\n\n0,1"
+  ],
+  [
+    {
+      "y": 0.25,
+      "x": 2.25
+    },
+    "3,4\n\n\n0,1",
+    "3,2\n\n\n0,1",
+    "3,0\n\n\n0,1"
+  ],
+  [
+    {
+      "y": 0.75
+    },
+    "0,4\n\n\n0,2",
+    {
+      "w": 2
+    },
+    "2,4\n\n\n0,2"
+  ],
+  [
+    "0,3\n\n\n0,2",
+    "1,3\n\n\n0,2",
+    "2,3\n\n\n0,2",
+    {
+      "x": 0.25
+    },
+    "2,0\n\n\n0,2\n\n\n\n\n\ne",
+    "2,1\n\n\n0,2\n\n\n\n\n\ne"
+  ],
+  [
+    "0,2\n\n\n0,2",
+    "1,2\n\n\n0,2",
+    "2,2\n\n\n0,2"
+  ],
+  [
+    "0,1\n\n\n0,2",
+    "1,1\n\n\n0,2",
+    "2,1\n\n\n0,2",
+    {
+      "x": 0.25
+    },
+    "1,0\n\n\n0,2\n\n\n\n\n\ne",
+    "1,1\n\n\n0,2\n\n\n\n\n\ne"
+  ],
+  [
+    {
+      "x": 1
+    },
+    "1,0\n\n\n0,2",
+    {
+      "x": 1.25
+    },
+    "0,0\n\n\n0,2\n\n\n\n\n\ne",
+    "0,1\n\n\n0,2\n\n\n\n\n\ne"
+  ],
+  [
+    {
+      "y": 0.25
+    },
+    "3,4\n\n\n0,2",
+    "3,2\n\n\n0,2",
+    "3,0\n\n\n0,2"
+  ],
+  [
+    {
+      "y": 0.75
+    },
+    "3,0\n\n\n0,3",
+    "3,2\n\n\n0,3",
+    "3,4\n\n\n0,3"
+  ],
+  [
+    {
+      "y": 0.25,
+      "x": 1
+    },
+    "1,0\n\n\n0,3",
+    {
+      "x": 1.25
+    },
+    "0,0\n\n\n0,3\n\n\n\n\n\ne",
+    "0,1\n\n\n0,3\n\n\n\n\n\ne"
+  ],
+  [
+    "2,1\n\n\n0,3",
+    "1,1\n\n\n0,3",
+    "0,1\n\n\n0,3",
+    {
+      "x": 0.25
+    },
+    "1,0\n\n\n0,3\n\n\n\n\n\ne",
+    "1,1\n\n\n0,3\n\n\n\n\n\ne"
+  ],
+  [
+    "2,2\n\n\n0,3",
+    "1,2\n\n\n0,3",
+    "0,2\n\n\n0,3"
+  ],
+  [
+    "2,3\n\n\n0,3",
+    "1,3\n\n\n0,3",
+    "0,3\n\n\n0,3",
+    {
+      "x": 0.25
+    },
+    "2,0\n\n\n0,3\n\n\n\n\n\ne",
+    "2,1\n\n\n0,3\n\n\n\n\n\ne"
+  ],
+  [
+    {
+      "w": 2
+    },
+    "2,4\n\n\n0,3",
+    "0,4\n\n\n0,3"
+  ]
+]
+    },
+    "lighting": "qmk_rgblight",
+    "customKeycodes": [
+        {
+            "name": "SEL_BLE",
+            "title": "Output report from BLE",
+            "shortName": "SEL\nBLE"
+        },
+        {
+            "name": "SEL_USB",
+            "title": "Output report from USB",
+            "shortName": "SEL\nUSB"
+        },
+        {
+            "name": "ADV0",
+            "title": "Start advertise to ID0",
+            "shortName": "ADV\nID0"
+        },
+        {
+            "name": "ADV1",
+            "title": "Start advertise to ID1",
+            "shortName": "ADV\nID1"
+        },
+        {
+            "name": "ADV2",
+            "title": "Start advertise to ID2",
+            "shortName": "ADV\nID2"
+        },
+        {
+            "name": "ADV3",
+            "title": "Start advertise to ID3",
+            "shortName": "ADV\nID3"
+        },
+        {
+            "name": "ADV4",
+            "title": "Start advertise to ID4",
+            "shortName": "ADV\nID4"
+        },
+        {
+            "name": "ADV5",
+            "title": "Start advertise to ID5",
+            "shortName": "ADV\nID5"
+        },
+        {
+            "name": "ADV6",
+            "title": "Start advertise to ID6",
+            "shortName": "ADV\nID6"
+        },
+        {
+            "name": "ADV7",
+            "title": "Start advertise to ID7",
+            "shortName": "ADV\nID7"
+        },
+        {
+            "name": "AD_WO_L",
+            "title": "Start advertise without whitelist (Pair new device)",
+            "shortName": "ADV\nW/O L"
+        },
+        {
+            "name": "DEL0",
+            "title": "Delete pairing info ID1",
+            "shortName": "DEL\nID1"
+        },
+        {
+            "name": "DEL1",
+            "title": "Delete pairing info ID1",
+            "shortName": "DEL\nID1"
+        },
+        {
+            "name": "DEL2",
+            "title": "Delete pairing info ID2",
+            "shortName": "DEL\nID2"
+        },
+        {
+            "name": "DEL3",
+            "title": "Delete pairing info ID3",
+            "shortName": "DEL\nID3"
+        },
+        {
+            "name": "DEL4",
+            "title": "Delete pairing info ID4",
+            "shortName": "DEL\nID4"
+        },
+        {
+            "name": "DEL5",
+            "title": "Delete pairing info ID5",
+            "shortName": "DEL\nID5"
+        },
+        {
+            "name": "DEL6",
+            "title": "Delete pairing info ID6",
+            "shortName": "DEL\nID6"
+        },
+        {
+            "name": "DEL7",
+            "title": "Delete pairing info ID7",
+            "shortName": "DEL\nID7"
+        },
+        {
+            "name": "DEL_ALL",
+            "title": "Delete all pairing info",
+            "shortName": "DEL\nALL"
+        },
+        {
+            "name": "BATT",
+            "title": "Print battery info",
+            "shortName": "BATT\nLV"
+        },
+        {
+            "name": "ENT_SLP",
+            "title": "Enter deep sleep mode",
+            "shortName": "ENT\nSLP"
+        },
+        {
+            "name": "DISABLE_KEY_OS_OVERRIDE",
+            "title": "Disable key overrides for JP/US OS",
+            "shortName": "D\nOVR"
+        },
+        {
+            "name": "ENABLE_US_KEY_ON_JP_OS_OVERRIDE",
+            "title": "Enable US keyboard on JP OS override",
+            "shortName": "UJ\nOVR"
+        },
+        {
+            "name": "ENABLE_JP_KEY_ON_US_OS_OVERRIDE",
+            "title": "Enable JP keyboard on US OS override",
+            "shortName": "JU\nOVR"
+        }
+    ]
+}
