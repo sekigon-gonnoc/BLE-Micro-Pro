@@ -1,5 +1,7 @@
 # 自作キーボードキットを無線化する
 
+**このページは旧バージョンのファームウェアについての説明です。最新版ファームウェアの説明は[こちら](../v1/README.md)**
+
 BLE Micro Proを導入する手順はいくつかありますが、初めての場合は[BLE Micro Pro Web Configurator](https://sekigon-gonnoc.github.io/BLE-Micro-Pro-WebConfigurator/legacy)を使った方法がおすすめです。
 
 - [ハードウェアの準備](#ハードウェアの準備)

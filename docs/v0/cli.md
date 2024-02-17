@@ -1,5 +1,7 @@
 # CLI
 
+**このページは旧バージョンのファームウェアについての説明です。最新版ファームウェアの説明は[こちら](../v1/README.md)**
+
 BLE Micro Proに各種のコマンドを命令したり、デバッグメッセージを確認したりできます。
 
 BLE Micro ProのCLIを開くには、[QMK Configurator](https://sekigon-gonnoc.github.io/qmk_configurator)か、TeraTermやscreen, cuなどからシリアルポートを開いてください。

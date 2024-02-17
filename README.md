@@ -2,7 +2,7 @@
 
 [![Docs Status](https://img.shields.io/badge/docs-ready-orange.svg)](https://sekigon-gonnoc.github.io/BLE-Micro-Pro)
 
-Pro Microとの互換性を意識したBL654(nrf52840モジュール)のブレークアウトボードです。主に自作キーボードでの使用を想定して設計しています。Pro Microを使用した自作キーボードに取り付けて、USB/Bluetooth Low Energyの両方に対応させることができます。  
+BLE Micro ProはPro Microとの互換性を意識した、nrf52840モジュール搭載のブレークアウトボードです。主に自作キーボードでの使用を想定して設計しています。Pro Microを使用した自作キーボードに取り付けてQMKベースの専用ファームウェアを書き込むことで、USB/BLE5の両方に対応させることができます。  
 
 **質問等は [Self Made Keyboard in Japan の Discord](https://discordapp.com/invite/zXCss8T) #mon-shin🔰 (トラブルシューティング) または #ble-micro-pro（開発関係の質問）チャンネルまで。**
 **質問の前に過去ログを参照してください**
@@ -24,7 +24,7 @@ Pro Microとの互換性を意識して設計されていますが、以下の�
 
 ## 接続確認済みデバイス
 
-Windows 10, Androidとの接続を確認しています。ただし、使用するbluetoothアダプタによっては接続が不安定になることがあります。
+Windows 10, Androidとの接続を確認しています。使用する機器との相性や使用環境によっては接続が不安定になることがあります。
 
 ## 使い方(ハードウェア編)
 
