@@ -87,6 +87,6 @@ Pro Microとの互換性を意識して設計されていますが、以下の�
 
 ## プルリクエスト
 
-BLE Micro Pro Web Configurator に設定ファイルを登録したい場合は、[BLE-Micro-Pro/AboutDefaultFirmware/keyboards](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/tree/master/AboutDefaultFirmware/keyboards)以下にファイルを追加してプルリクエストしてください。マージ後、Web Configuratorへの追加はこちらで処理します。
+BLE Micro Pro Web Configurator に設定ファイルを登録したい場合は、[設定について](about_config_files.md)を参考にプルリクエストを作成してください。
 
 また、Remapのキーマップ共有機能でデフォルトキーマップを共有しておくとキット購入者が組み立てるときの助けになると思います。
