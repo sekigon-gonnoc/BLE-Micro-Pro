@@ -1,0 +1,21 @@
+{
+  "keyboard": "primer29",
+  "keymap": "default",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_INS", "KC_HOME","KC_PGUP",    "KC_NUM", "KC_PSLS","KC_PAST","KC_PMNS",
+      "KC_DEL", "KC_END", "KC_PGDN",    "KC_P1",  "KC_P1",  "KC_P1",
+                                        "KC_P1",  "KC_P1",  "KC_P1",  "KC_PPLS",
+      "BLE_EN","KC_UP",  "MO(1)",      "KC_P1",  "KC_P1",  "KC_P1",
+      "KC_LEFT","KC_DOWN","KC_RGHT",              "KC_P0",  "KC_PDOT","KC_PENT"
+    ],
+    [
+      "RGB_RST","RGB_TOG","RGB_MOD",    "KC_NO",  "KC_NO",  "KC_NO",  "AD_WO_L",
+      "KC_NO",  "KC_NO",  "KC_NO",      "ADV_ID7","KC_NO",  "KC_NO",
+                                        "ADV_ID4","ADV_ID5","ADV_ID6","KC_NO",
+      "RGB_VAi","RGB_SAI","RGB_HUI",    "ADV_ID1","ADV_ID2","ADV_ID3",
+      "RGB_VAD","RGB_SAD","RGB_HUD",                "KC_NO",  "KC_NO","KC_NO"
+    ]
+  ]
+}
