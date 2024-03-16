@@ -4,9 +4,6 @@
 
 ### bmp-vial対応の設定ファイルを用意する
 
-従来の設定ファイルが用意されていたキーボードのうち、QMK公式にinfo.jsonが存在しているか、こちらでinfo.jsonの所在を把握していたキーボードについては[Release](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/releases/tag/bmp-vial-1.0.0-rc)ページに書き込み用設定ファイルを、[github](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/tree/master/bmp-vial-config)に 書き込み用ファイルの元となったjsonファイルを用意しています。
-
-それ以外のキーボードや修正が必要な場合は下記の手順に沿って設定ファイルを用意してください。
 設定ファイルは下記の3種類必要です。
 
 * vial用jsonファイル(vial.json)
@@ -16,18 +13,16 @@
 * 書き込み用binファイル(config.bin)
   * vial.jsonとconfig.jsonから生成された書き込み用のバイナリファイルです
 
-設定ファイルは[bmp-vial-config-generator](https://sekigon-gonnoc.github.io/bmp-vial-config-generator/)を利用して生成できます。
+これらの設定ファイルは[bmp-vial-config-generator](https://sekigon-gonnoc.github.io/bmp-vial-config-generator/)を利用して生成できます。
 
 1. 左側のテキストボックスにQMKのinfo.jsonを記入する
    1. QMK公式のリポジトリにinfo.jsonが存在する場合はテキストボックス下部にあるリストから選択できます。
 2. 左下の`Generate`ボタンをクリックしてvial.jsonとconfig.jsonを生成する
    1. 自動生成されたvial.jsonでは内容が不十分な場合はテキストボックスの中身を書き換えてください
 3. 中央下の`Append BMP custom keycodes`ボタンをクリックして、BLE Micro Pro用のカスタムキーコードリストをvial.jsonに追加する
-4. `Download vial.json`ボタンをクリックしてvial.jsonをダウンロードする
-5. 分割キーボードの場合は右下のリストからconfig.jsonの対象(master, slave, lpme)を選択する
+4. 分割キーボードの場合は右下のリストからconfig.jsonの対象(master, slave, lpme)を選択する
    1. 自動生成されたconfig.jsonでは内容が不十分な場合はテキストボックスの中身を書き換えてください。通常のマトリクスであればinfo.jsonからの自動変換で十分な場合が多いですが、duplex-matrixは修正が必要な場合があります。→[config.jsonの説明](edit_config_file.md)
-6. `Download config.json`ボタンをクリックしてconfig.jsonをダウンロードする
-7. `Downliad config.bin`ボタンをクリックしてconfig.binをダウンロードする
+5. `Download config.bin`ボタンをクリックしてconfig.binを生成・ダウンロードする
 
 ### BLE Micro Proに設定ファイルを書き込む 
 
@@ -47,9 +42,16 @@
 ## BLE Miro Pro Web Configuratorに登録するための手順
 
 Vial対応の設定ファイルをBLE Micro Pro Web Configuratorに登録したい方は追加で以下の手順の実施をお願いします。該当キーボードの作者以外の方でもプルリクエストを作成していただいて構いません。
+以下の流れで作業を実施してください。
 
+1. [bmp-vial-config-generator](https://sekigon-gonnoc.github.io/bmp-vial-config-generator/)でvial.jsonとconfig.jsonを生成し、ダウンロードする
 1. (任意)デフォルトキーマップ用binファイルを用意する
-2. 2種類のjsonファイルとデフォルトキーマップ用binファイルを登録する
+1. 2種類のjsonファイルとデフォルトキーマップ用binファイルを[bmp-vial-config/](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/tree/master/bmp-vial-config)フォルダに保存し、プルリクエストを作成する
+
+
+### vial.jsonとconfig.jsonの用意
+
+[bmp-vial-config-generator](https://sekigon-gonnoc.github.io/bmp-vial-config-generator/)で設定を作成したら、それぞれの列の下部にある`Download *.json`ボタンをクリックして各jsonファイルをダウンロードしてください。
 
 ### デフォルトキーマップ用binファイルを用意する
 
@@ -63,4 +65,4 @@ EEPROMリセット時に反映されるデフォルトキーマップの設定�
 
 ### 2種類のjsonファイルとデフォルトキーマップ用binファイルを登録する
 
-BLE Miro Proのリポジトリの `bmp-vial-config/` にvial.json, config.json, default.binファイルを追加してプルリクエストを作成してください。
+BLE Miro Proのリポジトリの [bmp-vial-config/](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/tree/master/bmp-vial-config)フォルダにvial.json, config.json, default.binファイルを追加してプルリクエストを作成してください。
