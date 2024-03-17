@@ -1,0 +1,55 @@
+{
+    "name": "keyfuda03_stick",
+    "vendorId": "0x04D8",
+    "productId": "0xE76F",
+    "matrix": {
+        "rows": 1,
+        "cols": 6
+    },
+    "layouts": {
+        "labels": [
+            [
+                "Layout",
+                "LAYOUT"
+            ]
+        ],
+        "keymap": [
+            [
+                {
+                    "h": 1.5,
+                    "w": 1.5
+                },
+                "0,5\n\n\n0,0",
+                {
+                    "x": 1
+                },
+                "0,0\n\n\n\n\n\n\n\n\ne",
+                "0,1\n\n\n\n\n\n\n\n\ne"
+            ],
+            [
+                {
+                    "y": 0.5,
+                    "h": 0.5
+                },
+                "0,4\n\n\n0,0"
+            ],
+            [
+                {
+                    "y": -0.5
+                },
+                "0,3\n\n\n0,0"
+            ],
+            [
+                "0,2\n\n\n0,0"
+            ],
+            [
+                "0,1\n\n\n0,0"
+            ],
+            [
+                "0,0\n\n\n0,0"
+            ],
+            []
+        ]
+    },
+    "lighting": "qmk_rgblight"
+}

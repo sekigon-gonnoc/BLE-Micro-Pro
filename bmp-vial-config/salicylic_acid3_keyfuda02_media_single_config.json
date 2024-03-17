@@ -1,0 +1,75 @@
+{
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0x04D8",
+            "pid": "0xE887",
+            "name": "keyfuda02_media",
+            "manufacture": "Salicylic-acid3"
+        },
+        "matrix": {
+            "rows": 1,
+            "cols": 12,
+            "layer": 8,
+            "device_rows": 1,
+            "device_cols": 12,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 0,
+            "row_pins": [
+                0
+            ],
+            "col_pins": [
+                1,
+                5,
+                7,
+                8,
+                9,
+                10,
+                11,
+                2,
+                6,
+                20,
+                19,
+                18
+            ]
+        },
+        "mode": "SINGLE",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 15,
+            "num": 1
+        },
+        "encoder": {
+            "pin_a": [
+                16
+            ],
+            "pin_b": [
+                17
+            ],
+            "resolution": [
+                4
+            ]
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    }
+}
