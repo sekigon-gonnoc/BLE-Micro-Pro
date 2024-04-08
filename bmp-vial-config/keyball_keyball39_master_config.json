@@ -1,0 +1,49 @@
+{
+  "config": {
+    "version": 3,
+    "device_info": {
+      "vid": "0x5957",
+      "pid": "0x0200",
+      "name": "Keyball39",
+      "manufacture": "Yowkees"
+    },
+    "matrix": {
+      "rows": 8,
+      "cols": 6,
+      "layer": 7,
+      "device_rows": 4,
+      "device_cols": 6,
+      "debounce": 1,
+      "is_left_hand": 0,
+      "diode_direction": 0,
+      "row_pins": [ 20, 19, 18, 17 ],
+      "col_pins": [ 7, 8, 9, 10, 11, 12 ]
+    },
+    "mode": "SPLIT_MASTER",
+    "startup": 1,
+    "peripheral": {
+      "max_interval": 30,
+      "min_interval": 10,
+      "slave_latency": 25
+    },
+    "central": {
+      "max_interval": 30,
+      "min_interval": 10,
+      "slave_latency": 25
+    },
+    "led": {
+      "pin": 1,
+      "num": 46
+    },
+    "reserved": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
