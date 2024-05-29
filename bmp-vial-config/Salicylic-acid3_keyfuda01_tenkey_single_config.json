@@ -1,0 +1,70 @@
+{
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0x04D8",
+            "pid": "0xE887",
+            "name": "keyfuda01_tenkey",
+            "manufacture": "Salicylic-acid3"
+        },
+        "matrix": {
+            "rows": 1,
+            "cols": 18,
+            "layer": 8,
+            "device_rows": 1,
+            "device_cols": 18,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 0,
+            "row_pins": [
+                0
+            ],
+            "col_pins": [
+                12,
+                11,
+                10,
+                9,
+                8,
+                7,
+                6,
+                5,
+                2,
+                13,
+                1,
+                14,
+                15,
+                16,
+                17,
+                20,
+                19,
+                18
+            ]
+        },
+        "mode": "SINGLE",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 255,
+            "num": 0
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    }
+}
