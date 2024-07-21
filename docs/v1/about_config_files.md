@@ -17,6 +17,7 @@
 
 1. 左側のテキストボックスにQMKのinfo.jsonを記入する
    1. QMK公式のリポジトリにinfo.jsonが存在する場合はテキストボックス下部にあるリストから選択できます。
+   1. info.jsonの中にはmatrixのピンと配置の情報が必要です。これらの情報がconfig.hやLAYOUTマクロに記入されている古いファームウェアでは`qmk info -kb <keyboard> -f json`コマンドを使用するとinfo.jsonを生成できる場合があります。
 2. 左下の`Generate`ボタンをクリックしてvial.jsonとconfig.jsonを生成する
    1. 自動生成されたvial.jsonでは内容が不十分な場合はテキストボックスの中身を書き換えてください
 3. 中央下の`Append BMP custom keycodes`ボタンをクリックして、BLE Micro Pro用のカスタムキーコードリストをvial.jsonに追加する
