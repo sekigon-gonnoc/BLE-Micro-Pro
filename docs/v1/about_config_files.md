@@ -13,7 +13,8 @@
 
 ### bmp-vial対応の設定ファイルを用意する
 
-設定ファイルは2種類のjsonファイルと、これらから生成される1つのbinファイルがあります。
+設定ファイルは2種類のjsonファイルと、jsonから生成される1つのbinファイルがあります。
+これらの設定ファイルは[bmp-vial-config-generator](https://sekigon-gonnoc.github.io/bmp-vial-config-generator/)を利用することでQMKのinfo.jsonから変換できます。そのため、すでにPro Micro用のファームウェアが用意されていれば、単純な変換作業のみでBLE Micro Pro用の設定も用意できます。
 
 * vial用jsonファイル(vial.json)
   * vial用の設定ファイルです
@@ -22,7 +23,6 @@
 * 書き込み用binファイル(config.bin)
   * vial.jsonとconfig.jsonから生成された書き込み用のバイナリファイルです
 
-これらの設定ファイルは[bmp-vial-config-generator](https://sekigon-gonnoc.github.io/bmp-vial-config-generator/)を利用して生成できます。
 
 1. 左側のテキストボックスにQMKのinfo.jsonを記入する
    1. QMK公式のリポジトリにinfo.jsonが存在する場合はテキストボックス下部にあるリストから選択できます。
