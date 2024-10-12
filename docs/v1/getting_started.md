@@ -21,7 +21,7 @@
 
 ### BLE Micro Proを取り付ける準備
 
-キーボード基板への取り付けにピンヘッダでなくコンスルーを使うことができます。([遊舎工房販売ページ](https://yushakobo.jp/shop/a01mc-00/), [TALP keyboard販売ページ](https://talpkeyboard.stores.jp/items/5e056626d790db16e2889233), [Switch Science 販売ページ](https://www.switch-science.com/catalog/3763/))。 BLE Micro Proはコンスルー対応なのでBLE Micro Pro側のはんだづけが不要です。
+キーボード基板への取り付けにピンヘッダでなくコンスルーを使うことができます。([遊舎工房販売ページ](https://yushakobo.jp/shop/a01mc-00/), [TALP keyboard販売ページ](https://talpkeyboard.stores.jp/items/5e056626d790db16e2889233), [Switch Science 販売ページ](https://www.switch-science.com/catalog/3763/))。 BLE Micro Proはコンスルー対応なので、はんだづけは不要です。
 
 BLE Micro Pro対応を前提に設計されたキーボードキットでは13ピンのコンスルーが必要な場合があります。キーボードキットの必要部品をよく確認してください。それ以外の場合は12ピンのコンスルーを使用するか、13ピンコンスルーをカットしてください。
 
