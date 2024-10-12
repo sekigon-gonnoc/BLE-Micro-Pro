@@ -1,0 +1,63 @@
+{
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0xFEED",
+            "pid": "0xABB1",
+            "name": "Timothy",
+            "manufacture": "geek-rabb1t"
+        },
+        "matrix": {
+            "rows": 10,
+            "cols": 7,
+            "layer": 8,
+            "device_rows": 5,
+            "device_cols": 7,
+            "debounce": 2,
+            "is_left_hand": 0,
+            "diode_direction": 0,
+            "row_pins": [
+                17,
+                16,
+                15,
+                14,
+                13
+            ],
+            "col_pins": [
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ]
+        },
+        "mode": "SPLIT_SLAVE",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 20,
+            "min_interval": 20,
+            "slave_latency": 4
+        },
+        "central": {
+            "max_interval": 20,
+            "min_interval": 20,
+            "slave_latency": 4
+        },
+        "led": {
+            "pin": 255,
+            "num": 0
+        },
+        "reserved": [
+            0,
+            5,
+            12,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    }
+}
