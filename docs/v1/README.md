@@ -11,7 +11,6 @@ BLE Micro ProはPro Microとの互換性を意識した、nrf52840モジュー�
 
 ## 特徴
 
-[機能一覧](features.md)
 - BLEでの無線接続
   - BLE Micro Proを2台使用した分割キーボードの完全無線化
   - BLE Micro ProとLPME-IOを使用した部分無線化
@@ -23,14 +22,12 @@ BLE Micro ProはPro Microとの互換性を意識した、nrf52840モジュー�
 - [買ってきた自作キーボードキットを無線化したい](getting_started.md)
   - 遊舎工房やBOOTHで購入したキットを無線化する場合はこちら
   - Pro Microを使用しているキットを無線化できます
-
 - [BLE Micro Proに対応したキーボードを設計したい](design_guide.md)
   - 自分でキーボードを設計するときの注意点などをまとめています
 
 ## 困ったときは
 
 - [よくある質問](FAQ.md)
-
 - そのほかの質問等は [Self Made Keyboard in Japan の Discord](https://discordapp.com/invite/zXCss8T)
 #mon-shin🔰 (トラブルシューティング) または #ble-micro-pro（開発関係の質問）チャンネルまで。過去ログを検索すると役立つ情報があるかもしれません。
 
