@@ -1,0 +1,60 @@
+{
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0x7463",
+            "pid": "0x0063",
+            "name": "Palmslave",
+            "manufacture": "takashicompany"
+        },
+        "matrix": {
+            "rows": 8,
+            "cols": 5,
+            "layer": 8,
+            "device_rows": 4,
+            "device_cols": 5,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 0,
+            "row_pins": [
+                20,
+                19,
+                18,
+                17
+            ],
+            "col_pins": [
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        },
+        "mode": "SPLIT_MASTER",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 255,
+            "num": 0
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    }
+}
