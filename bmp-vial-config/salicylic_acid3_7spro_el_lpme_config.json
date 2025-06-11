@@ -1,0 +1,77 @@
+{
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0x355D",
+            "pid": "0x101D",
+            "name": "7spro_el",
+            "manufacture": "Salicylic_Acid"
+        },
+        "matrix": {
+            "rows": 10,
+            "cols": 8,
+            "layer": 8,
+            "device_rows": 5,
+            "device_cols": 8,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 2,
+            "row_pins": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                7,
+                8,
+                9,
+                10,
+                11
+            ],
+            "col_pins": [
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14,
+                12,
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14,
+                12
+            ]
+        },
+        "mode": "SINGLE",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 1,
+            "num": 12
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    }
+}
