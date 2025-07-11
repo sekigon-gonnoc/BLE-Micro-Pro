@@ -4,6 +4,8 @@ BLE Micro ProはPro Microとの互換性を意識した、nrf52840モジュー�
 
 **こちらは最新版ファームウェア(v1)の説明です。最新版では設定ファイルの形式が変更になりました。Vialにも対応しています。**
 
+**BMP BoostのハードウェアやZMKで使用する方法については[こちら](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/tree/master/bmp-boost)をご確認ください。**
+
 ## 販売リンク
 
 [BOOTH](https://nogikes.booth.pm/items/1177319)  
