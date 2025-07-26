@@ -7,6 +7,9 @@ BMP Boostは、DC-DC昇圧コンバータを搭載したnRF52開発ボードで�
 
 ZMK FirmwareやBLE Micro Pro用のファームウェアで動作します。
 
+- [BOOTH](https://nogikes.booth.pm/items/1177319)
+- [遊舎工房](https://shop.yushakobo.jp/products/10737)
+
 ## 特徴
 
 - DC-DC昇圧コンバータ内蔵で電池一本（0.7V～）から動作可能
