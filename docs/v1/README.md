@@ -6,6 +6,9 @@ BLE Micro ProはPro Microとの互換性を意識した、nrf52840モジュー�
 
 **BMP BoostのハードウェアやZMKで使用する方法については[こちら](https://github.com/sekigon-gonnoc/BLE-Micro-Pro/tree/master/bmp-boost)をご確認ください。**
 
+[QMK用のinfo.jsonをZMK用の設定に変更するツール](https://sekigon-gonnoc.github.io/bmp-qmk-zmk-converter/)
+  - 変換結果が正しいとは限らないので適宜修正してください
+
 ## 販売リンク
 
 [BOOTH](https://nogikes.booth.pm/items/1177319)  

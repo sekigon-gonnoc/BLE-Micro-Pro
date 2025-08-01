@@ -79,6 +79,8 @@ LEDを実装しないか、実装してしまっている場合はコンスル�
 ## ZMK用コンポーネント
 
 - [zmk-component-bmp-boost](https://github.com/sekigon-gonnoc/zmk-component-bmp-boost)
+- [QMK用のinfo.jsonをZMK用の設定に変更するツール](https://sekigon-gonnoc.github.io/bmp-qmk-zmk-converter/)
+  - 変換結果が正しいとは限らないので適宜修正してください
 
 ## 注意事項
 
