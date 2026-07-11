@@ -1,0 +1,71 @@
+{
+    "config": {
+        "version": 2,
+        "device_info": {
+            "vid": "0xEDB8",
+            "pid": "0x2235",
+            "name": "DRESSTHING Twins",
+            "manufacture": "soo_suke"
+        },
+        "matrix": {
+            "rows": 8,
+            "cols": 5,
+            "layer": 8,
+            "device_rows": 4,
+            "device_cols": 5,
+            "debounce": 1,
+            "is_left_hand": 1,
+            "diode_direction": 0,
+            "row_pins": [
+                20,
+                18,
+                17,
+                10
+            ],
+            "col_pins": [
+                11,
+                12,
+                13,
+                14,
+                19
+            ]
+        },
+        "mode": "SPLIT_MASTER",
+        "startup": 1,
+        "peripheral": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 16
+        },
+        "central": {
+            "max_interval": 30,
+            "min_interval": 30,
+            "slave_latency": 0
+        },
+        "led": {
+            "pin": 255,
+            "num": 0
+        },
+        "encoder": {
+            "pin_a": [
+                16
+            ],
+            "pin_b": [
+                15
+            ],
+            "resolution": [
+                4
+            ]
+        },
+        "reserved": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    }
+}
