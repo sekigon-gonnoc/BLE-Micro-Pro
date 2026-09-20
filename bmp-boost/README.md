@@ -101,19 +101,7 @@ LEDを実装しないか、実装してしまっている場合はコンスル�
 | -------------------------------- | ------------------------------------- |
 | ![](img/bmp-boost-connector.jpg) | ![](img/bmp-boost-extender-assem.jpg) |
 
-### BMP Boost Extender Mini
-
-[リポジトリ](https://github.com/ngsyst/bmp_boost_extender_mini)
-
-ngsystさんが公開している小型の拡張基板です。FFCコネクタがハンダ付けされておりトラックボールやトラックパッドモジュール、エンコーダと接続可能です。
-
-### bmp-boost-led-extender
-
-[KiCADプロジェクトデータ](./bmp-boost-led-extender/)
-
-緑・黄・赤の三色のLEDを追加する拡張基板です。本基板もFFCケーブルで拡張モジュールを接続できます。
-
-### デバイスツリーの例
+#### デバイスツリーの例
 
 オプションのFFC変換基板を使用して[paw3222センサ](https://github.com/sekigon-gonnoc/small-mouse-sensor-module)と接続する場合は下記をデバイスツリーに追加してください。
 
@@ -158,3 +146,18 @@ ngsystさんが公開している小型の拡張基板です。FFCコネクタ�
 
 KiCadで作成した基板の設計データは[こちら](bmp-boost-extender/)
 
+### BMP Boost Extender Mini
+
+[リポジトリ](https://github.com/ngsyst/bmp_boost_extender_mini)
+
+ngsystさんが公開している小型の拡張基板です。FFCコネクタがハンダ付けされておりトラックボールやトラックパッドモジュール、エンコーダと接続可能です。
+
+### bmp-boost-led-extender
+
+[KiCADプロジェクトデータ](./bmp-boost-led-extender/)
+
+緑・黄・赤の三色のLEDを追加する拡張基板です。本基板もFFCケーブルで拡張モジュールを接続できます。
+
+#### デバイスツリーの例
+
+[torabo-tsuki LP用のスニペット](https://github.com/sekigon-gonnoc/zmk-keyboard-torabo-tsuki-lp/tree/master/snippets/led-plus)
